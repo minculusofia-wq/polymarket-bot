@@ -30,6 +30,11 @@ Un bot de trading automatisé pour Polymarket qui identifie et suit les "whales"
 - **Leaderboard** : Classement des meilleures whales
 - **Historique** : Suivi des trades copiés
 
+### ✅ Phase 6 : Performance (WebSocket)
+- **Détection Temps Réel** : Latence proche de zéro
+- **Connexion Sécurisée** : Support SSL/TLS
+- **Sniping Ready** : Réaction instantanée aux mouvements de marché
+
 ## 📊 Résultats
 
 Le scanner a détecté **63 whales** sur 278 traders analysés :

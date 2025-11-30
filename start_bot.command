@@ -26,9 +26,9 @@ sleep 2
 echo "🌐 Opening Dashboard..."
 open "http://localhost:5000"
 
-# Start Scanner in foreground
-echo "🐋 Starting Whale Scanner..."
-python scanner.py
+# Start Scanner in foreground (WebSocket Mode)
+echo "🐋 Starting Whale Scanner (Real-Time WebSocket)..."
+python scanner_ws.py
 
 # Cleanup on exit
 kill $API_PID
