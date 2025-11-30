@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polymarket Bot Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐋 Polymarket Bot</h1>
+            <div class="status-badge" id="status-badge">Online</div>
+        </header>
+
+        <div class="grid">
+            <!-- Stats Cards -->
+            <div class="card">
+                <h3>Total Whales</h3>
+                <div class="value" id="total-whales">0</div>
+            </div>
+            <div class="card">
+                <h3>Active Positions</h3>
+                <div class="value" id="active-positions">0</div>
+            </div>
+            <div class="card">
+                <h3>Balance (Paper)</h3>
+                <div class="value" id="balance">$0.00</div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- Whales Leaderboard -->
+            <div class="section">
+                <h2>🏆 Top Whales</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Address</th>
+                                <th>Score</th>
+                                <th>Volume</th>
+                                <th>Tags</th>
+                            </tr>
+                        </thead>
+                        <tbody id="whales-table">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Trade History -->
+            <div class="section">
+                <h2>📜 Trade History</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Market</th>
+                                <th>Outcome</th>
+                                <th>Amount</th>
+                                <th>Whale</th>
+                            </tr>
+                        </thead>
+                        <tbody id="history-table">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

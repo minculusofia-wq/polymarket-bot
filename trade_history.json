@@ -1,0 +1,56 @@
+{
+  "positions": {
+    "0xf14db7a187a32a99a5cb1061dea3d7af632cc8e0ee2791df79f7dd19652fabad_No_1764523631": {
+      "market_id": "0xf14db7a187a32a99a5cb1061dea3d7af632cc8e0ee2791df79f7dd19652fabad",
+      "outcome": "No",
+      "entry_price": 0.5,
+      "shares": 10.479998,
+      "amount_invested": 5.239999,
+      "timestamp": "2025-11-30T18:27:11.533719",
+      "whale": "0xe8dd7741ccb12350957ec71e9ee332e0d1e6ec86",
+      "status": "OPEN"
+    },
+    "0x46b8212fb7ff10901049ba71a0bf62b18a21780622cfe465162cc00d469ce172_No_1764523631": {
+      "market_id": "0x46b8212fb7ff10901049ba71a0bf62b18a21780622cfe465162cc00d469ce172",
+      "outcome": "No",
+      "entry_price": 0.5,
+      "shares": 9.93999,
+      "amount_invested": 4.969995,
+      "timestamp": "2025-11-30T18:27:11.534127",
+      "whale": "0xe8dd7741ccb12350957ec71e9ee332e0d1e6ec86",
+      "status": "OPEN"
+    },
+    "0x46a79789f6aea363f2c44da26b0318e2e3db036975c5b6140f9463d6a6d3d3b4_No_1764523631": {
+      "market_id": "0x46a79789f6aea363f2c44da26b0318e2e3db036975c5b6140f9463d6a6d3d3b4",
+      "outcome": "No",
+      "entry_price": 0.5,
+      "shares": 5.3999999999999995,
+      "amount_invested": 2.6999999999999997,
+      "timestamp": "2025-11-30T18:27:11.536124",
+      "whale": "0xe8dd7741ccb12350957ec71e9ee332e0d1e6ec86",
+      "status": "OPEN"
+    },
+    "0x60d9067fa29c8b2be6db55f578ac722dfe8cfd98b68ee793500a7c19c53d9c7c_No_1764523631": {
+      "market_id": "0x60d9067fa29c8b2be6db55f578ac722dfe8cfd98b68ee793500a7c19c53d9c7c",
+      "outcome": "No",
+      "entry_price": 0.5,
+      "shares": 20.0,
+      "amount_invested": 10.0,
+      "timestamp": "2025-11-30T18:27:11.536548",
+      "whale": "0xe8dd7741ccb12350957ec71e9ee332e0d1e6ec86",
+      "status": "OPEN"
+    },
+    "0x2d74251c771c3000ee080e2663c94e20280f86c3c11f289228349555c2d82e8d_No_1764523631": {
+      "market_id": "0x2d74251c771c3000ee080e2663c94e20280f86c3c11f289228349555c2d82e8d",
+      "outcome": "No",
+      "entry_price": 0.5,
+      "shares": 20.0,
+      "amount_invested": 10.0,
+      "timestamp": "2025-11-30T18:27:11.536945",
+      "whale": "0xe8dd7741ccb12350957ec71e9ee332e0d1e6ec86",
+      "status": "OPEN"
+    }
+  },
+  "balance": 967.0900059999999,
+  "last_update": "2025-11-30T18:27:11.537050"
+}

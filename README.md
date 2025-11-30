@@ -15,15 +15,25 @@ Un bot de trading automatisé pour Polymarket qui identifie et suit les "whales"
 - **Tracking des wallets actifs** avec historique
 - **Export des données** en JSON
 
-### 🚧 Phase 3 : Copy-Trading (À venir)
-- Surveillance en temps réel des whales
-- Exécution automatique d'ordres
-- Règles de sécurité (stop loss, taille max)
+### ✅ Phase 3 : Scanner Amélioré
+- **Scoring des Whales** : Win rate, ROI, Consistance
+- **Monitoring Continu** : Scan toutes les 60 secondes
+- **Tracking des Positions** : Suivi des positions ouvertes
+
+### ✅ Phase 4 : Copy-Trading (Paper Trading)
+- **Exécution Automatique** : Copie les trades des top whales
+- **Gestion des Risques** : Stop loss, take profit, taille max
+- **Mode Simulation** : Testez sans risquer d'argent réel
+
+### ✅ Phase 5 : Dashboard Web
+- **Interface Moderne** : Visualisation des données en temps réel
+- **Leaderboard** : Classement des meilleures whales
+- **Historique** : Suivi des trades copiés
 
 ## 📊 Résultats
 
-Le scanner a détecté **45 whales** sur 196 traders analysés :
-- Top whale : **$6,527** de volume
+Le scanner a détecté **63 whales** sur 278 traders analysés :
+- Top whale : **$54,885** de volume
 - Données sauvegardées dans `whales.json`
 
 ## 🚀 Installation
@@ -36,7 +46,7 @@ Le scanner a détecté **45 whales** sur 196 traders analysés :
 
 1. **Cloner le repository**
 ```bash
-git clone <votre-repo-url>
+git clone https://github.com/minculusofia-wq/polymarket-bot.git
 cd polymarket-bot
 ```
 
@@ -59,33 +69,40 @@ cp .env.example .env
 
 ## 📖 Utilisation
 
-### Tester la connexion Polygon
-```bash
-python main.py
-```
-
-### Lancer le scanner de whales
+### 1. Lancer le Bot (Scanner + Trader)
 ```bash
 python scanner.py
 ```
+Le bot va :
+- Scanner le marché en continu
+- Identifier les whales
+- Exécuter des trades (paper trading par défaut)
 
-Le scanner va :
-1. Récupérer les 1000 derniers trades
-2. Analyser les traders par volume
-3. Filtrer les whales (volume ≥ $100)
-4. Sauvegarder les résultats dans `whales.json`
+### 2. Lancer le Dashboard
+```bash
+python api.py
+```
+Ouvrez votre navigateur sur `http://localhost:5000` pour voir :
+- Le leaderboard des whales
+- Les positions ouvertes
+- L'historique des trades
 
 ## 📁 Structure du Projet
 
 ```
 polymarket-bot/
-├── main.py              # Test de connexion Polygon
-├── scanner.py           # Scanner de whales (trades-based)
-├── requirements.txt     # Dépendances Python
-├── .env.example         # Template de configuration
-├── .gitignore          # Fichiers à ignorer
-├── whales.json         # Base de données des whales (généré)
-└── README.md           # Ce fichier
+├── scanner.py           # Bot principal (Scanner + Trader)
+├── trader.py            # Module d'exécution des trades
+├── whale_analyzer.py    # Module d'analyse et scoring
+├── config.py            # Configuration du bot
+├── api.py               # Serveur API pour le dashboard
+├── dashboard/           # Interface Web
+│   ├── index.html
+│   ├── style.css
+│   └── app.js
+├── whales.json          # Base de données des whales
+├── trade_history.json   # Historique des trades
+└── README.md            # Documentation
 ```
 
 ## 🔧 Configuration
@@ -96,13 +113,17 @@ polymarket-bot/
 # RPC Polygon (obligatoire)
 POLYGON_RPC_URL=https://polygon-rpc.com
 
-# Clé privée (pour le trading - Phase 3)
+# Clé privée (pour le trading réel)
 PRIVATE_KEY=votre_cle_privee_ici
+```
 
-# API Polymarket (optionnel)
-POLYMARKET_API_KEY=
-POLYMARKET_API_SECRET=
-POLYMARKET_PASSPHRASE=
+### Configuration du Bot (`config.py`)
+
+```python
+PAPER_TRADING = True        # False pour trading réel
+MAX_POSITION_SIZE_USD = 10  # Taille max par trade
+STOP_LOSS_PERCENT = 0.15    # Stop loss à 15%
+MIN_WHALE_SCORE = 60        # Score min pour copier
 ```
 
 ⚠️ **Sécurité** : Ne partagez jamais votre fichier `.env` ou votre clé privée !

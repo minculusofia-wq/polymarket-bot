@@ -117,37 +117,84 @@ def save_whales(whales_data):
         json.dump(whales_data, f, indent=2)
     print(f"Saved {len(whales_data)} wallets to {WHALES_FILE}")
 
+import time
+from whale_analyzer import WhaleAnalyzer
+from trader import Trader
+import config
+
+# ... (Previous imports remain)
+
+# Constants
+DATA_API_URL = "https://data-api.polymarket.com"
+WHALES_FILE = "whales.json"
+MIN_VOLUME_THRESHOLD = 100
+SCAN_INTERVAL = config.SCAN_INTERVAL
+
 def main():
-    print("--- Starting Whale Scanner (Trades-Based) ---")
+    print("--- Starting Polymarket Bot (Scanner + Trader) ---")
+    analyzer = WhaleAnalyzer()
+    trader = Trader()
     
-    # 1. Get Recent Trades
-    trades = get_recent_trades(limit=1000)
+    last_scan_time = time.time() - 3600 # Start by looking at last hour
     
-    if not trades:
-        print("No trades retrieved. Exiting.")
-        return
-    
-    # 2. Aggregate by Trader
-    trader_stats = aggregate_traders(trades)
-    print(f"Analyzed {len(trader_stats)} unique traders")
-    
-    # 3. Filter for Whales
-    new_whales = filter_whales(trader_stats, min_volume=MIN_VOLUME_THRESHOLD)
-    print(f"Identified {len(new_whales)} whales (volume >= ${MIN_VOLUME_THRESHOLD})")
-    
-    # 4. Merge with Existing Data
-    existing_whales = load_whales()
-    merged_whales = merge_whale_data(existing_whales, new_whales)
-    
-    # 5. Save Results
-    save_whales(merged_whales)
-    
-    # 6. Print Top 5 Whales
-    print("\n--- Top 5 Whales by Volume ---")
-    for i, (address, stats) in enumerate(list(merged_whales.items())[:5], 1):
-        print(f"{i}. {address[:10]}... - ${stats['total_volume']:.2f} ({stats['trade_count']} trades)")
-    
-    print("\n--- Scan Complete ---")
+    while True:
+        try:
+            print(f"\n[{datetime.now().strftime('%H:%M:%S')}] Scanning market...")
+            
+            # 1. Get Recent Trades
+            trades = get_recent_trades(limit=1000)
+            
+            if trades:
+                current_scan_time = time.time()
+                
+                # 2. Aggregate & Analyze Whales (Background Task)
+                trader_stats = aggregate_traders(trades)
+                new_whales = filter_whales(trader_stats, min_volume=MIN_VOLUME_THRESHOLD)
+                existing_whales = load_whales()
+                merged_whales = merge_whale_data(existing_whales, new_whales)
+                ranked_whales = analyzer.rank_whales(merged_whales)
+                save_whales(ranked_whales)
+                
+                # 3. Check for Copy-Trade Opportunities
+                # Filter for trades that happened AFTER the last scan
+                # Note: API returns trades sorted by time desc
+                
+                print("Checking for copy-trade opportunities...")
+                for trade in trades:
+                    timestamp = trade.get('timestamp')
+                    if not timestamp or timestamp <= last_scan_time:
+                        continue
+                        
+                    address = trade.get('proxyWallet')
+                    if not address:
+                        continue
+                        
+                    # Check if address is a high-ranking whale
+                    whale_data = ranked_whales.get(address)
+                    if whale_data and whale_data.get('score', 0) >= config.MIN_WHALE_SCORE:
+                        # Found a trade from a top whale!
+                        market_id = trade.get('conditionId')
+                        outcome = trade.get('outcome')
+                        size = float(trade.get('size', 0))
+                        price = float(trade.get('price', 0))
+                        amount_usd = size * price
+                        
+                        print(f"!!! WHALE DETECTED: {address[:8]}... bought {amount_usd:.2f} of {outcome}")
+                        
+                        # Execute Copy Trade
+                        trader.execute_copy_trade(address, market_id, outcome, amount_usd)
+                
+                last_scan_time = current_scan_time
+            
+            print(f"Waiting {SCAN_INTERVAL} seconds...")
+            time.sleep(SCAN_INTERVAL)
+            
+        except KeyboardInterrupt:
+            print("\nStopping bot...")
+            break
+        except Exception as e:
+            print(f"Error in main loop: {e}")
+            time.sleep(SCAN_INTERVAL)
 
 if __name__ == "__main__":
     main()
