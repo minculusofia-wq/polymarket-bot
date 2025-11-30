@@ -54,21 +54,43 @@ function updateDashboard(whales, history, config) {
     `).join('');
     document.getElementById('history-table').innerHTML = historyHtml;
 
-    // Update Settings
+    // Update Settings (populate input fields)
     document.getElementById('setting-mode').textContent = config.paper_trading ? 'Paper Trading' : 'Real Trading';
+    document.getElementById('setting-capital').textContent = `$${balance.toFixed(2)}`;
 
-    // Show actual balance if trades exist, otherwise show initial capital (1000)
-    const initialCapital = 1000;
-    const currentBalance = balance > 0 ? balance : initialCapital;
-    document.getElementById('setting-capital').textContent = `$${currentBalance.toFixed(2)}`;
+    document.getElementById('input-max-position').value = config.max_position_size;
+    document.getElementById('input-stop-loss').value = (config.stop_loss * 100).toFixed(0);
+    document.getElementById('input-take-profit').value = (config.take_profit * 100).toFixed(0);
+    document.getElementById('input-max-positions').value = config.max_positions;
+    document.getElementById('input-min-score').value = config.min_whale_score;
+    document.getElementById('input-scan-interval').value = config.scan_interval;
+}
 
-    document.getElementById('setting-max-position').textContent = `$${config.max_position_size}`;
-    const percentPerTrade = (config.max_position_size / initialCapital * 100).toFixed(1);
-    document.getElementById('setting-percent').textContent = `${percentPerTrade}%`;
-    document.getElementById('setting-stop-loss').textContent = `${(config.stop_loss * 100).toFixed(0)}%`;
-    document.getElementById('setting-take-profit').textContent = `${(config.take_profit * 100).toFixed(0)}%`;
-    document.getElementById('setting-max-positions').textContent = config.max_positions;
-    document.getElementById('setting-min-score').textContent = config.min_whale_score;
+async function saveSettings() {
+    const settings = {
+        max_position_size: parseFloat(document.getElementById('input-max-position').value),
+        stop_loss: parseFloat(document.getElementById('input-stop-loss').value) / 100,
+        take_profit: parseFloat(document.getElementById('input-take-profit').value) / 100,
+        max_positions: parseInt(document.getElementById('input-max-positions').value),
+        min_whale_score: parseInt(document.getElementById('input-min-score').value),
+        scan_interval: parseInt(document.getElementById('input-scan-interval').value)
+    };
+
+    try {
+        const response = await fetch('/api/config/save', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(settings)
+        });
+
+        if (response.ok) {
+            alert('✅ Paramètres sauvegardés ! Redémarrez le bot pour appliquer les changements.');
+        } else {
+            alert('❌ Erreur lors de la sauvegarde');
+        }
+    } catch (error) {
+        alert('❌ Erreur: ' + error.message);
+    }
 }
 
 // Refresh every 5 seconds

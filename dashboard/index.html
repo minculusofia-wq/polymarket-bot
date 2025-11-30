@@ -79,40 +79,42 @@
             <div class="section">
                 <h2>⚙️ Trading Settings</h2>
                 <div class="settings-grid">
-                    <div class="setting-item">
+                    <div class="setting-item readonly">
                         <label>Mode</label>
                         <div class="value" id="setting-mode">Paper Trading</div>
                     </div>
-                    <div class="setting-item">
+                    <div class="setting-item readonly">
                         <label>Capital (Paper)</label>
-                        <div class="value" id="setting-capital">$1000.00</div>
+                        <div class="value" id="setting-capital">$0.00</div>
                     </div>
                     <div class="setting-item">
-                        <label>Max Position Size</label>
-                        <div class="value" id="setting-max-position">$10.00</div>
+                        <label>Max Position Size ($)</label>
+                        <input type="number" id="input-max-position" step="0.1" min="1">
                     </div>
                     <div class="setting-item">
-                        <label>% per Trade</label>
-                        <div class="value" id="setting-percent">1%</div>
+                        <label>Stop Loss (%)</label>
+                        <input type="number" id="input-stop-loss" step="1" min="0" max="100">
                     </div>
                     <div class="setting-item">
-                        <label>Stop Loss</label>
-                        <div class="value" id="setting-stop-loss">15%</div>
-                    </div>
-                    <div class="setting-item">
-                        <label>Take Profit</label>
-                        <div class="value" id="setting-take-profit">30%</div>
+                        <label>Take Profit (%)</label>
+                        <input type="number" id="input-take-profit" step="1" min="0" max="100">
                     </div>
                     <div class="setting-item">
                         <label>Max Open Positions</label>
-                        <div class="value" id="setting-max-positions">5</div>
+                        <input type="number" id="input-max-positions" step="1" min="1" max="20">
                     </div>
                     <div class="setting-item">
                         <label>Min Whale Score</label>
-                        <div class="value" id="setting-min-score">60</div>
+                        <input type="number" id="input-min-score" step="1" min="0" max="100">
+                    </div>
+                    <div class="setting-item">
+                        <label>Scan Interval (sec)</label>
+                        <input type="number" id="input-scan-interval" step="10" min="10" max="300">
                     </div>
                 </div>
-                <p class="settings-note">💡 Pour modifier ces paramètres, éditez le fichier <code>config.py</code></p>
+                <button class="save-btn" onclick="saveSettings()">💾 Sauvegarder les Paramètres</button>
+                <p class="settings-note">💡 Les paramètres seront sauvegardés dans <code>config.py</code> et appliqués
+                    au prochain redémarrage</p>
             </div>
         </div>
     </div>

@@ -48,6 +48,35 @@ def get_config():
         "scan_interval": config.SCAN_INTERVAL
     })
 
+@app.route('/api/config/save', methods=['POST'])
+def save_config():
+    from flask import request
+    import re
+    
+    data = request.json
+    config_path = 'config.py'
+    
+    try:
+        # Read current config
+        with open(config_path, 'r') as f:
+            content = f.read()
+        
+        # Update values
+        content = re.sub(r'MAX_POSITION_SIZE_USD = [\d.]+', f'MAX_POSITION_SIZE_USD = {data["max_position_size"]}', content)
+        content = re.sub(r'STOP_LOSS_PERCENT = [\d.]+', f'STOP_LOSS_PERCENT = {data["stop_loss"]}', content)
+        content = re.sub(r'TAKE_PROFIT_PERCENT = [\d.]+', f'TAKE_PROFIT_PERCENT = {data["take_profit"]}', content)
+        content = re.sub(r'MAX_OPEN_POSITIONS = \d+', f'MAX_OPEN_POSITIONS = {data["max_positions"]}', content)
+        content = re.sub(r'MIN_WHALE_SCORE = \d+', f'MIN_WHALE_SCORE = {data["min_whale_score"]}', content)
+        content = re.sub(r'SCAN_INTERVAL = \d+', f'SCAN_INTERVAL = {data["scan_interval"]}', content)
+        
+        # Write back
+        with open(config_path, 'w') as f:
+            f.write(content)
+        
+        return jsonify({"status": "success"})
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
+
 if __name__ == '__main__':
     print("Starting Dashboard API on http://localhost:5000")
     app.run(debug=True, port=5000)
