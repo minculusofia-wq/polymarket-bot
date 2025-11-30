@@ -69,7 +69,17 @@ cp .env.example .env
 
 ## 📖 Utilisation
 
-### 1. Lancer le Bot (Scanner + Trader)
+### 🚀 Lancement Facile (Recommandé)
+Double-cliquez simplement sur le fichier `start_bot.command` !
+
+Cela va automatiquement :
+1. Lancer le Dashboard API
+2. Ouvrir le Dashboard dans votre navigateur
+3. Lancer le Scanner dans le terminal
+
+### Lancement Manuel
+
+#### 1. Lancer le Bot (Scanner + Trader)
 ```bash
 python scanner.py
 ```
