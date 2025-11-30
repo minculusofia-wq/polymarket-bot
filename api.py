@@ -77,6 +77,13 @@ def save_config():
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}), 500
 
+@app.route('/api/opportunities')
+def get_opportunities():
+    if os.path.exists('opportunities.json'):
+        with open('opportunities.json', 'r') as f:
+            return jsonify(json.load(f))
+    return jsonify({"trending": [], "price_movements": [], "keywords": []})
+
 if __name__ == '__main__':
     print("Starting Dashboard API on http://localhost:5000")
     app.run(debug=True, port=5000)

@@ -1,22 +1,24 @@
 async function fetchData() {
     try {
-        const [whalesRes, historyRes, configRes] = await Promise.all([
+        const [whalesRes, historyRes, configRes, oppsRes] = await Promise.all([
             fetch('/api/whales'),
             fetch('/api/history'),
-            fetch('/api/config')
+            fetch('/api/config'),
+            fetch('/api/opportunities')
         ]);
 
         const whales = await whalesRes.json();
         const history = await historyRes.json();
         const config = await configRes.json();
+        const opportunities = await oppsRes.json();
 
-        updateDashboard(whales, history, config);
+        updateDashboard(whales, history, config, opportunities);
     } catch (error) {
         console.error('Error fetching data:', error);
     }
 }
 
-function updateDashboard(whales, history, config) {
+function updateDashboard(whales, history, config, opportunities) {
     // Update Stats
     const whaleList = Object.entries(whales).map(([addr, data]) => ({ addr, ...data }));
     document.getElementById('total-whales').textContent = whaleList.length;
@@ -64,6 +66,37 @@ function updateDashboard(whales, history, config) {
     document.getElementById('input-max-positions').value = config.max_positions;
     document.getElementById('input-min-score').value = config.min_whale_score;
     document.getElementById('input-scan-interval').value = config.scan_interval;
+
+    // Update Opportunities
+    // Trending Markets
+    const trendingHtml = (opportunities.trending || []).map(m => `
+        <tr>
+            <td>${m.question}</td>
+            <td>$${Math.round(m.volume).toLocaleString()}</td>
+            <td><a href="https://polymarket.com/event/${m.slug}" target="_blank">Voir</a></td>
+        </tr>
+    `).join('');
+    document.getElementById('trending-table').innerHTML = trendingHtml || '<tr><td colspan="3">Aucune donnée</td></tr>';
+
+    // Price Movements
+    const movementsHtml = (opportunities.price_movements || []).map(m => `
+        <tr>
+            <td>${m.market_id.substring(0, 10)}...</td>
+            <td>${m.direction} ${m.change}</td>
+            <td>${new Date(m.detected_at).toLocaleTimeString()}</td>
+        </tr>
+    `).join('');
+    document.getElementById('movements-table').innerHTML = movementsHtml || '<tr><td colspan="3">Aucun mouvement détecté</td></tr>';
+
+    // Keywords
+    const keywordsHtml = (opportunities.keywords || []).map(k => `
+        <div class="keyword-card">
+            <div class="category">${k.category}</div>
+            <div class="question">${k.question}</div>
+            <div class="volume">Volume: $${Math.round(k.volume).toLocaleString()}</div>
+        </div>
+    `).join('');
+    document.getElementById('keywords-grid').innerHTML = keywordsHtml || '<p>Aucune alerte</p>';
 }
 
 async function saveSettings() {

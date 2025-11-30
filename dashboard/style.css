@@ -177,3 +177,36 @@ th {
     border-radius: 4px;
     color: var(--accent);
 }
+
+.keywords-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.keyword-card {
+    background: var(--bg-color);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.keyword-card .category {
+    color: var(--accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    margin-bottom: 8px;
+}
+
+.keyword-card .question {
+    color: var(--text-primary);
+    font-size: 0.95em;
+    margin-bottom: 8px;
+}
+
+.keyword-card .volume {
+    color: var(--text-secondary);
+    font-size: 0.85em;
+}
