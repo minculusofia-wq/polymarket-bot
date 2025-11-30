@@ -1,0 +1,432 @@
+{
+  "0xdd572169e741c72227589c5cb56b9ddd638d694d": {
+    "total_volume": 6527.4,
+    "trade_count": 1,
+    "markets": [
+      "0x6903b766f5fda3d5b02f4472a6b4154419e78b7fd126c0b29ce17bb8e20b20cc"
+    ],
+    "first_seen": 1764508266,
+    "last_trade": 1764508266
+  },
+  "0x204f72f35326db932158cba6adff0b9a1da95e14": {
+    "total_volume": 3016.8199999999997,
+    "trade_count": 8,
+    "markets": [
+      "0xbb81761b33bbe83e18b0d443b33befffbfa493c992bfd37008220818d43fa3ae",
+      "0x0e50141162ee38bbb1671e3ef26cc857723c1dd0a0db3b4e6cee8247b8e815f9",
+      "0x32c256a41adadf1b965fbe153773d183b1d0a9c268a111e1a384825a0890a749",
+      "0x75893bb78820df892617272fb070d0b6f775d7a434aa221e3f6938cfd04844b1",
+      "0x15ae51ff21ebf9d4b74b4dfd1047946b59eb36f1a624ea56525088a3dca5c390",
+      "0x64f4e45a82855cf983e244304e9978072c8eb845e1a0d0928bcec6b38c46f5bd"
+    ],
+    "first_seen": 1764508282,
+    "last_trade": 1764508250
+  },
+  "0x90b6d240c4f365583351f6b8975686c19a98a1b0": {
+    "total_volume": 2780.5595,
+    "trade_count": 1,
+    "markets": [
+      "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863"
+    ],
+    "first_seen": 1764508246,
+    "last_trade": 1764508246
+  },
+  "0x241efcb191061c28b49bafc7eaa9b9e260832de2": {
+    "total_volume": 1753.97427,
+    "trade_count": 1,
+    "markets": [
+      "0x6bf8df2767742e890a5de6b769a7f9bc2873baa39c5c1f1dd3fcbced8645c8c2"
+    ],
+    "first_seen": 1764508258,
+    "last_trade": 1764508258
+  },
+  "0xecd55daa7c6900683b804d1d4db935fbfabe43f4": {
+    "total_volume": 1083.433,
+    "trade_count": 7,
+    "markets": [
+      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83"
+    ],
+    "first_seen": 1764508280,
+    "last_trade": 1764508246
+  },
+  "0xda5fff24aa9d889d6366da205029c73093102e9b": {
+    "total_volume": 999.9999990000001,
+    "trade_count": 1,
+    "markets": [
+      "0x0763b625a5afc60f1d1d5496bfd49da7e79364c28cb36c02c6c8ef7b6ed1d2c6"
+    ],
+    "first_seen": 1764508268,
+    "last_trade": 1764508268
+  },
+  "0xb3abff7c20ffb675e176ae3d6239f590cdfbff0c": {
+    "total_volume": 856.259998,
+    "trade_count": 1,
+    "markets": [
+      "0x036d97151d1f50e2741571d26c0fcb2ee5e914e48031e08b779513879c775eee"
+    ],
+    "first_seen": 1764508268,
+    "last_trade": 1764508268
+  },
+  "0x2a59f6c20cb7a720e6a08973152c0efdcb9c9a2f": {
+    "total_volume": 848.5499749999999,
+    "trade_count": 1,
+    "markets": [
+      "0x036d97151d1f50e2741571d26c0fcb2ee5e914e48031e08b779513879c775eee"
+    ],
+    "first_seen": 1764508244,
+    "last_trade": 1764508244
+  },
+  "0x5248313731287b61d714ab9df655442d6ed28aa2": {
+    "total_volume": 618.9574,
+    "trade_count": 13,
+    "markets": [
+      "0xf60263cccb0c23c0e4001bc5446ba607d56647c8abaf3f9e75f13cbf3243d0b2",
+      "0xb8932e2d1a04938192b73e798e63ce270b9113440be218478e426f60b357f9f6",
+      "0x7ed5a25f4b2c4439ad9a4d0e1fd77b73711ab325ac91664c9adccfbe72635266",
+      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83"
+    ],
+    "first_seen": 1764508282,
+    "last_trade": 1764508240
+  },
+  "0x6deff9252ef02e16ee86a2546e60e7c031520b75": {
+    "total_volume": 591.239999,
+    "trade_count": 1,
+    "markets": [
+      "0x478dfc905dd9f44631e7b3a2a76f8aaf5680bc77fd17fe79179664b0ca819a18"
+    ],
+    "first_seen": 1764508240,
+    "last_trade": 1764508240
+  },
+  "0x8f1c2df23c90d7f09408f24960a80208adf45f43": {
+    "total_volume": 568.87056,
+    "trade_count": 4,
+    "markets": [
+      "0xe6ce70fdf20dffd516cb2eb56dbf353f35cd5368ed3946da4bc9270a9fc21c41",
+      "0x5940556674f9947056c1f9157d9414bfb9b49ff75e6f9177ab856c53503476bf",
+      "0x657602898b3846de4d9889837d8277e663528610d4b436881523994ec5e6e9d7",
+      "0x775912e3f158b83a94e176bae94abecfb26fdb73c4d9da08439b08b17e965d50"
+    ],
+    "first_seen": 1764508272,
+    "last_trade": 1764508246
+  },
+  "0xe00740bce98a594e26861838885ab310ec3b548c": {
+    "total_volume": 550.278191,
+    "trade_count": 26,
+    "markets": [
+      "0xce8dafd8967eb78c658aa9a45269a23e84fff33e4ab20e71a0a69682c4f5fb7a",
+      "0xf60263cccb0c23c0e4001bc5446ba607d56647c8abaf3f9e75f13cbf3243d0b2",
+      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83"
+    ],
+    "first_seen": 1764508282,
+    "last_trade": 1764508238
+  },
+  "0xde0463ea7f611b065e8ab06bbfbddad75e6dfa37": {
+    "total_volume": 346.58000000000004,
+    "trade_count": 2,
+    "markets": [
+      "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863"
+    ],
+    "first_seen": 1764508258,
+    "last_trade": 1764508244
+  },
+  "0xaf0d3f82b556fcfa4bb2bf5a4140b261bf37e220": {
+    "total_volume": 332.0,
+    "trade_count": 1,
+    "markets": [
+      "0x32c256a41adadf1b965fbe153773d183b1d0a9c268a111e1a384825a0890a749"
+    ],
+    "first_seen": 1764508252,
+    "last_trade": 1764508252
+  },
+  "0xd781932b6ed32e7aad1311a22c4f15f3e07992a0": {
+    "total_volume": 331.0,
+    "trade_count": 1,
+    "markets": [
+      "0xda3da220757a6978c857f255f7beca8c0299656194e9f30195075547274bf02c"
+    ],
+    "first_seen": 1764508246,
+    "last_trade": 1764508246
+  },
+  "0x2005d16a84ceefa912d4e380cd32e7ff827875ea": {
+    "total_volume": 319.89000000000004,
+    "trade_count": 4,
+    "markets": [
+      "0x3ebce956f2b081159771a7dbbfa538365356d8f4626627246fc56728440d9d3f",
+      "0xe3ff7e48c6ce264f7e6979dfe7e4a1801117141c3c70460517809070e6a8d0cf",
+      "0x1333ef1879246c6e7397aea7b33bd9160ca403e7a631c42e1d1c8ec283ea0083"
+    ],
+    "first_seen": 1764508248,
+    "last_trade": 1764508248
+  },
+  "0xa20b482f97063f4f88ef621c9203e60814399940": {
+    "total_volume": 305.5349999999999,
+    "trade_count": 49,
+    "markets": [
+      "0xf60263cccb0c23c0e4001bc5446ba607d56647c8abaf3f9e75f13cbf3243d0b2",
+      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83"
+    ],
+    "first_seen": 1764508282,
+    "last_trade": 1764508240
+  },
+  "0xd7187f89e57cba437e1fe7bbd457133f9042aa13": {
+    "total_volume": 259.90999899999997,
+    "trade_count": 1,
+    "markets": [
+      "0xab1e298ed90c6b2599130c10451e143bbc73081222f21e3c31bd974f2a395345"
+    ],
+    "first_seen": 1764508244,
+    "last_trade": 1764508244
+  },
+  "0x7cbf350c1a98ae778db134250995cc0e3dc86c43": {
+    "total_volume": 249.99999900000003,
+    "trade_count": 1,
+    "markets": [
+      "0xa472169d91f832d5b2e70d1f350b8c0376d61323dac93decd535d6dbec82851e"
+    ],
+    "first_seen": 1764508276,
+    "last_trade": 1764508276
+  },
+  "0x50dd5385599f51d57163b126d56885c6c357c186": {
+    "total_volume": 244.29999899999996,
+    "trade_count": 1,
+    "markets": [
+      "0x6256d151235ff103a7671b603fec89a64eb90f92ba38ab1a6b0e68e6b7a86651"
+    ],
+    "first_seen": 1764508264,
+    "last_trade": 1764508264
+  },
+  "0x0dd60a6ddeea6f93659789cac7af6a9d12835f62": {
+    "total_volume": 240.0,
+    "trade_count": 1,
+    "markets": [
+      "0x72e786717509bc26c3ca6e57f8d5b33f61bc33a3b5cc46821c3c6aab9c3b69bb"
+    ],
+    "first_seen": 1764508276,
+    "last_trade": 1764508276
+  },
+  "0x6499ba163ae00c1bb6c2ad51f90c3ff69bc905d2": {
+    "total_volume": 238.68,
+    "trade_count": 1,
+    "markets": [
+      "0xe6b7d4d8b4d2ff7dc8c9e5d6dd70b6eece210b8cf9e34fb45f9b9516cc4c76ff"
+    ],
+    "first_seen": 1764508258,
+    "last_trade": 1764508258
+  },
+  "0xb70c708f5d91c8ecd82b63b497240b817cdf41d5": {
+    "total_volume": 235.0,
+    "trade_count": 1,
+    "markets": [
+      "0x0763b625a5afc60f1d1d5496bfd49da7e79364c28cb36c02c6c8ef7b6ed1d2c6"
+    ],
+    "first_seen": 1764508276,
+    "last_trade": 1764508276
+  },
+  "0xec55f9a523f3787a06527c791630ff6184e16870": {
+    "total_volume": 232.8,
+    "trade_count": 2,
+    "markets": [
+      "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863"
+    ],
+    "first_seen": 1764508248,
+    "last_trade": 1764508246
+  },
+  "0x057ac4ddef0b43348b5a4be31955e82df5733bac": {
+    "total_volume": 232.47,
+    "trade_count": 1,
+    "markets": [
+      "0xaa6401f4ae9015b3f1dfd22cce3e3b34b67b637801e0c3710b7f527683be7e19"
+    ],
+    "first_seen": 1764508264,
+    "last_trade": 1764508264
+  },
+  "0xe2a8602a2e4cae31bf4d72b7352d8589ac0b9b29": {
+    "total_volume": 232.0,
+    "trade_count": 1,
+    "markets": [
+      "0xbeefb5fe85847e19986284222ebd2e3d5c04d66338dd04183cb91b4944b546cd"
+    ],
+    "first_seen": 1764508252,
+    "last_trade": 1764508252
+  },
+  "0xa7f20287987919245a91e4a8ddb46d275b5e7027": {
+    "total_volume": 225.03,
+    "trade_count": 1,
+    "markets": [
+      "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863"
+    ],
+    "first_seen": 1764508276,
+    "last_trade": 1764508276
+  },
+  "0xc631d9d610b9939f0b915b1916864e9b806876f6": {
+    "total_volume": 215.25,
+    "trade_count": 4,
+    "markets": [
+      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83"
+    ],
+    "first_seen": 1764508282,
+    "last_trade": 1764508244
+  },
+  "0x6031b6eed1c97e853c6e0f03ad3ce3529351f96d": {
+    "total_volume": 210.84,
+    "trade_count": 44,
+    "markets": [
+      "0xf60263cccb0c23c0e4001bc5446ba607d56647c8abaf3f9e75f13cbf3243d0b2",
+      "0x7ed5a25f4b2c4439ad9a4d0e1fd77b73711ab325ac91664c9adccfbe72635266",
+      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83"
+    ],
+    "first_seen": 1764508282,
+    "last_trade": 1764508242
+  },
+  "0x557bed924a1bb6f62842c5742d1dc789b8d480d4": {
+    "total_volume": 201.48,
+    "trade_count": 1,
+    "markets": [
+      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83"
+    ],
+    "first_seen": 1764508282,
+    "last_trade": 1764508282
+  },
+  "0xc14cda025d9cd05d123aaaeef3b930d7eb9d8da0": {
+    "total_volume": 196.72307999999998,
+    "trade_count": 1,
+    "markets": [
+      "0x657602898b3846de4d9889837d8277e663528610d4b436881523994ec5e6e9d7"
+    ],
+    "first_seen": 1764508260,
+    "last_trade": 1764508260
+  },
+  "0x203f6f1fa096197f735434c7000758964beb521e": {
+    "total_volume": 195.89999999999998,
+    "trade_count": 25,
+    "markets": [
+      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83"
+    ],
+    "first_seen": 1764508282,
+    "last_trade": 1764508240
+  },
+  "0x1ecbb976813f39dfea0f3c264b96a26dd8e0b5e3": {
+    "total_volume": 190.548,
+    "trade_count": 1,
+    "markets": [
+      "0xf226940b079f9257169ba3243f495dc8228443a254b862532d180a85b0a7e472"
+    ],
+    "first_seen": 1764508246,
+    "last_trade": 1764508246
+  },
+  "0xc517b0f37b5b198344f7a7f9244897accedcf390": {
+    "total_volume": 159.99999300000002,
+    "trade_count": 1,
+    "markets": [
+      "0x19cf416030d713d69a514999508dd31df04e4112db5dd2eec4018aa2eb915113"
+    ],
+    "first_seen": 1764508268,
+    "last_trade": 1764508268
+  },
+  "0x397e4f7fae63e68fd7be7f318793f3fc4de43d84": {
+    "total_volume": 159.75,
+    "trade_count": 3,
+    "markets": [
+      "0x39b4458418ef84ffc3ea14c301fe1b92a7901a83ff901b037617237117cad1a4",
+      "0xbc461546e26e47862aef8f7558e7ea6c963cc1a60fcb6c410adbfa115a4068be",
+      "0xf8032ded99d16dba552d6c78a4da3b1df297e642583cd82a0616cadd5ac5642c"
+    ],
+    "first_seen": 1764508246,
+    "last_trade": 1764508246
+  },
+  "0x75fcc12007dab5ef4a14a3eeb60f982e4d47f035": {
+    "total_volume": 151.58825,
+    "trade_count": 1,
+    "markets": [
+      "0x30cfb887558b20373a984da60c372fe5a90c0296aa6d8bb413a8aa7543846da2"
+    ],
+    "first_seen": 1764508240,
+    "last_trade": 1764508240
+  },
+  "0x70a44446a6e8e984495bbbf4716956d40bea8159": {
+    "total_volume": 142.1656,
+    "trade_count": 1,
+    "markets": [
+      "0xaa368b9b8a22b8fd9338f3e46b4ce5f856233ac5ff45e30557384846279acee7"
+    ],
+    "first_seen": 1764508270,
+    "last_trade": 1764508270
+  },
+  "0x3e3552931a67a81db295818415813ce16827384f": {
+    "total_volume": 128.52,
+    "trade_count": 1,
+    "markets": [
+      "0xe6b7d4d8b4d2ff7dc8c9e5d6dd70b6eece210b8cf9e34fb45f9b9516cc4c76ff"
+    ],
+    "first_seen": 1764508246,
+    "last_trade": 1764508246
+  },
+  "0xd44e29936409019f93993de8bd603ef6cb1bb15e": {
+    "total_volume": 127.936,
+    "trade_count": 17,
+    "markets": [
+      "0xb8932e2d1a04938192b73e798e63ce270b9113440be218478e426f60b357f9f6",
+      "0xf60263cccb0c23c0e4001bc5446ba607d56647c8abaf3f9e75f13cbf3243d0b2"
+    ],
+    "first_seen": 1764508282,
+    "last_trade": 1764508242
+  },
+  "0xfac0a7b5514320861c95904a843f12d2000ca75a": {
+    "total_volume": 120.4,
+    "trade_count": 1,
+    "markets": [
+      "0x277db27fa42f6d1dc8ae6528ebe4e6a482dc9c2f5c61aca7c26eaced2fd207b6"
+    ],
+    "first_seen": 1764508238,
+    "last_trade": 1764508238
+  },
+  "0xe60a9b0be459d9849bc2339dac20517639ae6a47": {
+    "total_volume": 118.1745,
+    "trade_count": 3,
+    "markets": [
+      "0xc0faba96f42d2e21f7c6dbb348b8ecc3734372d306efb0d636612cf4da06f2a7",
+      "0x70821b340c1e89b3f9545a920000d242a632d471d1b4ceb3aa582eb048df7865",
+      "0x302bb4d901c8fe550edede68f63e113cc83ae0d910258516080e8c56c79a44ea"
+    ],
+    "first_seen": 1764508268,
+    "last_trade": 1764508244
+  },
+  "0x7b699c06d85f849b16e0fa1feb9448f3d53442cf": {
+    "total_volume": 116.03868000000001,
+    "trade_count": 2,
+    "markets": [
+      "0x9e087c27362adf9075e0350be1870f0ffc933b1f41938a096ae748f9339453eb",
+      "0xc03f42b32e2cb6fd8e793d2f4eadc6fa66059761a72e056b43b8cc5a18281b7d"
+    ],
+    "first_seen": 1764508262,
+    "last_trade": 1764508252
+  },
+  "0xd71304743e49f7254e5d9329c9e4b9ec5b6f7ff5": {
+    "total_volume": 114.109998,
+    "trade_count": 4,
+    "markets": [
+      "0xb8932e2d1a04938192b73e798e63ce270b9113440be218478e426f60b357f9f6",
+      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83"
+    ],
+    "first_seen": 1764508280,
+    "last_trade": 1764508240
+  },
+  "0x18d4d2579d3d9356111815acbc67c2693216a81c": {
+    "total_volume": 105.28000000000002,
+    "trade_count": 1,
+    "markets": [
+      "0x277db27fa42f6d1dc8ae6528ebe4e6a482dc9c2f5c61aca7c26eaced2fd207b6"
+    ],
+    "first_seen": 1764508238,
+    "last_trade": 1764508238
+  },
+  "0x10c36c06aea302e57b5ffdb017af2be629345e7b": {
+    "total_volume": 102.794,
+    "trade_count": 1,
+    "markets": [
+      "0xd28f9dfab98d6b2a8a22d8ff7e8d109678fc8275710be17c96825301efce4a69"
+    ],
+    "first_seen": 1764508264,
+    "last_trade": 1764508264
+  }
+}
