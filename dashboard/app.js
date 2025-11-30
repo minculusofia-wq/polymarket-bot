@@ -56,9 +56,14 @@ function updateDashboard(whales, history, config) {
 
     // Update Settings
     document.getElementById('setting-mode').textContent = config.paper_trading ? 'Paper Trading' : 'Real Trading';
-    document.getElementById('setting-capital').textContent = `$${balance.toFixed(2)}`;
+
+    // Show actual balance if trades exist, otherwise show initial capital (1000)
+    const initialCapital = 1000;
+    const currentBalance = balance > 0 ? balance : initialCapital;
+    document.getElementById('setting-capital').textContent = `$${currentBalance.toFixed(2)}`;
+
     document.getElementById('setting-max-position').textContent = `$${config.max_position_size}`;
-    const percentPerTrade = (config.max_position_size / 1000 * 100).toFixed(1);
+    const percentPerTrade = (config.max_position_size / initialCapital * 100).toFixed(1);
     document.getElementById('setting-percent').textContent = `${percentPerTrade}%`;
     document.getElementById('setting-stop-loss').textContent = `${(config.stop_loss * 100).toFixed(0)}%`;
     document.getElementById('setting-take-profit').textContent = `${(config.take_profit * 100).toFixed(0)}%`;
