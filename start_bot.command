@@ -6,12 +6,18 @@ cd "$DIR"
 
 echo "🚀 Starting Polymarket Bot..."
 
-# Activate Virtual Environment
-if [ -d "venv" ]; then
+# Check for Virtual Environment
+if [ ! -d "venv" ]; then
+    echo "⚠️  Virtual environment not found. Setting it up..."
+    python3 -m venv venv
     source venv/bin/activate
+    
+    echo "📦 Installing dependencies..."
+    pip install -r requirements.txt
+    
+    echo "✅ Setup complete!"
 else
-    echo "❌ Virtual environment not found! Please run 'python3 -m venv venv' and install requirements."
-    exit 1
+    source venv/bin/activate
 fi
 
 # Start API in background
