@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -72,8 +74,49 @@
                     </table>
                 </div>
             </div>
+
+            <!-- Settings Panel -->
+            <div class="section">
+                <h2>⚙️ Trading Settings</h2>
+                <div class="settings-grid">
+                    <div class="setting-item">
+                        <label>Mode</label>
+                        <div class="value" id="setting-mode">Paper Trading</div>
+                    </div>
+                    <div class="setting-item">
+                        <label>Capital (Paper)</label>
+                        <div class="value" id="setting-capital">$1000.00</div>
+                    </div>
+                    <div class="setting-item">
+                        <label>Max Position Size</label>
+                        <div class="value" id="setting-max-position">$10.00</div>
+                    </div>
+                    <div class="setting-item">
+                        <label>% per Trade</label>
+                        <div class="value" id="setting-percent">1%</div>
+                    </div>
+                    <div class="setting-item">
+                        <label>Stop Loss</label>
+                        <div class="value" id="setting-stop-loss">15%</div>
+                    </div>
+                    <div class="setting-item">
+                        <label>Take Profit</label>
+                        <div class="value" id="setting-take-profit">30%</div>
+                    </div>
+                    <div class="setting-item">
+                        <label>Max Open Positions</label>
+                        <div class="value" id="setting-max-positions">5</div>
+                    </div>
+                    <div class="setting-item">
+                        <label>Min Whale Score</label>
+                        <div class="value" id="setting-min-score">60</div>
+                    </div>
+                </div>
+                <p class="settings-note">💡 Pour modifier ces paramètres, éditez le fichier <code>config.py</code></p>
+            </div>
         </div>
     </div>
     <script src="app.js"></script>
 </body>
+
 </html>
