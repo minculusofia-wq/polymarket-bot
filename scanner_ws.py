@@ -94,6 +94,11 @@ async def run_opportunities_scanner():
             save_signals(signals)
             print(f"✅ Found {len(signals)} convergent signals")
             
+            # Auto-Copy Sells Check
+            from scanner import check_whale_exits
+            from scanner_ws import trader # Import the global trader instance
+            check_whale_exits(trader)
+            
         except Exception as e:
             print(f"Error in opportunities scanner: {e}")
         

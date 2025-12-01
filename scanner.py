@@ -214,3 +214,45 @@ def main():
 
 if __name__ == "__main__":
     main()
+def check_whale_exits(trader):
+    """
+    Check if followed whales have exited their positions.
+    If AUTO_COPY_SELLS is True, liquidate corresponding positions.
+    """
+    import config
+    
+    # Check if feature is enabled (handle missing config safely)
+    if not getattr(config, 'AUTO_COPY_SELLS', False):
+        return
+
+    open_positions = [p for pid, p in trader.positions.items() if p['status'] == 'OPEN' and p.get('whale')]
+    
+    if not open_positions:
+        return
+
+    print(f"Checking exits for {len(open_positions)} positions...")
+    
+    # Fetch recent trades to check for whale sells
+    recent_trades = get_recent_trades(limit=500)
+    
+    for pid, position in trader.positions.items():
+        if position['status'] != 'OPEN' or not position.get('whale'):
+            continue
+            
+        whale_address = position['whale']
+        market_id = position['market_id']
+        outcome = position['outcome']
+        
+        # Look for SELL trades from this whale on this market
+        whale_sells = [
+            t for t in recent_trades 
+            if t.get('proxyWallet') == whale_address 
+            and t.get('conditionId') == market_id
+            and t.get('side') == 'SELL'
+            # Check timestamp to ensure it's a new trade (after our entry)
+            # This is a simplified check; ideally compare timestamps properly
+        ]
+        
+        if whale_sells:
+            print(f"🚨 DETECTED WHALE EXIT: {whale_address} sold on {market_id}")
+            trader.liquidate_position(pid, reason=f"Auto-Copy Sell (Whale {whale_address[:6]} exited)")

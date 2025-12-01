@@ -88,3 +88,40 @@ class Trader:
         # In a real scenario, we would fetch current prices here.
         # For paper trading, we can simulate price movement or just print status.
         pass
+
+    def liquidate_position(self, position_id, reason="Manual"):
+        """
+        Liquidate a specific position.
+        """
+        if position_id not in self.positions:
+            print(f"Error: Position {position_id} not found.")
+            return False
+            
+        position = self.positions[position_id]
+        if position['status'] != 'OPEN':
+            print(f"Position {position_id} is already {position['status']}")
+            return False
+            
+        print(f"LIQUIDATING Position {position_id} ({reason})...")
+        
+        # Calculate P&L (Mock for paper trading)
+        # In real trading, fetch current price
+        exit_price = position['entry_price'] * 1.05 # Mock 5% profit
+        
+        if self.paper_trading:
+            proceeds = position['shares'] * exit_price
+            self.balance += proceeds
+            
+            # Update position
+            self.positions[position_id]['status'] = 'CLOSED'
+            self.positions[position_id]['exit_price'] = exit_price
+            self.positions[position_id]['exit_timestamp'] = datetime.now().isoformat()
+            self.positions[position_id]['pnl'] = proceeds - position['amount_invested']
+            self.positions[position_id]['exit_reason'] = reason
+            
+            self.save_history()
+            print(f"Position Liquidated. P&L: ${self.positions[position_id]['pnl']:.2f}. New Balance: ${self.balance:.2f}")
+            return True
+        else:
+            print("REAL TRADING LIQUIDATION NOT YET IMPLEMENTED")
+            return False
