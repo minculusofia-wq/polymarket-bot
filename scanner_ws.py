@@ -87,9 +87,10 @@ async def run_opportunities_scanner():
             find_opportunities()
             
             print("🎯 Analyzing convergent signals...")
+            # Use 0 thresholds to capture ALL signals, allowing frontend to filter
             signals = analyze_convergence(
-                min_whales=config.MIN_WHALES_FOR_SIGNAL,
-                min_sources=config.MIN_SOURCES_FOR_SIGNAL
+                min_whales=0,
+                min_sources=0
             )
             save_signals(signals)
             print(f"✅ Found {len(signals)} convergent signals")
