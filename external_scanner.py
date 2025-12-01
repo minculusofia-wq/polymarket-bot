@@ -116,34 +116,38 @@ class ExternalScanner:
 
     def get_lunarcrush_sentiment(self):
         """Fetch social sentiment for top coins via LunarCrush."""
-        if not config.LUNARCRUSH_API_KEY:
-            return []
-            
-        try:
-            # Fetching data for Bitcoin and Ethereum as a baseline
-            url = f"https://lunarcrush.com/api3/coins/global?key={config.LUNARCRUSH_API_KEY}" 
-            # Note: LunarCrush V3 endpoint might differ, using a generic approach or specific coin endpoint
-            # Let's try listing top coins
-            url = f"https://lunarcrush.com/api3/coins?limit=5&sort=galaxy_score&key={config.LUNARCRUSH_API_KEY}"
-            
-            response = requests.get(url, timeout=10)
-            if response.status_code == 200:
-                data = response.json()
-                items = []
-                for coin in data.get('data', []):
-                    items.append({
-                        "symbol": coin.get('symbol'),
-                        "name": coin.get('name'),
-                        "galaxy_score": coin.get('galaxy_score'),
-                        "sentiment": coin.get('sentiment_relative'), # bullish/bearish
-                        "url": f"https://lunarcrush.com/coins/{coin.get('symbol').lower()}",
-                        "type": "sentiment"
-                    })
-                return items
-            return []
-        except Exception as e:
-            print(f"Error fetching LunarCrush: {e}")
-            return []
+        # NOTE: LunarCrush API v4 requires a paid subscription (Individual or higher)
+        # Returning empty list to avoid 402 errors
+        # If you have a paid subscription, uncomment the code below and add your key
+        
+        return []
+        
+        # Uncomment if you have a paid LunarCrush subscription:
+        # if not config.LUNARCRUSH_API_KEY:
+        #     return []
+        #     
+        # try:
+        #     url = "https://lunarcrush.com/api4/public/coins/list/v1?limit=5&sort=galaxy_score&desc=true"
+        #     headers = {'Authorization': f'Bearer {config.LUNARCRUSH_API_KEY}'}
+        #     response = requests.get(url, headers=headers, timeout=10)
+        #     if response.status_code == 200:
+        #         data = response.json()
+        #         items = []
+        #         for coin in data.get('data', []):
+        #             items.append({
+        #                 "symbol": coin.get('symbol'),
+        #                 "name": coin.get('name'),
+        #                 "galaxy_score": coin.get('galaxy_score', 0),
+        #                 "price": coin.get('price', 0),
+        #                 "volume_24h": coin.get('volume_24h', 0),
+        #                 "url": f"https://lunarcrush.com/coins/{coin.get('symbol', '').lower()}",
+        #                 "type": "sentiment"
+        #             })
+        #         return items
+        #     return []
+        # except Exception as e:
+        #     print(f"Error fetching LunarCrush: {e}")
+        #     return []
 
     def get_youtube_videos(self):
         """Fetch latest crypto videos via SerpAPI."""

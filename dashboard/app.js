@@ -37,7 +37,12 @@ function updateDashboard(whales, history, config, opportunities, whitelist) {
     const whalesHtml = sortedWhales.map((w, i) => `
         <tr>
             <td>#${i + 1}</td>
-            <td>${w.addr.substring(0, 8)}...</td>
+            <td>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <code style="font-size: 0.85em;">${w.addr}</code>
+                    <button onclick="copyAddress('${w.addr}')" style="padding: 4px 8px; font-size: 0.8em; cursor: pointer;">📋</button>
+                </div>
+            </td>
             <td>${w.score || '-'}</td>
             <td>$${Math.round(w.total_volume).toLocaleString()}</td>
             <td>${(w.tags || []).map(t => `<span class="tag">${t}</span>`).join('')}</td>
@@ -277,6 +282,14 @@ async function toggleTradingMode() {
     } catch (error) {
         alert('❌ Erreur: ' + error.message);
     }
+}
+
+function copyAddress(address) {
+    navigator.clipboard.writeText(address).then(() => {
+        alert('✅ Adresse copiée: ' + address);
+    }).catch(err => {
+        alert('❌ Erreur de copie: ' + err);
+    });
 }
 
 // Auto-refresh every 5 seconds
