@@ -38,9 +38,21 @@ Un bot de trading automatisé pour Polymarket qui identifie et suit les "whales"
 ### ✅ Phase 7 : Opportunités & Data
 - **Scanner de Marché** : Détection des tendances et mouvements de prix
 - **News Aggregator** : NewsAPI + CoinStats
-- **Social Sentiment** : Reddit (r/CryptoCurrency) + LunarCrush
+- **Social Sentiment** : Reddit (r/CryptoCurrency)
 - **Événements** : CoinGecko Events
 - **Vidéos** : YouTube Search (SerpAPI)
+
+### ✅ Phase 8 : Configuration Avancée
+- **Whitelist Manuelle** : Ajoutez des wallets spécifiques à copier
+- **Configuration du Wallet** : Entrez votre clé privée depuis le Dashboard
+- **Toggle Paper/Real** : Basculez entre modes directement dans l'interface
+- **Settings Éditables** : Modifiez tous les paramètres en temps réel
+
+### ✅ Phase 9 : Signaux Convergents
+- **Détection Intelligente** : Croise les données whales + opportunités
+- **Seuils Configurables** : Min Whales (1-5) + Min Sources (1-5)
+- **Score de Confiance** : Affiche uniquement les signaux à haute probabilité
+- **Détails Expandables** : Voir les whales et sources pour chaque signal
 
 ## 📊 Résultats
 
@@ -95,9 +107,12 @@ Cela va automatiquement :
 
 ### Dashboard
 Le dashboard offre plusieurs onglets :
-- **Stats & Whales** : Suivi des gros traders
-- **Settings** : Configuration en temps réel (Stop Loss, Capital...)
-- **Opportunités** : News, Sentiment, Événements, Vidéos
+- **Stats & Whales** : Suivi des gros traders avec adresses complètes (bouton copie)
+- **Settings** : Configuration en temps réel (Stop Loss, Capital, Mode Trading...)
+- **Whitelist** : Ajoutez manuellement des wallets à copier
+- **Wallet Config** : Configurez votre clé privée pour le trading réel
+- **Opportunités** : News, Reddit, Événements, Vidéos
+- **🎯 Signaux Convergents** : Détection automatique des opportunités à haute confiance
 
 ## 📁 Structure du Projet
 
@@ -105,6 +120,7 @@ Le dashboard offre plusieurs onglets :
 polymarket-bot/
 ├── scanner_ws.py        # Scanner Temps Réel (WebSocket)
 ├── opportunities.py     # Scanner d'opportunités (News, Social)
+├── convergent_signals.py # Détection de signaux convergents
 ├── external_scanner.py  # Gestion des APIs externes
 ├── trader.py            # Module d'exécution des trades
 ├── whale_analyzer.py    # Module d'analyse et scoring
@@ -115,6 +131,8 @@ polymarket-bot/
 │   ├── style.css
 │   └── app.js
 ├── whales.json          # Base de données des whales
+├── whitelist.json       # Wallets à copier manuellement
+├── convergent_signals.json # Signaux détectés
 └── README.md            # Documentation
 ```
 
