@@ -188,6 +188,27 @@ function updateDashboard(whales, history, config, opportunities, whitelist, sign
     `).join('');
     document.getElementById('whitelist-table').innerHTML = whitelistHtml || '<tr><td colspan="2">Aucun wallet whitelisté</td></tr>';
 
+    // Initialize sliders if not already set (simple check)
+    const minWhalesSlider = document.getElementById('min-whales-slider');
+    const minSourcesSlider = document.getElementById('min-sources-slider');
+
+    // Only update if we haven't touched them yet (using a custom attribute)
+    if (!minWhalesSlider.hasAttribute('data-initialized')) {
+        minWhalesSlider.value = config.min_whale_score || 0; // Using min_whale_score as proxy or default to 0
+        // Ideally we should have min_whales in config response, but for now let's default to 0 or keep user value
+        // Actually, let's just respect what's in the DOM unless we explicitly want to load from config
+        minWhalesSlider.setAttribute('data-initialized', 'true');
+    }
+
+    if (!minSourcesSlider.hasAttribute('data-initialized')) {
+        minSourcesSlider.value = 0; // Default to 0 to show all
+        minSourcesSlider.setAttribute('data-initialized', 'true');
+    }
+
+    // Update slider value displays
+    document.getElementById('min-whales-value').textContent = minWhalesSlider.value;
+    document.getElementById('min-sources-value').textContent = minSourcesSlider.value;
+
     // Store signals globally for filtering
     window.allSignals = signals || [];
     renderFilteredSignals();
@@ -232,10 +253,18 @@ function renderFilteredSignals() {
     const minWhales = parseInt(document.getElementById('min-whales-slider').value);
     const minSources = parseInt(document.getElementById('min-sources-slider').value);
 
+    const allSignals = window.allSignals || [];
+
     // Filter signals based on current slider values
-    const filteredSignals = (window.allSignals || []).filter(s =>
+    const filteredSignals = allSignals.filter(s =>
         s.nb_whales >= minWhales && s.nb_sources >= minSources
     );
+
+    // Update counter
+    const counter = document.getElementById('signals-counter');
+    if (counter) {
+        counter.textContent = `(${filteredSignals.length} / ${allSignals.length})`;
+    }
 
     const signalsHtml = filteredSignals.map((s, idx) => `
         <tr>

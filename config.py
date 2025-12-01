@@ -44,5 +44,5 @@ SERPAPI_KEY = "fee7d2335de3adba052c9afc8fde3de15140305606c43ccf62e302798ae931c5"
 HELIUS_API_KEY = "be5c8bc3-cb64-4141-b691-8ee754b2d3e4"
 
 # Convergent Signals
-MIN_WHALES_FOR_SIGNAL = 0  # 0 = no minimum, shows all signals
-MIN_SOURCES_FOR_SIGNAL = 0  # 0 = no minimum, shows all signals
+MIN_WHALES_FOR_SIGNAL = 2  # 0 = no minimum, shows all signals
+MIN_SOURCES_FOR_SIGNAL = 2  # 0 = no minimum, shows all signals
