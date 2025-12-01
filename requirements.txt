@@ -5,3 +5,5 @@ colorama>=0.4.6
 flask
 flask-cors
 websockets
+newsapi-python
+praw

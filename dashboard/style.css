@@ -210,3 +210,34 @@ th {
     color: var(--text-secondary);
     font-size: 0.85em;
 }
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.news-item {
+    background: var(--bg-color);
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 3px solid var(--accent);
+}
+
+.news-source {
+    font-size: 0.8em;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.news-title a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.news-title a:hover {
+    color: var(--accent);
+}

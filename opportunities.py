@@ -105,14 +105,20 @@ def scan_keywords():
     
     return opportunities
 
+from external_scanner import external_scanner
+
 def find_opportunities():
     """Main function to find all opportunities."""
     print("🔍 Scanning for opportunities...")
+    
+    # Fetch external data
+    external_data = external_scanner.scan_all()
     
     opportunities = {
         "trending": get_trending_markets()[:5],
         "price_movements": detect_price_movements(),
         "keywords": scan_keywords()[:10],
+        "news": external_data.get('news', [])[:5],
         "last_update": datetime.now().isoformat()
     }
     
@@ -122,6 +128,7 @@ def find_opportunities():
     
     print(f"✅ Found {len(opportunities['price_movements'])} price movements")
     print(f"✅ Found {len(opportunities['keywords'])} keyword matches")
+    print(f"✅ Found {len(opportunities['news'])} news articles")
     
     return opportunities
 

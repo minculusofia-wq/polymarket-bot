@@ -97,6 +97,15 @@ function updateDashboard(whales, history, config, opportunities) {
         </div>
     `).join('');
     document.getElementById('keywords-grid').innerHTML = keywordsHtml || '<p>Aucune alerte</p>';
+
+    // News
+    const newsHtml = (opportunities.news || []).map(n => `
+        <div class="news-item">
+            <div class="news-source">${n.source} • ${new Date(n.published_at).toLocaleTimeString()}</div>
+            <div class="news-title"><a href="${n.url}" target="_blank">${n.title}</a></div>
+        </div>
+    `).join('');
+    document.getElementById('news-list').innerHTML = newsHtml || '<p>Aucune actualité récente</p>';
 }
 
 async function saveSettings() {

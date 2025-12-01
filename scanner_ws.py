@@ -43,11 +43,30 @@ async def update_subscriptions(ws_client):
     # Let's verify if we can get active markets from Gamma API directly here.
     pass
 
+from opportunities import find_opportunities
+
+# ... (existing imports)
+
+async def run_opportunities_scanner():
+    """Periodically run the opportunities scanner."""
+    while True:
+        try:
+            print("🔍 Running background opportunities scan...")
+            # Run in executor to avoid blocking the event loop
+            await asyncio.to_thread(find_opportunities)
+        except Exception as e:
+            print(f"Error in opportunities scanner: {e}")
+        
+        await asyncio.sleep(60) # Scan every 60 seconds
+
 async def main():
     print("--- Starting Real-Time Scanner (WebSocket) ---")
     
     # Initialize WS
     ws = PolymarketWS(on_trade_message)
+    
+    # Start background tasks
+    asyncio.create_task(run_opportunities_scanner())
     
     # Start WS loop
     await ws.connect()

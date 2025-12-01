@@ -29,3 +29,9 @@ IGNORE_TAGS = ["Sniper"]  # Snipers might be too fast to copy
 # System
 SCAN_INTERVAL = 60
 LOG_LEVEL = "INFO"
+
+# External Data Sources (Option A)
+NEWS_API_KEY = "2c1f916ed0da45749065edd092d08f80"
+REDDIT_CLIENT_ID = os.getenv("REDDIT_CLIENT_ID")
+REDDIT_CLIENT_SECRET = os.getenv("REDDIT_CLIENT_SECRET")
+REDDIT_USER_AGENT = "polymarket-bot:v1.0 (by /u/yourusername)"
