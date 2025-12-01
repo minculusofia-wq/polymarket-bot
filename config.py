@@ -14,10 +14,11 @@ GAMMA_API_URL = "https://gamma-api.polymarket.com"
 
 # Trading Settings
 PAPER_TRADING = True  # Set to False for real trading
-MAX_POSITION_SIZE_USD = 10.0  # Max amount per trade
+MAX_POSITION_SIZE_USD = 10  # Max amount per trade
 STOP_LOSS_PERCENT = 0.15  # 15% stop loss
-TAKE_PROFIT_PERCENT = 0.30  # 30% take profit
-MAX_OPEN_POSITIONS = 5
+TAKE_PROFIT_PERCENT = 0.3  # 30% take profit
+MAX_OPEN_POSITIONS = 2
+MAX_TRADERS_TO_COPY = 3 # Max number of unique traders to copy (1-5)
 DAILY_LOSS_LIMIT_USD = 50.0
 
 # Whale Selection
@@ -42,5 +43,5 @@ SERPAPI_KEY = "fee7d2335de3adba052c9afc8fde3de15140305606c43ccf62e302798ae931c5"
 HELIUS_API_KEY = "be5c8bc3-cb64-4141-b691-8ee754b2d3e4"
 
 # Convergent Signals
-MIN_WHALES_FOR_SIGNAL = 2
-MIN_SOURCES_FOR_SIGNAL = 1
+MIN_WHALES_FOR_SIGNAL = 0  # 0 = no minimum, shows all signals
+MIN_SOURCES_FOR_SIGNAL = 0  # 0 = no minimum, shows all signals

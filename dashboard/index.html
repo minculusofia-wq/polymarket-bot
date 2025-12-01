@@ -115,7 +115,11 @@
                     </div>
                     <div class="setting-item">
                         <label>Max Open Positions</label>
-                        <input type="number" id="input-max-positions" step="1" min="1" max="20">
+                        <input type="number" id="input-max-positions" value="5" min="1" max="20">
+                    </div>
+                    <div class="setting-item">
+                        <label>Max Traders to Copy</label>
+                        <input type="number" id="input-max-traders" value="3" min="1" max="5">
                     </div>
                     <div class="setting-item">
                         <label>Min Whale Score</label>
@@ -179,12 +183,12 @@
                     <div class="signal-sliders">
                         <div class="slider-group">
                             <label>Min Whales: <span id="min-whales-value">2</span></label>
-                            <input type="range" id="min-whales-slider" min="1" max="5" value="2"
+                            <input type="range" id="min-whales-slider" min="0" max="5" value="2"
                                 oninput="updateSignalConfig()">
                         </div>
                         <div class="slider-group">
                             <label>Min Sources: <span id="min-sources-value">1</span></label>
-                            <input type="range" id="min-sources-slider" min="1" max="5" value="1"
+                            <input type="range" id="min-sources-slider" min="0" max="5" value="1"
                                 oninput="updateSignalConfig()">
                         </div>
                     </div>
@@ -192,7 +196,7 @@
                 </div>
 
                 <!-- Signals Display -->
-                <h3>🔔 Signaux Actifs</h3>
+                <h3 id="signals-header">🔔 Signaux Actifs</h3>
                 <div class="table-container">
                     <table>
                         <thead>
