@@ -77,6 +77,31 @@ def save_config():
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}), 500
 
+@app.route('/api/config/toggle-mode', methods=['POST'])
+def toggle_trading_mode():
+    from flask import request
+    import re
+    
+    data = request.json
+    paper_trading = data.get('paper_trading', True)
+    
+    config_path = 'config.py'
+    
+    try:
+        with open(config_path, 'r') as f:
+            content = f.read()
+        
+        # Update PAPER_TRADING value
+        content = re.sub(r'PAPER_TRADING = (True|False)', f'PAPER_TRADING = {paper_trading}', content)
+        
+        with open(config_path, 'w') as f:
+            f.write(content)
+        
+        mode = "Paper Trading" if paper_trading else "Real Trading"
+        return jsonify({"status": "success", "message": f"Mode changé: {mode}. Redémarrez le bot."})
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
+
 @app.route('/api/opportunities')
 def get_opportunities():
     if os.path.exists('opportunities.json'):

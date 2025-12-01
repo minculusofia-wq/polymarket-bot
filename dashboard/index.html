@@ -77,7 +77,21 @@
 
             <!-- Settings Panel -->
             <div class="section">
-                <h2>⚙️ Trading Settings</h2>
+                <h2>⚙️ Paramètres de Trading</h2>
+
+                <!-- Trading Mode Toggle -->
+                <div class="trading-mode-toggle">
+                    <h3>Mode de Trading</h3>
+                    <div class="toggle-container">
+                        <span id="mode-label">Paper Trading</span>
+                        <button id="toggle-mode-btn" class="toggle-btn" onclick="toggleTradingMode()">
+                            🔄 Passer au Real Trading
+                        </button>
+                    </div>
+                    <p class="settings-note">⚠️ <strong>Attention :</strong> Le Real Trading utilise de vrais fonds.
+                        Assurez-vous d'avoir configuré votre wallet.</p>
+                </div>
+
                 <div class="settings-grid">
                     <div class="setting-item readonly">
                         <label>Mode</label>
@@ -144,7 +158,8 @@
             <div class="section">
                 <h2>🔑 Configuration du Wallet</h2>
                 <p class="settings-note">⚠️ <strong>Sécurité :</strong> Votre clé privée est sauvegardée localement dans
-                    <code>.env</code>. Ne la partagez jamais !</p>
+                    <code>.env</code>. Ne la partagez jamais !
+                </p>
                 <div class="wallet-config">
                     <label for="private-key-input">Clé Privée (0x...)</label>
                     <input type="password" id="private-key-input" placeholder="0x..." class="wallet-input">

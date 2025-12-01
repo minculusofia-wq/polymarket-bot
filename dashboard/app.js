@@ -66,10 +66,27 @@ function updateDashboard(whales, history, config, opportunities, whitelist) {
     document.getElementById('input-stop-loss').value = (config.stop_loss * 100).toFixed(0);
     document.getElementById('input-take-profit').value = (config.take_profit * 100).toFixed(0);
     document.getElementById('input-max-positions').value = config.max_positions;
-    document.getElementById('input-min-score').value = config.min_whale_score;
-    document.getElementById('input-scan-interval').value = config.scan_interval;
+    document.getElementById('min-whale-score').value = config.min_whale_score;
+    document.getElementById('scan-interval').value = config.scan_interval;
 
-    // Update Opportunities
+    // Update trading mode display
+    const isPaperTrading = config.paper_trading;
+    const modeLabel = document.getElementById('mode-label');
+    const toggleBtn = document.getElementById('toggle-mode-btn');
+
+    if (isPaperTrading) {
+        modeLabel.textContent = '📝 Paper Trading';
+        modeLabel.style.color = '#667eea';
+        toggleBtn.textContent = '🔄 Passer au Real Trading';
+        toggleBtn.classList.remove('real-mode');
+    } else {
+        modeLabel.textContent = '💰 Real Trading';
+        modeLabel.style.color = '#f5576c';
+        toggleBtn.textContent = '🔄 Passer au Paper Trading';
+        toggleBtn.classList.add('real-mode');
+    }
+
+    // Top Whales TableOpportunities
     // Trending Markets
     const trendingHtml = (opportunities.trending || []).map(m => `
         <tr>
@@ -217,6 +234,51 @@ async function saveSettings() {
     }
 }
 
-// Refresh every 5 seconds
+async function toggleTradingMode() {
+    // Get current mode from config
+    const response = await fetch('/api/config');
+    const config = await response.json();
+    const currentMode = config.paper_trading;
+    const newMode = !currentMode;
+
+    const modeText = newMode ? "Paper Trading" : "Real Trading";
+
+    if (!newMode) {
+        // Switching to Real Trading - show strong warning
+        const confirmed = confirm(
+            '⚠️ ATTENTION ⚠️\n\n' +
+            'Vous êtes sur le point d\'activer le REAL TRADING.\n\n' +
+            'Cela signifie que le bot utilisera de VRAIS FONDS.\n\n' +
+            'Assurez-vous que:\n' +
+            '1. Votre wallet est configuré\n' +
+            '2. Vous comprenez les risques\n' +
+            '3. Vous avez testé en Paper Trading\n\n' +
+            'Voulez-vous vraiment continuer ?'
+        );
+
+        if (!confirmed) return;
+    }
+
+    try {
+        const res = await fetch('/api/config/toggle-mode', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ paper_trading: newMode })
+        });
+
+        const result = await res.json();
+
+        if (result.status === 'success') {
+            alert(`✅ ${result.message}`);
+            fetchData(); // Refresh to update UI
+        } else {
+            alert('❌ Erreur: ' + result.message);
+        }
+    } catch (error) {
+        alert('❌ Erreur: ' + error.message);
+    }
+}
+
+// Auto-refresh every 5 seconds
 fetchData();
 setInterval(fetchData, 5000);
