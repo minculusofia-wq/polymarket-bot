@@ -84,6 +84,90 @@ def get_opportunities():
             return jsonify(json.load(f))
     return jsonify({"trending": [], "price_movements": [], "keywords": []})
 
+@app.route('/api/whitelist', methods=['GET'])
+def get_whitelist():
+    if os.path.exists('whitelist.json'):
+        with open('whitelist.json', 'r') as f:
+            return jsonify(json.load(f))
+    return jsonify([])
+
+@app.route('/api/whitelist', methods=['POST'])
+def add_whitelist():
+    from flask import request
+    data = request.json
+    address = data.get('address')
+    if not address:
+        return jsonify({"status": "error", "message": "Address required"}), 400
+    
+    whitelist = []
+    if os.path.exists('whitelist.json'):
+        with open('whitelist.json', 'r') as f:
+            whitelist = json.load(f)
+    
+    if address not in whitelist:
+        whitelist.append(address)
+        with open('whitelist.json', 'w') as f:
+            json.dump(whitelist, f)
+            
+    return jsonify({"status": "success", "whitelist": whitelist})
+
+@app.route('/api/whitelist', methods=['DELETE'])
+def remove_whitelist():
+    from flask import request
+    data = request.json
+    address = data.get('address')
+    
+    whitelist = []
+    if os.path.exists('whitelist.json'):
+        with open('whitelist.json', 'r') as f:
+            whitelist = json.load(f)
+            
+    if address in whitelist:
+        whitelist.remove(address)
+        with open('whitelist.json', 'w') as f:
+            json.dump(whitelist, f)
+            
+    return jsonify({"status": "success", "whitelist": whitelist})
+
+@app.route('/api/config/wallet', methods=['POST'])
+def save_wallet():
+    from flask import request
+    import re
+    
+    data = request.json
+    private_key = data.get('private_key', '').strip()
+    
+    if not private_key:
+        return jsonify({"status": "error", "message": "Private key required"}), 400
+    
+    # Basic validation (should start with 0x and be 66 chars)
+    if not private_key.startswith('0x') or len(private_key) != 66:
+        return jsonify({"status": "error", "message": "Invalid private key format"}), 400
+    
+    env_path = '.env'
+    
+    try:
+        # Read or create .env
+        if os.path.exists(env_path):
+            with open(env_path, 'r') as f:
+                content = f.read()
+        else:
+            content = ""
+        
+        # Update or add PRIVATE_KEY
+        if 'PRIVATE_KEY=' in content:
+            content = re.sub(r'PRIVATE_KEY=.*', f'PRIVATE_KEY={private_key}', content)
+        else:
+            content += f'\nPRIVATE_KEY={private_key}\n'
+        
+        # Write back
+        with open(env_path, 'w') as f:
+            f.write(content)
+        
+        return jsonify({"status": "success", "message": "Wallet configured. Restart bot to apply."})
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
+
 if __name__ == '__main__':
     print("Starting Dashboard API on http://localhost:5000")
     app.run(debug=True, port=5000)

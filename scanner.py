@@ -130,6 +130,16 @@ WHALES_FILE = "whales.json"
 MIN_VOLUME_THRESHOLD = 100
 SCAN_INTERVAL = config.SCAN_INTERVAL
 
+def load_whitelist():
+    """Load whitelist from JSON file."""
+    if os.path.exists("whitelist.json"):
+        try:
+            with open("whitelist.json", 'r') as f:
+                return set(json.load(f))
+        except:
+            return set()
+    return set()
+
 def main():
     print("--- Starting Polymarket Bot (Scanner + Trader) ---")
     analyzer = WhaleAnalyzer()
@@ -140,6 +150,7 @@ def main():
     while True:
         try:
             print(f"\n[{datetime.now().strftime('%H:%M:%S')}] Scanning market...")
+            whitelist = load_whitelist()
             
             # 1. Get Recent Trades
             trades = get_recent_trades(limit=1000)
@@ -169,10 +180,15 @@ def main():
                     if not address:
                         continue
                         
-                    # Check if address is a high-ranking whale
+                    # Check if address is a high-ranking whale OR whitelisted
                     whale_data = ranked_whales.get(address)
-                    if whale_data and whale_data.get('score', 0) >= config.MIN_WHALE_SCORE:
-                        # Found a trade from a top whale!
+                    is_whitelisted = address in whitelist
+                    
+                    if is_whitelisted or (whale_data and whale_data.get('score', 0) >= config.MIN_WHALE_SCORE):
+                        # Found a trade from a top whale or whitelisted wallet!
+                        if is_whitelisted:
+                            print(f"!!! WHITELISTED TRADER DETECTED: {address[:8]}...")
+                        
                         market_id = trade.get('conditionId')
                         outcome = trade.get('outcome')
                         size = float(trade.get('size', 0))

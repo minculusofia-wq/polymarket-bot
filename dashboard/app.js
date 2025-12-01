@@ -1,24 +1,26 @@
 async function fetchData() {
     try {
-        const [whalesRes, historyRes, configRes, oppsRes] = await Promise.all([
+        const [whalesRes, historyRes, configRes, oppsRes, whitelistRes] = await Promise.all([
             fetch('/api/whales'),
             fetch('/api/history'),
             fetch('/api/config'),
-            fetch('/api/opportunities')
+            fetch('/api/opportunities'),
+            fetch('/api/whitelist')
         ]);
 
         const whales = await whalesRes.json();
         const history = await historyRes.json();
         const config = await configRes.json();
         const opportunities = await oppsRes.json();
+        const whitelist = await whitelistRes.json();
 
-        updateDashboard(whales, history, config, opportunities);
+        updateDashboard(whales, history, config, opportunities, whitelist);
     } catch (error) {
         console.error('Error fetching data:', error);
     }
 }
 
-function updateDashboard(whales, history, config, opportunities) {
+function updateDashboard(whales, history, config, opportunities, whitelist) {
     // Update Stats
     const whaleList = Object.entries(whales).map(([addr, data]) => ({ addr, ...data }));
     document.getElementById('total-whales').textContent = whaleList.length;
@@ -106,6 +108,86 @@ function updateDashboard(whales, history, config, opportunities) {
         </div>
     `).join('');
     document.getElementById('news-list').innerHTML = newsHtml || '<p>Aucune actualité récente</p>';
+
+    // Reddit
+    const redditHtml = (opportunities.reddit || []).map(r => `
+        <div class="news-item" style="border-left-color: #FF4500;">
+            <div class="news-source">${r.source} • ${r.score} ⬆️ • ${r.comments} 💬</div>
+            <div class="news-title"><a href="${r.url}" target="_blank">${r.title}</a></div>
+        </div>
+    `).join('');
+    document.getElementById('reddit-list').innerHTML = redditHtml || '<p>Aucune discussion récente</p>';
+
+    // Events
+    const eventsHtml = (opportunities.events || []).map(e => `
+        <div class="news-item" style="border-left-color: #8DC351;">
+            <div class="news-source">📅 ${e.date}</div>
+            <div class="news-title"><a href="${e.url}" target="_blank">${e.title}</a></div>
+            <div class="news-source">${e.description.substring(0, 100)}...</div>
+        </div>
+    `).join('');
+    document.getElementById('events-list').innerHTML = eventsHtml || '<p>Aucun événement à venir</p>';
+
+    // Sentiment
+    const sentimentHtml = (opportunities.sentiment || []).map(s => `
+        <div class="keyword-card">
+            <div class="category">${s.symbol}</div>
+            <div class="question">${s.name}</div>
+            <div class="volume">Galaxy Score: ${s.galaxy_score} 🚀</div>
+        </div>
+    `).join('');
+    document.getElementById('sentiment-grid').innerHTML = sentimentHtml || '<p>Aucune donnée sentiment</p>';
+
+    // Videos
+    const videosHtml = (opportunities.videos || []).map(v => `
+        <div class="news-item" style="border-left-color: #FF0000;">
+            <div class="news-source">🎥 ${v.channel} • ${v.published}</div>
+            <div class="news-title"><a href="${v.link}" target="_blank">${v.title}</a></div>
+        </div>
+    `).join('');
+    document.getElementById('videos-list').innerHTML = videosHtml || '<p>Aucune vidéo récente</p>';
+
+    // Whitelist
+    const whitelistHtml = (whitelist || []).map(addr => `
+        <tr>
+            <td>${addr}</td>
+            <td><button class="delete-btn" onclick="removeFromWhitelist('${addr}')">🗑️ Supprimer</button></td>
+        </tr>
+    `).join('');
+    document.getElementById('whitelist-table').innerHTML = whitelistHtml || '<tr><td colspan="2">Aucun wallet whitelisté</td></tr>';
+}
+
+async function addToWhitelist() {
+    const input = document.getElementById('whitelist-input');
+    const address = input.value.trim();
+    if (!address) return;
+
+    try {
+        await fetch('/api/whitelist', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ address })
+        });
+        input.value = '';
+        fetchData(); // Refresh
+    } catch (error) {
+        alert('Erreur: ' + error.message);
+    }
+}
+
+async function removeFromWhitelist(address) {
+    if (!confirm(`Supprimer ${address} de la whitelist ?`)) return;
+
+    try {
+        await fetch('/api/whitelist', {
+            method: 'DELETE',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ address })
+        });
+        fetchData(); // Refresh
+    } catch (error) {
+        alert('Erreur: ' + error.message);
+    }
 }
 
 async function saveSettings() {

@@ -1,56 +1,98 @@
 {
   "0xe8dd7741ccb12350957ec71e9ee332e0d1e6ec86": {
-    "total_volume": 1022.4216769999995,
-    "trade_count": 52,
+    "total_volume": 3526.529633,
+    "trade_count": 11,
     "markets": [
-      "0x0a417e314c60d4221af45fad3ca308ebc060532d8f057da93743163388d20c10",
+      "0x2ca58175aa8080357d9706c535bb0be218ce7bb156dc48753e0d8b8ee6b56635",
+      "0x5de0a215761ef66927625cbb224c5dd296e74c9b93cd698e0e4b78be0ad8f996",
+      "0x58f4542341fcc66a2197877b7487ebe901b689ec42bcdbb0a070f5536d91459e",
+      "0xd0e252627d064bfeea2907d9d6e7305edcf0a19c6c359a12ead615f338b45cd1",
       "0xa6a324f5aed32ad2b72b68d276ed4c25a6ca628caf70b602bb2dc2f5e4b4be92",
       "0x42300049e0d90f49cb2e7504dae57a636750f668d6c2c713004b586327ce8abb",
-      "0x8c5699dd31e0782b3bff9d3aaf4a0f4077a1449cfa8d2e821c6e881e033c4afb",
-      "0xcbb6f3d8c0443114ce3c151a1dbcc5b73d34444b0be0e44c42272a1653c3f1f8",
-      "0x2ca58175aa8080357d9706c535bb0be218ce7bb156dc48753e0d8b8ee6b56635",
-      "0x300603cf45c00af47424fffe1a012708d7c8d5f9830c0365c3bbc2f5924cc67d",
-      "0xfdc5e6ae42b83659ba19f06ec0051c001ad5f9679f4b0b4e4dbaac5c6e82f4e9",
-      "0x069fef06f8b32dee6a22fab6189249dc83582f22cb737a85225b114770d7da05",
-      "0x683b0254bde8d1ef08206953015629f25b9869d9770807baab939f6aaba4ae5c",
+      "0xc4eda410d208ab9a754c912a5065c75562e8771f9c3464f03c4a8a23b8b648c4",
+      "0x29eafc104d7824c838e194766074f50b352f866abd9bc2fe536b1cdf93e3663f",
+      "0xcb197645828f81de6b437425cf3eb26ab365d3480260af661239b405ca7bf1e4",
       "0x3d7df1bd2cb3e1dbdfa20f368fbdbe3ed55d091174a633fd0bc21b5e3d3732b9",
-      "0x3318eb8ca655b3e9be7d3c44b0a0f0533c2c806f33111d8c85c4f5ac73a5d4bf",
-      "0x2a9458b5d5b7e639ce2ab0c60dfaa986d1a8c3a99174ec41ad9ee762c08494d4",
       "0x536ee0e8926c58f8b14f08ff6769dcf01ecb64716e598c12d1d1335af287a198",
-      "0x7e2484f2f94720b76d9380f26a35a64a2fe0e638467d4840c2a6ac7d879149e5",
-      "0x5e67d2599f32e6cd86a760bf28796da2e796377e5d711b739a1686b0d17dc31c",
-      "0xdb4541feb3b6226ff37f506f7786407e4190e43c51937cc857e01294f5e48dd2",
-      "0x65a2dd0af5f4155915a701e8fdbcdb2f547fb5925d0bcef0b373a8c39a16613e",
-      "0x3bdd5a6ad40137100671169c1a5602992da863643a6c300bd3b76771d55b70f4",
+      "0xb01a93d49c25a78bc5535dfda094981ae990915b16d2feafc55324bd2166d0f4",
+      "0x79a49296f365026a28b0a529d1498b5eb734a5b5b68d3ac0d10fe7193426529d",
+      "0xcb111226a8271fed0c71bb5ec1bd67b2a4fd72f1eb08466e2180b9efa99d3f32",
+      "0x5ad87e437d4d62c0ce0abb815ad1e444e8c091a4d13f306afe0af32433b59354",
+      "0x71a31a20fa10e2593c23f098bb0ff7d22eb1cb4eea148bf13e342914a4106438",
+      "0x463d4ef6af4de4d685c352c927c70914ab74660635206f25ac8f322e5c70aba0",
       "0x3d73153a20c3bbf05c703153aab4c1ca3afdc36abad76943c32861b72013d513",
+      "0x57f11cfb19b9d1ade8f9c602985309f7a13fe2a1dd1d544d9ae75a86eaae1ec1",
+      "0x641ed0af5212b666473e7ad637025ed93ecf80fbbe9b895cd869f1df177cd93a",
+      "0x4f7d83388f21541ec765e3eda3a9b8d2b5a3b20f0d7531fc4aa46089fb1bd588",
+      "0x65a2dd0af5f4155915a701e8fdbcdb2f547fb5925d0bcef0b373a8c39a16613e",
+      "0x069fef06f8b32dee6a22fab6189249dc83582f22cb737a85225b114770d7da05",
       "0xede5bd35327ea3d3c4ec164df7dd85de41a6c7de5419457281b6ad2d98d15086",
       "0x7cab9da787443beec1eb5e399afd46fffdc27b5f00e0293a1d6a9996c948ac52",
-      "0x819503ca15508ed1ecee519edba1666e8d789ac989590fbb03eda3abaff43e06",
-      "0x29eafc104d7824c838e194766074f50b352f866abd9bc2fe536b1cdf93e3663f",
-      "0xefe3a05506e08fefb8c1998aa607fcce31e32a6852ef60bee4c71d0935c97950",
-      "0xc3d9deeb6a32be1d084651a5d55aba34bc54bc18fabf2af8bc94b30849d70033",
-      "0xad9cf9a89f41009718b3858c47ea30c88491dbf9f043b8fcd704c4ba65be8edf",
-      "0x1b681ccb2987c2cd36e86d8182de50043106ba91cf9692506eea9f340d12293f",
-      "0x0856ff922ee902e07ac1401def92503d797cfa4160942a26ffb9065f1d596d26",
-      "0xb94c8b77d1e8b93edbdc0fe60f127b96f634aa9c0d9ca1c38cbb82d5dd7bc0b1",
-      "0x909bcd8ae00d0cd47b561a40d655ae4b71f24df00e7d82b18874698046f61f0e",
-      "0xa4ff70673e8d6f76261400c0ffd9d7970bf6d8aec5f8f44b20434e59e3e3141e",
+      "0xcbb6f3d8c0443114ce3c151a1dbcc5b73d34444b0be0e44c42272a1653c3f1f8",
       "0x10bcde172545dce79b25b75cf2e9b7b65d673b872dd9727bc320cbeb408a5ffd",
+      "0xaaadd8ffac53d22b6a6856fc0e84f1ccf6a8622acc7948922bdfe4a680a05213",
+      "0xb94c8b77d1e8b93edbdc0fe60f127b96f634aa9c0d9ca1c38cbb82d5dd7bc0b1",
+      "0x819503ca15508ed1ecee519edba1666e8d789ac989590fbb03eda3abaff43e06",
+      "0xefe3a05506e08fefb8c1998aa607fcce31e32a6852ef60bee4c71d0935c97950",
+      "0x2a9458b5d5b7e639ce2ab0c60dfaa986d1a8c3a99174ec41ad9ee762c08494d4",
+      "0x7e2484f2f94720b76d9380f26a35a64a2fe0e638467d4840c2a6ac7d879149e5",
+      "0xe2e9dd667f9aad31371e7fc9f9e7fe3c1c6e047df506392abff5e205473b7bfb",
+      "0xf20d121b7b82c5c4781d1172fdfad49146e5a355e8a6d61a73d16c6d2f171343",
+      "0x98d9142164ad6512a4c70eb17abc9f4d6d20f1c5afdab302805048ac75364a42",
+      "0xa65d1e4b20af24fdd589f4dfd1f7ded36c70c3e238b037b7dee639d9160e4ecd",
+      "0xb42a91aa788c3f87e3fe0dbff7a8de9bfb9c0433eb0117cc418fd4bafe4a0f9f",
+      "0x1225703d9cb56d1aea95aa69851c7e3f815535e1759481ab10c9321b936e260e",
+      "0x5974071cfbede55c04c1e44963c872de571a9286904c8edb1ded240e597a8011",
+      "0x58fe0f75d4526eebdf35b57041b7ef286628d47917c173cea657d71a4dcba5f8",
+      "0xc3d9deeb6a32be1d084651a5d55aba34bc54bc18fabf2af8bc94b30849d70033",
+      "0x31dd6b4b315f006f1653e0056376b64dad9734499d8a751a0c95eb3cf7c7067c",
+      "0x6ffa34c31aec7d26402fb622bc55bcf8c443ec0e699599f6625e90af2eed8515",
+      "0xa4ff70673e8d6f76261400c0ffd9d7970bf6d8aec5f8f44b20434e59e3e3141e",
+      "0xa62e1c2e7a2b9b61529d6337bd0893850d8a7c42a37f5ad4a2f3e8c0d5ffd130",
+      "0x02d1bfde2a6101638eb6638c3b425b5fa12fde93f8ba13d29ba004e3b81eb481",
       "0xfb1835b887c33862f5749c619e612d1244ab6e66115f0ef43d373485dc3a1573",
+      "0x5e67d2599f32e6cd86a760bf28796da2e796377e5d711b739a1686b0d17dc31c",
+      "0xb882ef03508361d431fe6b1a12a93a471d821f02e77b20310f7d25b9d3934d3e",
+      "0xaeb190c9a31c5e7f8ac193393ab05e55a9de86f0a945aac59feac0576aa86fc8",
+      "0x1b681ccb2987c2cd36e86d8182de50043106ba91cf9692506eea9f340d12293f",
+      "0x88dc264f29d0521cc79bc62757aa1b675f80a573e00d7392de5a4c60a6708883",
+      "0xf831ea34f7a6cd4bc96cb43dc53f087b15c25f515d00c9251f9c546eaba4840b",
+      "0xdb4541feb3b6226ff37f506f7786407e4190e43c51937cc857e01294f5e48dd2",
+      "0x227d18ca6dbec0b5b3d88ac86a6ec3a4c525e641af2e0c988c596eab1a2ba511",
+      "0x6e44fd9968a3b726064369149c4277b7c4e540e432847c42149a6eb33af991be",
+      "0x6903b766f5fda3d5b02f4472a6b4154419e78b7fd126c0b29ce17bb8e20b20cc",
+      "0x540d91ca753fdf47cb9509d91d741fa41d2e16555bf1668a59be6573c10c5972",
       "0x71b8d91bf97c72da36b0383410c70600a6282928a0c9694f047f9a41d73e73a2",
-      "0x5974071cfbede55c04c1e44963c872de571a9286904c8edb1ded240e597a8011"
+      "0x683b0254bde8d1ef08206953015629f25b9869d9770807baab939f6aaba4ae5c",
+      "0x3bdd5a6ad40137100671169c1a5602992da863643a6c300bd3b76771d55b70f4",
+      "0x3318eb8ca655b3e9be7d3c44b0a0f0533c2c806f33111d8c85c4f5ac73a5d4bf",
+      "0x0cf7a43ab4312f81ee525e9e056167be06ff8ac0ded02c7fc112e98d2aa1cb25",
+      "0x909bcd8ae00d0cd47b561a40d655ae4b71f24df00e7d82b18874698046f61f0e",
+      "0xfdc5e6ae42b83659ba19f06ec0051c001ad5f9679f4b0b4e4dbaac5c6e82f4e9",
+      "0x3eef9b52e8420f31bfa9db79a39ef889d85c7aa216aae5299d73dae58d33ef79",
+      "0x0856ff922ee902e07ac1401def92503d797cfa4160942a26ffb9065f1d596d26",
+      "0x86581b6228e0c8d6b4e48866463f91e07022825138c745bcad987e3306fb3112",
+      "0xfcd2fb666c5a346faee448e63267346a3ec394a52bce4c199877559da91cd2c1",
+      "0x4c3aec5b9692f0516c91640cf77f40c41f4c1bdc28217533685d154b69c46b2c",
+      "0x38043501453ad221c9a03e9b220f7da7f70b0a719ddc52ffccca05b17499f2d5",
+      "0x6d1a14923f799140209393badb6b180a7af11c3fcc160195d8e311b90e15d7d9",
+      "0x5463d527341b3c0992fbcfcc3b95cc8c0f0b1d8ad269165e7c32506968293ea5",
+      "0xad9cf9a89f41009718b3858c47ea30c88491dbf9f043b8fcd704c4ba65be8edf",
+      "0x300603cf45c00af47424fffe1a012708d7c8d5f9830c0365c3bbc2f5924cc67d",
+      "0xb8dd95abf4e54a9c86b51afa71291aafdbf46e74d36632aaef6519af6ef2448d",
+      "0x0a417e314c60d4221af45fad3ca308ebc060532d8f057da93743163388d20c10",
+      "0x8c5699dd31e0782b3bff9d3aaf4a0f4077a1449cfa8d2e821c6e881e033c4afb"
     ],
     "first_seen": 1764523418,
-    "last_trade": 1764523404,
-    "score": 60.58,
+    "last_trade": 1764576390,
+    "score": 52.74,
     "metrics": {
-      "volume_score": 49.96,
-      "activity_score": 52,
+      "volume_score": 58.89,
+      "activity_score": 11,
       "diversity_score": 100
     },
     "tags": [
       "Dolphin",
-      "High Frequency",
       "Diversified"
     ]
   },
@@ -92,29 +134,34 @@
     ]
   },
   "0x5248313731287b61d714ab9df655442d6ed28aa2": {
-    "total_volume": 1718.033798,
-    "trade_count": 41,
+    "total_volume": 1368.7242990000004,
+    "trade_count": 36,
     "markets": [
-      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83",
-      "0xd7e32c1c6555619a795814ddcecdfca4f27112efa84da8d02a6e133576d6f308",
-      "0xb8932e2d1a04938192b73e798e63ce270b9113440be218478e426f60b357f9f6",
-      "0x60114781c7c5d7f13f442ac35f9366bbcaced9d5b3e8677f3c364551da54c4c1",
+      "0x1d4ef769bfcb5d8e96748075e0d48db83c678ee38f6a9ac06ed570ba0a8b0e48",
+      "0xbd2fcaec98f05f5828d51370061b362100021513b89d20fec1c543d94f07ed72",
+      "0x7bb4ba7ea157ced2088b9d5e934d29a21433bf9e309dd304645dc1162973e5f6",
       "0x014fabd7aa61e0fd3bef6c88af92c08f76ba35ad762a1f1f127d6fc8936b0954",
-      "0xf60263cccb0c23c0e4001bc5446ba607d56647c8abaf3f9e75f13cbf3243d0b2",
+      "0xb8932e2d1a04938192b73e798e63ce270b9113440be218478e426f60b357f9f6",
+      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83",
       "0x7ed5a25f4b2c4439ad9a4d0e1fd77b73711ab325ac91664c9adccfbe72635266",
+      "0x60114781c7c5d7f13f442ac35f9366bbcaced9d5b3e8677f3c364551da54c4c1",
       "0x388396d6ab7503f405b98601580b19b8ebe60f296af45e7ed422ae9da3fba95a",
-      "0xbd2fcaec98f05f5828d51370061b362100021513b89d20fec1c543d94f07ed72"
+      "0x4bf5715e377755493929899462f24d4e627bec041bff545342a3ef8ebcf5110b",
+      "0x64b1fca5972e54e12a73387ba7d8d4f0214b8a5a1b96d1979c19c761e1b6b25b",
+      "0xf60263cccb0c23c0e4001bc5446ba607d56647c8abaf3f9e75f13cbf3243d0b2",
+      "0xd7e32c1c6555619a795814ddcecdfca4f27112efa84da8d02a6e133576d6f308"
     ],
     "first_seen": 1764508282,
-    "last_trade": 1764523566,
-    "score": 48.15,
+    "last_trade": 1764576388,
+    "score": 49.83,
     "metrics": {
-      "volume_score": 53.7,
-      "activity_score": 41,
-      "diversity_score": 45
+      "volume_score": 52.06,
+      "activity_score": 36,
+      "diversity_score": 65
     },
     "tags": [
-      "Dolphin"
+      "Dolphin",
+      "Diversified"
     ]
   },
   "0x204f72f35326db932158cba6adff0b9a1da95e14": {
@@ -193,23 +240,68 @@
       "Sniper"
     ]
   },
-  "0xa20b482f97063f4f88ef621c9203e60814399940": {
-    "total_volume": 305.5349999999999,
-    "trade_count": 49,
+  "0xe00740bce98a594e26861838885ab310ec3b548c": {
+    "total_volume": 443.81779700000004,
+    "trade_count": 30,
     "markets": [
+      "0xce8dafd8967eb78c658aa9a45269a23e84fff33e4ab20e71a0a69682c4f5fb7a",
+      "0x7bb4ba7ea157ced2088b9d5e934d29a21433bf9e309dd304645dc1162973e5f6",
+      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83",
+      "0x388396d6ab7503f405b98601580b19b8ebe60f296af45e7ed422ae9da3fba95a",
+      "0x60114781c7c5d7f13f442ac35f9366bbcaced9d5b3e8677f3c364551da54c4c1",
+      "0x4bf5715e377755493929899462f24d4e627bec041bff545342a3ef8ebcf5110b",
+      "0x64b1fca5972e54e12a73387ba7d8d4f0214b8a5a1b96d1979c19c761e1b6b25b",
       "0xf60263cccb0c23c0e4001bc5446ba607d56647c8abaf3f9e75f13cbf3243d0b2",
-      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83"
+      "0xd7e32c1c6555619a795814ddcecdfca4f27112efa84da8d02a6e133576d6f308"
     ],
     "first_seen": 1764508282,
-    "last_trade": 1764508240,
-    "score": 37.33,
+    "last_trade": 1764576388,
+    "score": 39.97,
     "metrics": {
-      "volume_score": 41.25,
-      "activity_score": 49,
-      "diversity_score": 10
+      "volume_score": 43.94,
+      "activity_score": 30,
+      "diversity_score": 45
     },
     "tags": [
       "Dolphin"
+    ]
+  },
+  "0x3de2e890c758a13eb23afa4faee3bd49e68c0c64": {
+    "total_volume": 19804.58645,
+    "trade_count": 2,
+    "markets": [
+      "0xcb1531b00e984865530f13e4ce35bcbc7d71615af98827b5e9aee2ca2984b626",
+      "0x591f785022238c7ea2563553d93c024e451a18ea74d9bbd79a6126c0267c588a"
+    ],
+    "first_seen": 1764576352,
+    "last_trade": 1764576314,
+    "score": 38.26,
+    "metrics": {
+      "volume_score": 71.33,
+      "activity_score": 2,
+      "diversity_score": 10
+    },
+    "tags": [
+      "Whale"
+    ]
+  },
+  "0x7744bfd749a70020d16a1fcbac1d064761c9999e": {
+    "total_volume": 23480.0,
+    "trade_count": 1,
+    "markets": [
+      "0xaeb190c9a31c5e7f8ac193393ab05e55a9de86f0a945aac59feac0576aa86fc8"
+    ],
+    "first_seen": 1764576318,
+    "last_trade": 1764576318,
+    "score": 37.58,
+    "metrics": {
+      "volume_score": 72.55,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Whale",
+      "Sniper"
     ]
   },
   "0xead152b855effa6b5b5837f53b24c0756830c76a": {
@@ -235,6 +327,25 @@
       "Dolphin"
     ]
   },
+  "0xbe25d7f78793d4f308745b75db5d6ab503301a77": {
+    "total_volume": 16020.0,
+    "trade_count": 1,
+    "markets": [
+      "0x58f4542341fcc66a2197877b7487ebe901b689ec42bcdbb0a070f5536d91459e"
+    ],
+    "first_seen": 1764576358,
+    "last_trade": 1764576358,
+    "score": 36.2,
+    "metrics": {
+      "volume_score": 69.8,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Whale",
+      "Sniper"
+    ]
+  },
   "0x6a72f61820b26b1fe4d956e17b6dc2a1ea3033ee": {
     "total_volume": 14452.763,
     "trade_count": 1,
@@ -252,26 +363,6 @@
     "tags": [
       "Whale",
       "Sniper"
-    ]
-  },
-  "0x6031b6eed1c97e853c6e0f03ad3ce3529351f96d": {
-    "total_volume": 210.84,
-    "trade_count": 44,
-    "markets": [
-      "0xf60263cccb0c23c0e4001bc5446ba607d56647c8abaf3f9e75f13cbf3243d0b2",
-      "0x7ed5a25f4b2c4439ad9a4d0e1fd77b73711ab325ac91664c9adccfbe72635266",
-      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83"
-    ],
-    "first_seen": 1764508282,
-    "last_trade": 1764508242,
-    "score": 35.49,
-    "metrics": {
-      "volume_score": 38.58,
-      "activity_score": 44,
-      "diversity_score": 15
-    },
-    "tags": [
-      "Dolphin"
     ]
   },
   "0xd5ccdf772f795547e299de57f47966e24de8dea4": {
@@ -332,29 +423,6 @@
       "Sniper"
     ]
   },
-  "0xe00740bce98a594e26861838885ab310ec3b548c": {
-    "total_volume": 369.6213969999999,
-    "trade_count": 24,
-    "markets": [
-      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83",
-      "0xce8dafd8967eb78c658aa9a45269a23e84fff33e4ab20e71a0a69682c4f5fb7a",
-      "0xd7e32c1c6555619a795814ddcecdfca4f27112efa84da8d02a6e133576d6f308",
-      "0x388396d6ab7503f405b98601580b19b8ebe60f296af45e7ed422ae9da3fba95a",
-      "0x60114781c7c5d7f13f442ac35f9366bbcaced9d5b3e8677f3c364551da54c4c1",
-      "0xf60263cccb0c23c0e4001bc5446ba607d56647c8abaf3f9e75f13cbf3243d0b2"
-    ],
-    "first_seen": 1764508282,
-    "last_trade": 1764523564,
-    "score": 34.51,
-    "metrics": {
-      "volume_score": 42.62,
-      "activity_score": 24,
-      "diversity_score": 30
-    },
-    "tags": [
-      "Dolphin"
-    ]
-  },
   "0xe74a4446efd66a4de690962938f550d8921a40ee": {
     "total_volume": 9990.0,
     "trade_count": 1,
@@ -372,6 +440,27 @@
     "tags": [
       "Dolphin",
       "Sniper"
+    ]
+  },
+  "0xe60a9b0be459d9849bc2339dac20517639ae6a47": {
+    "total_volume": 2663.8,
+    "trade_count": 3,
+    "markets": [
+      "0x302bb4d901c8fe550edede68f63e113cc83ae0d910258516080e8c56c79a44ea",
+      "0x70821b340c1e89b3f9545a920000d242a632d471d1b4ceb3aa582eb048df7865",
+      "0xc0faba96f42d2e21f7c6dbb348b8ecc3734372d306efb0d636612cf4da06f2a7",
+      "0x8d5ec7deb35689142a556ef4bad22c3347bc4cd0da1a2839c7bc616d4de2f842"
+    ],
+    "first_seen": 1764508268,
+    "last_trade": 1764576386,
+    "score": 33.33,
+    "metrics": {
+      "volume_score": 56.86,
+      "activity_score": 3,
+      "diversity_score": 20
+    },
+    "tags": [
+      "Dolphin"
     ]
   },
   "0x14ac84b66a27fc30e56ed620ebfa61cd8105cb21": {
@@ -450,6 +539,106 @@
       "Dolphin"
     ]
   },
+  "0xbef32751da69df58c9b325ca3bc43ba6473e04d7": {
+    "total_volume": 3897.209866,
+    "trade_count": 1,
+    "markets": [
+      "0xc95426fe92d0439a02bda38d4d84c4e645a7e163747c785d12d42692f73c1a75",
+      "0xb494383beb8e77443d24b504e0b19e9ec252407074222fab67fa802448a92bb6"
+    ],
+    "first_seen": 1764576380,
+    "last_trade": 1764576430,
+    "score": 32.1,
+    "metrics": {
+      "volume_score": 59.61,
+      "activity_score": 1,
+      "diversity_score": 10
+    },
+    "tags": [
+      "Dolphin"
+    ]
+  },
+  "0xa3ad70cf48a2f2b44163e798223c01a2c2536866": {
+    "total_volume": 2242.9539999999997,
+    "trade_count": 3,
+    "markets": [
+      "0x6903b766f5fda3d5b02f4472a6b4154419e78b7fd126c0b29ce17bb8e20b20cc",
+      "0xfcd2fb666c5a346faee448e63267346a3ec394a52bce4c199877559da91cd2c1",
+      "0xcb111226a8271fed0c71bb5ec1bd67b2a4fd72f1eb08466e2180b9efa99d3f32"
+    ],
+    "first_seen": 1764576358,
+    "last_trade": 1764576358,
+    "score": 31.71,
+    "metrics": {
+      "volume_score": 55.62,
+      "activity_score": 3,
+      "diversity_score": 15
+    },
+    "tags": [
+      "Dolphin"
+    ]
+  },
+  "0xc6a24b598f575b3379b03c23ecc96c841e640a87": {
+    "total_volume": 4361.0,
+    "trade_count": 1,
+    "markets": [
+      "0xcb111226a8271fed0c71bb5ec1bd67b2a4fd72f1eb08466e2180b9efa99d3f32"
+    ],
+    "first_seen": 1764576424,
+    "last_trade": 1764576424,
+    "score": 31.51,
+    "metrics": {
+      "volume_score": 60.42,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0xc4d5a24a240ec9f52669e3251e0473fd0c5687cf": {
+    "total_volume": 253.52620000000002,
+    "trade_count": 18,
+    "markets": [
+      "0x9a57495d16e7035c335dfb1e512b9851d49a2477b116dcc16fcfb2f3e05d4f51",
+      "0x0e36217f0015745a5d762c1fd4fc90ea2b6fd9de13a51359a26d9bd71746844b",
+      "0x956f7d882bc43df13afeb4942eab9b9a6556a1e935ef0c69b427cb098c1f55fc",
+      "0xa4fe504db468ac55c29bb59784df6c94e4c54977347b0565b2d1f972e47badfa",
+      "0xb494383beb8e77443d24b504e0b19e9ec252407074222fab67fa802448a92bb6",
+      "0x6e49c30d1d8d5cc632a19cee18355a5b6fce100087222c86f448ec22003cc5e1"
+    ],
+    "first_seen": 1764523584,
+    "last_trade": 1764576398,
+    "score": 31.35,
+    "metrics": {
+      "volume_score": 39.91,
+      "activity_score": 18,
+      "diversity_score": 30
+    },
+    "tags": [
+      "Dolphin"
+    ]
+  },
+  "0xf9ab5693cd695592f565031a09025926e97b383d": {
+    "total_volume": 3841.5587,
+    "trade_count": 1,
+    "markets": [
+      "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863"
+    ],
+    "first_seen": 1764576406,
+    "last_trade": 1764576406,
+    "score": 31.05,
+    "metrics": {
+      "volume_score": 59.5,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
   "0xee613b3fc183ee44f9da9c05f53e2da107e3debf": {
     "total_volume": 3506.0025000000005,
     "trade_count": 1,
@@ -507,6 +696,25 @@
       "Sniper"
     ]
   },
+  "0x7e49bfd94377b7b8a9d81f243b279193cebeabdf": {
+    "total_volume": 3138.0613,
+    "trade_count": 1,
+    "markets": [
+      "0xb494383beb8e77443d24b504e0b19e9ec252407074222fab67fa802448a92bb6"
+    ],
+    "first_seen": 1764576314,
+    "last_trade": 1764576314,
+    "score": 30.32,
+    "metrics": {
+      "volume_score": 58.04,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
   "0x5388bc8cb72eb19a3bec0e8f3db6a77f7cd54d5a": {
     "total_volume": 3024.8064,
     "trade_count": 1,
@@ -543,6 +751,90 @@
     "tags": [
       "Dolphin",
       "Sniper"
+    ]
+  },
+  "0x6031b6eed1c97e853c6e0f03ad3ce3529351f96d": {
+    "total_volume": 112.10000000000002,
+    "trade_count": 22,
+    "markets": [
+      "0x4bf5715e377755493929899462f24d4e627bec041bff545342a3ef8ebcf5110b",
+      "0x64b1fca5972e54e12a73387ba7d8d4f0214b8a5a1b96d1979c19c761e1b6b25b",
+      "0xf60263cccb0c23c0e4001bc5446ba607d56647c8abaf3f9e75f13cbf3243d0b2",
+      "0xadf812ca3a959bb646e2bf4cef8446fe6faca69060905afdb13fb63d4b082430",
+      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83",
+      "0x7ed5a25f4b2c4439ad9a4d0e1fd77b73711ab325ac91664c9adccfbe72635266"
+    ],
+    "first_seen": 1764508282,
+    "last_trade": 1764576328,
+    "score": 29.61,
+    "metrics": {
+      "volume_score": 34.02,
+      "activity_score": 22,
+      "diversity_score": 30
+    },
+    "tags": [
+      "Dolphin"
+    ]
+  },
+  "0x0540f430df85c770e0a4fb79d8499d71ebc298eb": {
+    "total_volume": 430.155,
+    "trade_count": 9,
+    "markets": [
+      "0xcdad308b98bcad5ad978afab57c19b0692ba15b353a195456a3b0de74eb97c0f",
+      "0x634ea8f368ec7f02dd28b0e485798a5436f9e41095b4ab89d55c4336dbef272b",
+      "0x8a297786bc993af4b7fe6ae830e39ff40cc9b12a66dc7f877713726671ce8e90",
+      "0x60a1ef1ec28f322455e3c2e46eac3c5bb4748208358f134a1031e4759b0c6710",
+      "0xa5a22e5f1377a6a9b893eaaeea35ce8935c464a758fd26652ed75f2097c10882"
+    ],
+    "first_seen": 1764576430,
+    "last_trade": 1764576388,
+    "score": 29.56,
+    "metrics": {
+      "volume_score": 43.72,
+      "activity_score": 9,
+      "diversity_score": 25
+    },
+    "tags": [
+      "Dolphin"
+    ]
+  },
+  "0xa20b482f97063f4f88ef621c9203e60814399940": {
+    "total_volume": 174.43000000000006,
+    "trade_count": 26,
+    "markets": [
+      "0xf60263cccb0c23c0e4001bc5446ba607d56647c8abaf3f9e75f13cbf3243d0b2",
+      "0x4bf5715e377755493929899462f24d4e627bec041bff545342a3ef8ebcf5110b",
+      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83"
+    ],
+    "first_seen": 1764508282,
+    "last_trade": 1764576386,
+    "score": 29.41,
+    "metrics": {
+      "volume_score": 37.21,
+      "activity_score": 26,
+      "diversity_score": 15
+    },
+    "tags": [
+      "Dolphin"
+    ]
+  },
+  "0xcf73450036fd7d9303045a59e59ec497c7207d25": {
+    "total_volume": 1395.468135,
+    "trade_count": 2,
+    "markets": [
+      "0xe8bc51ea558477cbc5d3c4377b8f55077c248226d9a1533411f1debdffcc9a36",
+      "0xaf71d72f320c640abd6ffd0048d01f1c2cbd345965847f7a6b48402db6cd6bd1"
+    ],
+    "first_seen": 1764576348,
+    "last_trade": 1764576322,
+    "score": 28.7,
+    "metrics": {
+      "volume_score": 52.2,
+      "activity_score": 2,
+      "diversity_score": 10
+    },
+    "tags": [
+      "Dolphin"
     ]
   },
   "0x4b2995b6c8cc2cf56899ad62ee87c3f70c97716f": {
@@ -699,18 +991,75 @@
       "Sniper"
     ]
   },
-  "0x203f6f1fa096197f735434c7000758964beb521e": {
-    "total_volume": 195.89999999999998,
-    "trade_count": 25,
+  "0x05ede65980909056e407a42ddf0bf3a9b5d4bf70": {
+    "total_volume": 1500.06386,
+    "trade_count": 1,
     "markets": [
-      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83"
+      "0xc6b8c7176c9bb3931c432a311d882077217a132aca9ae55745178cf275764c35"
     ],
-    "first_seen": 1764508282,
-    "last_trade": 1764508240,
-    "score": 27.52,
+    "first_seen": 1764576336,
+    "last_trade": 1764576336,
+    "score": 27.66,
     "metrics": {
-      "volume_score": 38.05,
-      "activity_score": 25,
+      "volume_score": 52.72,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0x629c2844d5c0e36774a67fe10dcd43ca31a76c01": {
+    "total_volume": 1463.0,
+    "trade_count": 1,
+    "markets": [
+      "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863"
+    ],
+    "first_seen": 1764576378,
+    "last_trade": 1764576378,
+    "score": 27.57,
+    "metrics": {
+      "volume_score": 52.54,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0x2a933e068aa43ecdac59c07f8a38567315b6ac86": {
+    "total_volume": 1455.5190240000002,
+    "trade_count": 1,
+    "markets": [
+      "0xcbd12f571208e6b3fe5ccebcbf04cea6c373f457ca17eefa077fbfc6d11f8daa"
+    ],
+    "first_seen": 1764576416,
+    "last_trade": 1764576416,
+    "score": 27.55,
+    "metrics": {
+      "volume_score": 52.51,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0x9285a46e5da36474fb7cdccb4238aaf40fe77a88": {
+    "total_volume": 1413.0399690000002,
+    "trade_count": 1,
+    "markets": [
+      "0x5f17eed4c81ceb722bb039c66591c8206fa7b7eec73a3c60df3dabca52a0ec5f"
+    ],
+    "first_seen": 1764576320,
+    "last_trade": 1764576320,
+    "score": 27.45,
+    "metrics": {
+      "volume_score": 52.29,
+      "activity_score": 1,
       "diversity_score": 5
     },
     "tags": [
@@ -735,6 +1084,27 @@
     "tags": [
       "Dolphin",
       "Sniper"
+    ]
+  },
+  "0x689ae12e11aa489adb3605afd8f39040ff52779e": {
+    "total_volume": 386.8695,
+    "trade_count": 6,
+    "markets": [
+      "0xa4fe504db468ac55c29bb59784df6c94e4c54977347b0565b2d1f972e47badfa",
+      "0x9a57495d16e7035c335dfb1e512b9851d49a2477b116dcc16fcfb2f3e05d4f51",
+      "0x0e36217f0015745a5d762c1fd4fc90ea2b6fd9de13a51359a26d9bd71746844b",
+      "0x761bd3e1cb91938afa149e84ab73f3604e852034a2f5ca8c829eb8020cad101e"
+    ],
+    "first_seen": 1764576382,
+    "last_trade": 1764576392,
+    "score": 27.28,
+    "metrics": {
+      "volume_score": 42.95,
+      "activity_score": 6,
+      "diversity_score": 20
+    },
+    "tags": [
+      "Dolphin"
     ]
   },
   "0xe7610d1551339a44e869d59821e2029902c4cdb1": {
@@ -767,6 +1137,67 @@
     "score": 27.19,
     "metrics": {
       "volume_score": 51.77,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0x557bed924a1bb6f62842c5742d1dc789b8d480d4": {
+    "total_volume": 181.52779999999998,
+    "trade_count": 7,
+    "markets": [
+      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83",
+      "0x388396d6ab7503f405b98601580b19b8ebe60f296af45e7ed422ae9da3fba95a",
+      "0x4bf5715e377755493929899462f24d4e627bec041bff545342a3ef8ebcf5110b",
+      "0x129b15b39556839c7c0572704b41c27ce565446f3ae518137f558c0b36f6b806",
+      "0xadf812ca3a959bb646e2bf4cef8446fe6faca69060905afdb13fb63d4b082430",
+      "0x4eb925a4323ca6c78b9e95f0ef95988738cfc7ff9eecef854a51b434618cacdf"
+    ],
+    "first_seen": 1764508282,
+    "last_trade": 1764576412,
+    "score": 26.85,
+    "metrics": {
+      "volume_score": 37.5,
+      "activity_score": 7,
+      "diversity_score": 30
+    },
+    "tags": [
+      "Dolphin"
+    ]
+  },
+  "0x60977ce36de1269e042c0fdc3421a9d468d54072": {
+    "total_volume": 1118.3305500000001,
+    "trade_count": 1,
+    "markets": [
+      "0x6686806f7020c1176e5686ca5b7585c7e5e0df1e8338f6c2b772f2e22d6858f5"
+    ],
+    "first_seen": 1764576394,
+    "last_trade": 1764576394,
+    "score": 26.6,
+    "metrics": {
+      "volume_score": 50.61,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0x4cdb3d2b295f1567068f03ede6d3c97f8da7d68d": {
+    "total_volume": 1030.0,
+    "trade_count": 1,
+    "markets": [
+      "0x89cd246423489264272c753e3143c0be632507de7c92e94cd07b54a8ea17c4ef"
+    ],
+    "first_seen": 1764576396,
+    "last_trade": 1764576396,
+    "score": 26.31,
+    "metrics": {
+      "volume_score": 50.01,
       "activity_score": 1,
       "diversity_score": 5
     },
@@ -832,6 +1263,44 @@
       "Sniper"
     ]
   },
+  "0xaa0119d2200158d4ed15271f5b2864923723f1df": {
+    "total_volume": 999.999999,
+    "trade_count": 1,
+    "markets": [
+      "0x22e626b785354df961f8cfd33f04de94f4f754829c64a528eb9fd58398211a71"
+    ],
+    "first_seen": 1764576386,
+    "last_trade": 1764576386,
+    "score": 26.2,
+    "metrics": {
+      "volume_score": 49.8,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0x203f6f1fa096197f735434c7000758964beb521e": {
+    "total_volume": 115.35,
+    "trade_count": 23,
+    "markets": [
+      "0x4bf5715e377755493929899462f24d4e627bec041bff545342a3ef8ebcf5110b",
+      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83"
+    ],
+    "first_seen": 1764508282,
+    "last_trade": 1764576386,
+    "score": 26.01,
+    "metrics": {
+      "volume_score": 34.23,
+      "activity_score": 23,
+      "diversity_score": 10
+    },
+    "tags": [
+      "Dolphin"
+    ]
+  },
   "0xf5cfe6f998d597085e366f915b140e82e0869fc6": {
     "total_volume": 553.3661000000001,
     "trade_count": 4,
@@ -849,6 +1318,45 @@
     },
     "tags": [
       "Dolphin"
+    ]
+  },
+  "0x0d05acd6baaa8ea1fac50ab74a7679ae6f534518": {
+    "total_volume": 301.09,
+    "trade_count": 8,
+    "markets": [
+      "0xadf812ca3a959bb646e2bf4cef8446fe6faca69060905afdb13fb63d4b082430",
+      "0x23aba12fb37980fa693505ccbf7cd9adb7ed2f566f19076e3344891d63d2bed3",
+      "0x4eb925a4323ca6c78b9e95f0ef95988738cfc7ff9eecef854a51b434618cacdf"
+    ],
+    "first_seen": 1764576378,
+    "last_trade": 1764576350,
+    "score": 25.97,
+    "metrics": {
+      "volume_score": 41.15,
+      "activity_score": 8,
+      "diversity_score": 15
+    },
+    "tags": [
+      "Dolphin"
+    ]
+  },
+  "0x9de131584be64b6f8e03b37fb6b669dc022f160e": {
+    "total_volume": 910.6599980000001,
+    "trade_count": 1,
+    "markets": [
+      "0x5543a36c490f8d182e05d430f1e6f21b4acee4b3a68d20eaae7b2e17526c49cb"
+    ],
+    "first_seen": 1764576420,
+    "last_trade": 1764576420,
+    "score": 25.86,
+    "metrics": {
+      "volume_score": 49.13,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
     ]
   },
   "0xebe75a7eced2871a864c63c44198e3e43a21ddf5": {
@@ -887,6 +1395,28 @@
     "tags": [
       "Dolphin",
       "Sniper"
+    ]
+  },
+  "0x2b5298893783e19500a3208894824a59a750354e": {
+    "total_volume": 239.250518,
+    "trade_count": 3,
+    "markets": [
+      "0x1843a807737099ec5ce5bc05ce81e51541e03592755362c82b46ff62f8a56dd6",
+      "0xd8b9ff369452daebce1ac8cb6a29d6817903e85168356c72812317f38e317613",
+      "0x9ae314cb5c94a12081c1cb3e88acb9171a17d946cfa664e8d56ec8c08eb19024",
+      "0x9e6229937edd4063929e844f70b76d130ffffa9e91bfacae0fd238a480ad6d58",
+      "0x3f342a1e717fdf3b6d567fd455a4ae76158672097467b80a67110c96818e6a70"
+    ],
+    "first_seen": 1764576380,
+    "last_trade": 1764576390,
+    "score": 25.64,
+    "metrics": {
+      "volume_score": 39.49,
+      "activity_score": 3,
+      "diversity_score": 25
+    },
+    "tags": [
+      "Dolphin"
     ]
   },
   "0xa69b1867a00c87928b5a1f6b1c2e9ac2246bd844": {
@@ -976,6 +1506,25 @@
     "score": 25.35,
     "metrics": {
       "volume_score": 48.1,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0x75e765216a57942d738d880ffcda854d9f869080": {
+    "total_volume": 770.0,
+    "trade_count": 1,
+    "markets": [
+      "0xaeb190c9a31c5e7f8ac193393ab05e55a9de86f0a945aac59feac0576aa86fc8"
+    ],
+    "first_seen": 1764576366,
+    "last_trade": 1764576366,
+    "score": 25.26,
+    "metrics": {
+      "volume_score": 47.92,
       "activity_score": 1,
       "diversity_score": 5
     },
@@ -1080,6 +1629,45 @@
       "Sniper"
     ]
   },
+  "0x96591d55e435675825704b4c0a5f22fc2e61f19a": {
+    "total_volume": 675.6999989999999,
+    "trade_count": 1,
+    "markets": [
+      "0x4c9aa5c85901875fae2e745ff343ac74ad32139a8d48914b65a4959a518d261f"
+    ],
+    "first_seen": 1764576390,
+    "last_trade": 1764576390,
+    "score": 24.79,
+    "metrics": {
+      "volume_score": 46.97,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0x0a9a28ae76139f06c0b01b140f049454ca643d26": {
+    "total_volume": 323.77484000000004,
+    "trade_count": 3,
+    "markets": [
+      "0xcb048886d15f9221a129150ca5d004fe72d6fa89d0a065d29e819363e9265eb7",
+      "0x46de9c6c14d2ce8da3ca15ac7d1b2255d6edd5c64ec1e7b5e40190436b298a71",
+      "0x819503ca15508ed1ecee519edba1666e8d789ac989590fbb03eda3abaff43e06"
+    ],
+    "first_seen": 1764576418,
+    "last_trade": 1764576396,
+    "score": 24.74,
+    "metrics": {
+      "volume_score": 41.67,
+      "activity_score": 3,
+      "diversity_score": 15
+    },
+    "tags": [
+      "Dolphin"
+    ]
+  },
   "0x057ac4ddef0b43348b5a4be31955e82df5733bac": {
     "total_volume": 350.829997,
     "trade_count": 2,
@@ -1138,6 +1726,44 @@
       "Dolphin"
     ]
   },
+  "0xd5809c05fe38c73c475fc35cc637bf68e7811bcd": {
+    "total_volume": 527.0064,
+    "trade_count": 3,
+    "markets": [
+      "0x9ea5173f151792a2056f7c799a4a7a33b0fca77c2048cfc9adbb2e87ba81631d"
+    ],
+    "first_seen": 1764576428,
+    "last_trade": 1764576396,
+    "score": 24.49,
+    "metrics": {
+      "volume_score": 45.18,
+      "activity_score": 3,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0xcdcb583bc4bc265bd5f3b445feb12f515cb8384f": {
+    "total_volume": 599.9995610000001,
+    "trade_count": 1,
+    "markets": [
+      "0x46ce1fc9459df28955ae4b5a550e787299b6872b7eab549930eadc4fdc5a9393"
+    ],
+    "first_seen": 1764576376,
+    "last_trade": 1764576376,
+    "score": 24.36,
+    "metrics": {
+      "volume_score": 46.12,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
   "0x6deff9252ef02e16ee86a2546e60e7c031520b75": {
     "total_volume": 591.239999,
     "trade_count": 1,
@@ -1149,6 +1775,44 @@
     "score": 24.31,
     "metrics": {
       "volume_score": 46.01,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0x5e08203c0c532dfc634b276290f243bb744f08e6": {
+    "total_volume": 580.9023,
+    "trade_count": 1,
+    "markets": [
+      "0x8fbcb151e2c988df5a43abb02298014b7daf34c008f3eed9188dd16a2a19bec1"
+    ],
+    "first_seen": 1764576368,
+    "last_trade": 1764576406,
+    "score": 24.24,
+    "metrics": {
+      "volume_score": 45.88,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0xa1ad784e32a1f068eacd07f91619d9e8038a93c4": {
+    "total_volume": 580.8958799999999,
+    "trade_count": 1,
+    "markets": [
+      "0x6531afe133dd1087f336e160eebee4af020e2107bd279b40d5039d1d033007fd"
+    ],
+    "first_seen": 1764576368,
+    "last_trade": 1764576404,
+    "score": 24.24,
+    "metrics": {
+      "volume_score": 45.88,
       "activity_score": 1,
       "diversity_score": 5
     },
@@ -1174,6 +1838,120 @@
     },
     "tags": [
       "Dolphin"
+    ]
+  },
+  "0x69645cea639e7a19cbde6c126a197bc1abafef53": {
+    "total_volume": 334.61497999999995,
+    "trade_count": 4,
+    "markets": [
+      "0x22e626b785354df961f8cfd33f04de94f4f754829c64a528eb9fd58398211a71",
+      "0x9a57495d16e7035c335dfb1e512b9851d49a2477b116dcc16fcfb2f3e05d4f51"
+    ],
+    "first_seen": 1764576430,
+    "last_trade": 1764576394,
+    "score": 24.15,
+    "metrics": {
+      "volume_score": 41.91,
+      "activity_score": 4,
+      "diversity_score": 10
+    },
+    "tags": [
+      "Dolphin"
+    ]
+  },
+  "0x3fd0c233c11504f5518f98bf3557d9260eb3f20a": {
+    "total_volume": 564.63265,
+    "trade_count": 1,
+    "markets": [
+      "0x580ffec1f7b057910f9f596c80d203870f3028b04784a982d158d3581514299e"
+    ],
+    "first_seen": 1764576368,
+    "last_trade": 1764576404,
+    "score": 24.14,
+    "metrics": {
+      "volume_score": 45.68,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0xc03c3d6a79c076ae934eec9883369adf189ed6d9": {
+    "total_volume": 562.9328,
+    "trade_count": 1,
+    "markets": [
+      "0x268ea93286f9b5be4f838b056fbaa6ab3916655602c50e42db77af473d7df73f"
+    ],
+    "first_seen": 1764576372,
+    "last_trade": 1764576372,
+    "score": 24.13,
+    "metrics": {
+      "volume_score": 45.66,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0x8404f61b2cb6336b5c804d736b59710fa3cc1553": {
+    "total_volume": 512.38,
+    "trade_count": 2,
+    "markets": [
+      "0x646b3c70cbd75b7a5ddb6392597dc8cbe9721dccdc295f27f6252e87858dec7a"
+    ],
+    "first_seen": 1764576382,
+    "last_trade": 1764576342,
+    "score": 24.09,
+    "metrics": {
+      "volume_score": 44.98,
+      "activity_score": 2,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0xb94108cc3c95b58d2c790fabd3f890d4aedbfc7c": {
+    "total_volume": 552.26624,
+    "trade_count": 1,
+    "markets": [
+      "0xf374fb58698bccedf29399f9f5548a70370a11c0fece34f2570fb9b3885e8e5a"
+    ],
+    "first_seen": 1764576366,
+    "last_trade": 1764576412,
+    "score": 24.06,
+    "metrics": {
+      "volume_score": 45.52,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0x75f4a33f2e582ee78697120167fc20841d4f37dc": {
+    "total_volume": 545.665,
+    "trade_count": 1,
+    "markets": [
+      "0x19d8d3de1026aa6f63160b4a1c6de585be068154d00cbc0303d9b342fdc4de65"
+    ],
+    "first_seen": 1764576354,
+    "last_trade": 1764576354,
+    "score": 24.02,
+    "metrics": {
+      "volume_score": 45.43,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
     ]
   },
   "0xa103eee98ac104a676c202d7afe5e859881c255c": {
@@ -1214,6 +1992,25 @@
       "Sniper"
     ]
   },
+  "0x1ff49fdcb6685c94059b65620f43a683be0ce7a5": {
+    "total_volume": 263.00569899999994,
+    "trade_count": 6,
+    "markets": [
+      "0x4bf5715e377755493929899462f24d4e627bec041bff545342a3ef8ebcf5110b",
+      "0x64b1fca5972e54e12a73387ba7d8d4f0214b8a5a1b96d1979c19c761e1b6b25b"
+    ],
+    "first_seen": 1764576422,
+    "last_trade": 1764576392,
+    "score": 23.89,
+    "metrics": {
+      "volume_score": 40.17,
+      "activity_score": 6,
+      "diversity_score": 10
+    },
+    "tags": [
+      "Dolphin"
+    ]
+  },
   "0xf247584e41117bbbe4cc06e4d2c95741792a5216": {
     "total_volume": 187.08199900000002,
     "trade_count": 10,
@@ -1231,6 +2028,25 @@
     },
     "tags": [
       "Dolphin"
+    ]
+  },
+  "0xc83cbace1bc2734fa62b20e87af25948ec5c46cd": {
+    "total_volume": 500.5,
+    "trade_count": 1,
+    "markets": [
+      "0x660de9c2db966fe9b847b89d1ce6b0e301e1692ca1df267d829f3afe0dc73439"
+    ],
+    "first_seen": 1764576316,
+    "last_trade": 1764576316,
+    "score": 23.71,
+    "metrics": {
+      "volume_score": 44.81,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
     ]
   },
   "0x185ffa4bd5bebfd8a463b905137ebd801bb7053c": {
@@ -1271,6 +2087,44 @@
       "Sniper"
     ]
   },
+  "0x10c9c27eba72a1d768d1059213b479400c3e87fe": {
+    "total_volume": 500.0,
+    "trade_count": 1,
+    "markets": [
+      "0x2a82e6a96959d3e327457f923d1526202728c80337351c9da24bd2a5a294be55"
+    ],
+    "first_seen": 1764576312,
+    "last_trade": 1764576312,
+    "score": 23.7,
+    "metrics": {
+      "volume_score": 44.8,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0x25dcf4635fe93082e0849fbbf81c95680cf5e33b": {
+    "total_volume": 346.9,
+    "trade_count": 2,
+    "markets": [
+      "0xd1aa9234e4c25fca5f17ae7fb3bd0effb37f8a47b79c576bd12881e97f267d03",
+      "0x4b3e07da77892a5c5837cd0cd96e30dc88314bf01a931986f198c3cc05370fbb"
+    ],
+    "first_seen": 1764576384,
+    "last_trade": 1764576352,
+    "score": 23.68,
+    "metrics": {
+      "volume_score": 42.17,
+      "activity_score": 2,
+      "diversity_score": 10
+    },
+    "tags": [
+      "Dolphin"
+    ]
+  },
   "0x397e4f7fae63e68fd7be7f318793f3fc4de43d84": {
     "total_volume": 144.0,
     "trade_count": 2,
@@ -1293,6 +2147,66 @@
       "Dolphin"
     ]
   },
+  "0xecd55daa7c6900683b804d1d4db935fbfabe43f4": {
+    "total_volume": 208.46000000000004,
+    "trade_count": 4,
+    "markets": [
+      "0x388396d6ab7503f405b98601580b19b8ebe60f296af45e7ed422ae9da3fba95a",
+      "0x4bf5715e377755493929899462f24d4e627bec041bff545342a3ef8ebcf5110b",
+      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83"
+    ],
+    "first_seen": 1764508280,
+    "last_trade": 1764576386,
+    "score": 23.45,
+    "metrics": {
+      "volume_score": 38.5,
+      "activity_score": 4,
+      "diversity_score": 15
+    },
+    "tags": [
+      "Dolphin"
+    ]
+  },
+  "0x3a584c457c6c5802d33cd95de9abb9d414997e08": {
+    "total_volume": 459.8619,
+    "trade_count": 1,
+    "markets": [
+      "0x9a57495d16e7035c335dfb1e512b9851d49a2477b116dcc16fcfb2f3e05d4f51"
+    ],
+    "first_seen": 1764576412,
+    "last_trade": 1764576412,
+    "score": 23.4,
+    "metrics": {
+      "volume_score": 44.2,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0xd71304743e49f7254e5d9329c9e4b9ec5b6f7ff5": {
+    "total_volume": 168.88,
+    "trade_count": 3,
+    "markets": [
+      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83",
+      "0x4bf5715e377755493929899462f24d4e627bec041bff545342a3ef8ebcf5110b",
+      "0xb8932e2d1a04938192b73e798e63ce270b9113440be218478e426f60b357f9f6",
+      "0x7bb4ba7ea157ced2088b9d5e934d29a21433bf9e309dd304645dc1162973e5f6"
+    ],
+    "first_seen": 1764508280,
+    "last_trade": 1764576348,
+    "score": 23.39,
+    "metrics": {
+      "volume_score": 36.98,
+      "activity_score": 3,
+      "diversity_score": 20
+    },
+    "tags": [
+      "Dolphin"
+    ]
+  },
   "0xaeb50a7e23d833da8be30e69b55172d1f52858e2": {
     "total_volume": 456.0,
     "trade_count": 1,
@@ -1304,6 +2218,101 @@
     "score": 23.37,
     "metrics": {
       "volume_score": 44.14,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0xd3db4077a45d342b8df69e3b1eace6c219a506cf": {
+    "total_volume": 455.835,
+    "trade_count": 1,
+    "markets": [
+      "0x19d8d3de1026aa6f63160b4a1c6de585be068154d00cbc0303d9b342fdc4de65"
+    ],
+    "first_seen": 1764576352,
+    "last_trade": 1764576352,
+    "score": 23.37,
+    "metrics": {
+      "volume_score": 44.14,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0xe9b66582fcbf442004ea10e8f9c9601ac7e5e730": {
+    "total_volume": 455.835,
+    "trade_count": 1,
+    "markets": [
+      "0x19d8d3de1026aa6f63160b4a1c6de585be068154d00cbc0303d9b342fdc4de65"
+    ],
+    "first_seen": 1764576340,
+    "last_trade": 1764576340,
+    "score": 23.37,
+    "metrics": {
+      "volume_score": 44.14,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0x0ead070a97957a42638cb4c8a74ef24631a528ca": {
+    "total_volume": 453.165,
+    "trade_count": 1,
+    "markets": [
+      "0x19d8d3de1026aa6f63160b4a1c6de585be068154d00cbc0303d9b342fdc4de65"
+    ],
+    "first_seen": 1764576342,
+    "last_trade": 1764576342,
+    "score": 23.35,
+    "metrics": {
+      "volume_score": 44.09,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0xab582d620329e8df23f70aca4002c976b0edb07d": {
+    "total_volume": 436.34488999999996,
+    "trade_count": 1,
+    "markets": [
+      "0x2ef14fdfaf600c4089ead1424b448ee723762b4d6dd19f774dc4681ac4f74622"
+    ],
+    "first_seen": 1764576344,
+    "last_trade": 1764576344,
+    "score": 23.21,
+    "metrics": {
+      "volume_score": 43.82,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0x2258931cfe8df15f4fa4b8371bc7a6961f97f257": {
+    "total_volume": 435.12,
+    "trade_count": 1,
+    "markets": [
+      "0x268ea93286f9b5be4f838b056fbaa6ab3916655602c50e42db77af473d7df73f"
+    ],
+    "first_seen": 1764576372,
+    "last_trade": 1764576372,
+    "score": 23.2,
+    "metrics": {
+      "volume_score": 43.8,
       "activity_score": 1,
       "diversity_score": 5
     },
@@ -1367,6 +2376,65 @@
     "tags": [
       "Dolphin",
       "Sniper"
+    ]
+  },
+  "0x3fb912146ca9aac8a0ed8ede0fb31e43e590f8f1": {
+    "total_volume": 382.58,
+    "trade_count": 1,
+    "markets": [
+      "0x268ea93286f9b5be4f838b056fbaa6ab3916655602c50e42db77af473d7df73f"
+    ],
+    "first_seen": 1764576372,
+    "last_trade": 1764576372,
+    "score": 22.74,
+    "metrics": {
+      "volume_score": 42.87,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0x760f52ba4c93d944b6bf95af6c543839543e5777": {
+    "total_volume": 377.349273,
+    "trade_count": 1,
+    "markets": [
+      "0xc9160a6897123bd64b2d421457d37a52eee15b873deb9257b0eee96d26518ad2"
+    ],
+    "first_seen": 1764576398,
+    "last_trade": 1764576398,
+    "score": 22.69,
+    "metrics": {
+      "volume_score": 42.77,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0xdacf9f8d0341fa3770fae5c7ccd9dcfed23e3c74": {
+    "total_volume": 119.90248000000001,
+    "trade_count": 4,
+    "markets": [
+      "0x233dd7c95c99738901453ce0625808e7994e5d6fb2de24eb580b71d543ce4b1d",
+      "0x0aac2b7e155fbe975d87282136b0b4e08217c5f3ecf506e923b6643d60525b19",
+      "0x86e2f813bb68aec5a259ef031bee6fe44eb6a834a1456f8136352a7295bad4ce",
+      "0xfab1e0c1e201a51cee46f610402e4063d7083c06a444bd242474c827230e0de5"
+    ],
+    "first_seen": 1764576382,
+    "last_trade": 1764576344,
+    "score": 22.45,
+    "metrics": {
+      "volume_score": 34.51,
+      "activity_score": 4,
+      "diversity_score": 20
+    },
+    "tags": [
+      "Dolphin"
     ]
   },
   "0xaf0d3f82b556fcfa4bb2bf5a4140b261bf37e220": {
@@ -1483,6 +2551,44 @@
       "Sniper"
     ]
   },
+  "0xde5314ddd05574a22cdaeef4e9ab2c02ce90e5be": {
+    "total_volume": 316.02,
+    "trade_count": 1,
+    "markets": [
+      "0xbeb95176c51c1e625f90ea5bd72324fbec7421d7714d15476e53e6ac5b6d901c"
+    ],
+    "first_seen": 1764576338,
+    "last_trade": 1764576338,
+    "score": 22.05,
+    "metrics": {
+      "volume_score": 41.5,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0x05c1882212a41aa8d7df5b70eebe03d9319345b7": {
+    "total_volume": 267.45,
+    "trade_count": 3,
+    "markets": [
+      "0x4bf5715e377755493929899462f24d4e627bec041bff545342a3ef8ebcf5110b"
+    ],
+    "first_seen": 1764576422,
+    "last_trade": 1764576418,
+    "score": 22.05,
+    "metrics": {
+      "volume_score": 40.29,
+      "activity_score": 3,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
   "0x2e2e496f3693b71273f19cabc8d7bf0cd2bbef05": {
     "total_volume": 304.62152,
     "trade_count": 1,
@@ -1540,6 +2646,25 @@
       "Sniper"
     ]
   },
+  "0x050ccc7e671846dc1d4e48383b505e01c195d13e": {
+    "total_volume": 287.329998,
+    "trade_count": 1,
+    "markets": [
+      "0x17815081230e3b9c78b098162c33b1ffa68c4ec29c123d3d14989599e0c2e113"
+    ],
+    "first_seen": 1764576318,
+    "last_trade": 1764576318,
+    "score": 21.7,
+    "metrics": {
+      "volume_score": 40.81,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
   "0x9a248a7fcc0c8c7160cbc9f3169b7dc44ed3cf2b": {
     "total_volume": 279.199999,
     "trade_count": 1,
@@ -1578,6 +2703,25 @@
       "Sniper"
     ]
   },
+  "0x9adf697c265f8c8807e286cbf75a3a2e857955e8": {
+    "total_volume": 269.01,
+    "trade_count": 1,
+    "markets": [
+      "0x5714216496525d00e2227740eeb00fd501579dbbd3180b43aa7f1b82d7ef3de0"
+    ],
+    "first_seen": 1764576348,
+    "last_trade": 1764576348,
+    "score": 21.47,
+    "metrics": {
+      "volume_score": 40.33,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
   "0x1f0ad445d507c69c5ccb389a7a261f6fd8b4da70": {
     "total_volume": 223.89800000000002,
     "trade_count": 3,
@@ -1590,6 +2734,25 @@
     "metrics": {
       "volume_score": 39.01,
       "activity_score": 3,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0x92c92e55d4621f7051edb5eedbc1b669291164d1": {
+    "total_volume": 264.40389999999996,
+    "trade_count": 1,
+    "markets": [
+      "0x4048fed324ac27f378ce44da1b12f0d338c8340ef82962989f38eea05409baab"
+    ],
+    "first_seen": 1764576388,
+    "last_trade": 1764576388,
+    "score": 21.4,
+    "metrics": {
+      "volume_score": 40.21,
+      "activity_score": 1,
       "diversity_score": 5
     },
     "tags": [
@@ -1616,20 +2779,40 @@
       "Sniper"
     ]
   },
-  "0xecd55daa7c6900683b804d1d4db935fbfabe43f4": {
-    "total_volume": 165.40640000000002,
+  "0x38ed6fe705e2d50dae1227aebe3dbc65036bf1aa": {
+    "total_volume": 255.54999999999998,
+    "trade_count": 1,
+    "markets": [
+      "0xf0facaa00e7dc1670f70db0ba28ff9bdac5ec2db1d1640fe6d6e104275a9de17"
+    ],
+    "first_seen": 1764576324,
+    "last_trade": 1764576324,
+    "score": 21.28,
+    "metrics": {
+      "volume_score": 39.96,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0xb6fa57039ea79185895500dbd0067c288594abcf": {
+    "total_volume": 123.93800000000002,
     "trade_count": 3,
     "markets": [
-      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83",
-      "0x388396d6ab7503f405b98601580b19b8ebe60f296af45e7ed422ae9da3fba95a"
+      "0xaeb190c9a31c5e7f8ac193393ab05e55a9de86f0a945aac59feac0576aa86fc8",
+      "0xf831ea34f7a6cd4bc96cb43dc53f087b15c25f515d00c9251f9c546eaba4840b",
+      "0xbf8d3c113339a9212ca0f263aede776db4a34762aedc006f70a8703215954863"
     ],
-    "first_seen": 1764508280,
-    "last_trade": 1764523562,
-    "score": 21.31,
+    "first_seen": 1764576412,
+    "last_trade": 1764576412,
+    "score": 21.27,
     "metrics": {
-      "volume_score": 36.83,
+      "volume_score": 34.75,
       "activity_score": 3,
-      "diversity_score": 10
+      "diversity_score": 15
     },
     "tags": [
       "Dolphin"
@@ -1662,6 +2845,25 @@
     ],
     "first_seen": 1764508276,
     "last_trade": 1764508276,
+    "score": 21.2,
+    "metrics": {
+      "volume_score": 39.81,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0xe6b5a0a05e34349a53035ac4b2b81ea9ec7253fc": {
+    "total_volume": 250.0,
+    "trade_count": 1,
+    "markets": [
+      "0x16151b49e68f23c57e675ad1a20f313aa9f0d52d7645887e24344fdfff651407"
+    ],
+    "first_seen": 1764576350,
+    "last_trade": 1764576350,
     "score": 21.2,
     "metrics": {
       "volume_score": 39.81,
@@ -1728,26 +2930,6 @@
     "tags": [
       "Dolphin",
       "Sniper"
-    ]
-  },
-  "0xe60a9b0be459d9849bc2339dac20517639ae6a47": {
-    "total_volume": 118.1745,
-    "trade_count": 3,
-    "markets": [
-      "0xc0faba96f42d2e21f7c6dbb348b8ecc3734372d306efb0d636612cf4da06f2a7",
-      "0x70821b340c1e89b3f9545a920000d242a632d471d1b4ceb3aa582eb048df7865",
-      "0x302bb4d901c8fe550edede68f63e113cc83ae0d910258516080e8c56c79a44ea"
-    ],
-    "first_seen": 1764508268,
-    "last_trade": 1764508244,
-    "score": 21.1,
-    "metrics": {
-      "volume_score": 34.4,
-      "activity_score": 3,
-      "diversity_score": 15
-    },
-    "tags": [
-      "Dolphin"
     ]
   },
   "0x1e75baf375ac3a352f7e7f4f18b16fa454bf305e": {
@@ -1826,6 +3008,25 @@
       "Dolphin"
     ]
   },
+  "0x08d85d193f51403e179f5ac7e4e5a4a59f25a121": {
+    "total_volume": 237.6,
+    "trade_count": 1,
+    "markets": [
+      "0x6903b766f5fda3d5b02f4472a6b4154419e78b7fd126c0b29ce17bb8e20b20cc"
+    ],
+    "first_seen": 1764576420,
+    "last_trade": 1764576420,
+    "score": 21.02,
+    "metrics": {
+      "volume_score": 39.44,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
   "0xe54d37c9c12e5fd3d684ff4d193ef1f44dabfdec": {
     "total_volume": 237.29,
     "trade_count": 1,
@@ -1856,6 +3057,25 @@
     "score": 20.98,
     "metrics": {
       "volume_score": 39.36,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0x67f3faad4fc93a3701c20db865112af8d3503f61": {
+    "total_volume": 234.331,
+    "trade_count": 1,
+    "markets": [
+      "0x0bd748502a252ed3a96416c2c21a6839f5aab6dbc81e454bbcc9be1d26f3414d"
+    ],
+    "first_seen": 1764576418,
+    "last_trade": 1764576418,
+    "score": 20.97,
+    "metrics": {
+      "volume_score": 39.34,
       "activity_score": 1,
       "diversity_score": 5
     },
@@ -1902,6 +3122,25 @@
       "Sniper"
     ]
   },
+  "0x93fd1445c1d5307ebad91c43f3802a3e7ab77e2f": {
+    "total_volume": 155.60143,
+    "trade_count": 2,
+    "markets": [
+      "0x22e626b785354df961f8cfd33f04de94f4f754829c64a528eb9fd58398211a71",
+      "0x761bd3e1cb91938afa149e84ab73f3604e852034a2f5ca8c829eb8020cad101e"
+    ],
+    "first_seen": 1764576366,
+    "last_trade": 1764576330,
+    "score": 20.79,
+    "metrics": {
+      "volume_score": 36.39,
+      "activity_score": 2,
+      "diversity_score": 10
+    },
+    "tags": [
+      "Dolphin"
+    ]
+  },
   "0x6908b4ba49ca7f4d8792eaf7e68402cb249d2fd1": {
     "total_volume": 221.816,
     "trade_count": 1,
@@ -1940,18 +3179,18 @@
       "Sniper"
     ]
   },
-  "0x557bed924a1bb6f62842c5742d1dc789b8d480d4": {
-    "total_volume": 150.632,
+  "0x60aefebe8b9c00fbf791630835f5b698290a47eb": {
+    "total_volume": 149.75256,
     "trade_count": 2,
     "markets": [
-      "0x388396d6ab7503f405b98601580b19b8ebe60f296af45e7ed422ae9da3fba95a",
-      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83"
+      "0x039b48827f3c6b83f50153715af8a66f2b74b04fcfc5def13acb3f151eeb3d81",
+      "0x08c8fffc2fb962e36d835621b82434b941a8a124f47558454d8eb666eeed59f9"
     ],
-    "first_seen": 1764508282,
-    "last_trade": 1764523400,
-    "score": 20.68,
+    "first_seen": 1764576370,
+    "last_trade": 1764576366,
+    "score": 20.66,
     "metrics": {
-      "volume_score": 36.15,
+      "volume_score": 36.11,
       "activity_score": 2,
       "diversity_score": 10
     },
@@ -1997,6 +3236,44 @@
       "Sniper"
     ]
   },
+  "0x0f660179596bd470b9b5806d91a1a5a5faa4565f": {
+    "total_volume": 200.1978,
+    "trade_count": 1,
+    "markets": [
+      "0xb7f9d3f61910ecf7a5e6e46f487a039e91a92b68585f05ec9b22cb34d3804bbd"
+    ],
+    "first_seen": 1764576422,
+    "last_trade": 1764576422,
+    "score": 20.4,
+    "metrics": {
+      "volume_score": 38.2,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0x51bf0e951d697ffde71acd1cf0ebaa1f27edb3dd": {
+    "total_volume": 138.76377,
+    "trade_count": 2,
+    "markets": [
+      "0x7cab9da787443beec1eb5e399afd46fffdc27b5f00e0293a1d6a9996c948ac52",
+      "0x7190eccbd0677d5d0ae8cdf598b37e945a346915c666dda11468dc9970657a56"
+    ],
+    "first_seen": 1764576326,
+    "last_trade": 1764576322,
+    "score": 20.38,
+    "metrics": {
+      "volume_score": 35.56,
+      "activity_score": 2,
+      "diversity_score": 10
+    },
+    "tags": [
+      "Dolphin"
+    ]
+  },
   "0xc14cda025d9cd05d123aaaeef3b930d7eb9d8da0": {
     "total_volume": 196.72307999999998,
     "trade_count": 1,
@@ -2014,25 +3291,6 @@
     "tags": [
       "Dolphin",
       "Sniper"
-    ]
-  },
-  "0xd71304743e49f7254e5d9329c9e4b9ec5b6f7ff5": {
-    "total_volume": 114.109998,
-    "trade_count": 4,
-    "markets": [
-      "0xb8932e2d1a04938192b73e798e63ce270b9113440be218478e426f60b357f9f6",
-      "0x8d10d23f39e0a93dc5d3ca253f6765f5c4f773c9f8302e39ef695527a31e6c83"
-    ],
-    "first_seen": 1764508280,
-    "last_trade": 1764508240,
-    "score": 20.28,
-    "metrics": {
-      "volume_score": 34.15,
-      "activity_score": 4,
-      "diversity_score": 10
-    },
-    "tags": [
-      "Dolphin"
     ]
   },
   "0x1ecbb976813f39dfea0f3c264b96a26dd8e0b5e3": {
@@ -2301,6 +3559,25 @@
       "Sniper"
     ]
   },
+  "0xcf2dc0e5a45450e60cb374cdc400893b967d1100": {
+    "total_volume": 150.049999,
+    "trade_count": 1,
+    "markets": [
+      "0xcfbab87fa04925b8db7c8768535514e6b4cddfb4e7d3a372f7f51cd73d4f29ae"
+    ],
+    "first_seen": 1764576316,
+    "last_trade": 1764576316,
+    "score": 19.36,
+    "metrics": {
+      "volume_score": 36.13,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
   "0xc9c3f6ce1498a2c9ba51223bb701751c2b7cb8ef": {
     "total_volume": 145.999998,
     "trade_count": 1,
@@ -2339,6 +3616,25 @@
       "Sniper"
     ]
   },
+  "0x6ea0572dd5f9f79d2072bca3f140837234e2b079": {
+    "total_volume": 139.85832,
+    "trade_count": 1,
+    "markets": [
+      "0x0a417e314c60d4221af45fad3ca308ebc060532d8f057da93743163388d20c10"
+    ],
+    "first_seen": 1764576354,
+    "last_trade": 1764576354,
+    "score": 19.11,
+    "metrics": {
+      "volume_score": 35.62,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
   "0xb7d497a0541229533602899a04f76d22ca235735": {
     "total_volume": 138.039,
     "trade_count": 1,
@@ -2351,6 +3647,25 @@
     "metrics": {
       "volume_score": 35.52,
       "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0xf2fd22084c260a01adeefb1e23921333b00a4ec0": {
+    "total_volume": 126.965,
+    "trade_count": 2,
+    "markets": [
+      "0xadf812ca3a959bb646e2bf4cef8446fe6faca69060905afdb13fb63d4b082430"
+    ],
+    "first_seen": 1764576418,
+    "last_trade": 1764576414,
+    "score": 19.06,
+    "metrics": {
+      "volume_score": 34.92,
+      "activity_score": 2,
       "diversity_score": 5
     },
     "tags": [
@@ -2407,6 +3722,25 @@
     "score": 18.94,
     "metrics": {
       "volume_score": 35.29,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0x99533d4d5ca181a14467e16b4e002ed5ab46aea5": {
+    "total_volume": 130.87823,
+    "trade_count": 1,
+    "markets": [
+      "0x738e903f9360991df72d0920ec10b570b548b92090446d84d3a96b1dbe88f4b5"
+    ],
+    "first_seen": 1764576324,
+    "last_trade": 1764576324,
+    "score": 18.87,
+    "metrics": {
+      "volume_score": 35.14,
       "activity_score": 1,
       "diversity_score": 5
     },
@@ -2529,18 +3863,18 @@
       "Sniper"
     ]
   },
-  "0xc4d5a24a240ec9f52669e3251e0473fd0c5687cf": {
-    "total_volume": 100.26601000000001,
-    "trade_count": 3,
+  "0x159f45446d6e6152f0daced013dd25a2b74f333f": {
+    "total_volume": 118.459,
+    "trade_count": 1,
     "markets": [
-      "0x956f7d882bc43df13afeb4942eab9b9a6556a1e935ef0c69b427cb098c1f55fc"
+      "0xd1754bc54ec5b0af53339ad69d868bcdf5510242212a400db22bc865b103bbfb"
     ],
-    "first_seen": 1764523584,
-    "last_trade": 1764523580,
+    "first_seen": 1764576374,
+    "last_trade": 1764576374,
     "score": 18.51,
     "metrics": {
-      "volume_score": 33.22,
-      "activity_score": 3,
+      "volume_score": 34.42,
+      "activity_score": 1,
       "diversity_score": 5
     },
     "tags": [
@@ -2559,6 +3893,44 @@
     "score": 18.49,
     "metrics": {
       "volume_score": 34.38,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0xb5aa47c7f4166eaa037635d02944b4cfb5a02a05": {
+    "total_volume": 117.29993,
+    "trade_count": 1,
+    "markets": [
+      "0xb494383beb8e77443d24b504e0b19e9ec252407074222fab67fa802448a92bb6"
+    ],
+    "first_seen": 1764576386,
+    "last_trade": 1764576386,
+    "score": 18.48,
+    "metrics": {
+      "volume_score": 34.35,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0xc3629c93ade971524ceb7bd192a8774a43a57f4f": {
+    "total_volume": 116.501,
+    "trade_count": 1,
+    "markets": [
+      "0xd1754bc54ec5b0af53339ad69d868bcdf5510242212a400db22bc865b103bbfb"
+    ],
+    "first_seen": 1764576360,
+    "last_trade": 1764576360,
+    "score": 18.45,
+    "metrics": {
+      "volume_score": 34.3,
       "activity_score": 1,
       "diversity_score": 5
     },
@@ -2624,6 +3996,25 @@
       "Sniper"
     ]
   },
+  "0x28afd5f4a5f077bd483c3e9740ae1059f36ba944": {
+    "total_volume": 109.40999899999998,
+    "trade_count": 1,
+    "markets": [
+      "0x1d4ef769bfcb5d8e96748075e0d48db83c678ee38f6a9ac06ed570ba0a8b0e48"
+    ],
+    "first_seen": 1764576388,
+    "last_trade": 1764576388,
+    "score": 18.22,
+    "metrics": {
+      "volume_score": 33.85,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
   "0x953cecc520589807009d0649c2ce86e1ab7a6e17": {
     "total_volume": 108.389998,
     "trade_count": 1,
@@ -2635,6 +4026,25 @@
     "score": 18.19,
     "metrics": {
       "volume_score": 33.78,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0xa35677209f8519a70d446d2f5b6ddd41c8588c2f": {
+    "total_volume": 107.399493,
+    "trade_count": 1,
+    "markets": [
+      "0x3f342a1e717fdf3b6d567fd455a4ae76158672097467b80a67110c96818e6a70"
+    ],
+    "first_seen": 1764576404,
+    "last_trade": 1764576404,
+    "score": 18.16,
+    "metrics": {
+      "volume_score": 33.71,
       "activity_score": 1,
       "diversity_score": 5
     },
@@ -2662,6 +4072,25 @@
       "Sniper"
     ]
   },
+  "0xb63ac06f20eed05d0a34f61116d0580a0afb4064": {
+    "total_volume": 105.00000000000001,
+    "trade_count": 1,
+    "markets": [
+      "0x123f6ae2162267b94a65e3e025ab7543ccf74db47e3bdb1d1a1eaa6667a1d3b9"
+    ],
+    "first_seen": 1764576404,
+    "last_trade": 1764576404,
+    "score": 18.08,
+    "metrics": {
+      "volume_score": 33.55,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
   "0x70447eabbe8c23839b9c8f8dbf32185f5be85104": {
     "total_volume": 104.64999999999999,
     "trade_count": 1,
@@ -2673,6 +4102,25 @@
     "score": 18.06,
     "metrics": {
       "volume_score": 33.53,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0xe4fa73e892db0c806aca75032b3622bc12b69f23": {
+    "total_volume": 103.709187,
+    "trade_count": 1,
+    "markets": [
+      "0x6bc05dbf76802a3d64a3aad04a877bfec0e347f7ae76e714cad441e4be358920"
+    ],
+    "first_seen": 1764576358,
+    "last_trade": 1764576358,
+    "score": 18.03,
+    "metrics": {
+      "volume_score": 33.46,
       "activity_score": 1,
       "diversity_score": 5
     },
@@ -2711,6 +4159,44 @@
     "score": 18.0,
     "metrics": {
       "volume_score": 33.39,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0x383eefe4a362d2629898d91b799a01527511490a": {
+    "total_volume": 102.64776,
+    "trade_count": 1,
+    "markets": [
+      "0x4e2887e913cd6e091c9b07b5e4013b24f372453efa6f11a0b0c5f65371729cf4"
+    ],
+    "first_seen": 1764576338,
+    "last_trade": 1764576338,
+    "score": 17.99,
+    "metrics": {
+      "volume_score": 33.39,
+      "activity_score": 1,
+      "diversity_score": 5
+    },
+    "tags": [
+      "Dolphin",
+      "Sniper"
+    ]
+  },
+  "0xd8c4d45000b7976d897ab79c21780e46faaa848d": {
+    "total_volume": 100.02859999999998,
+    "trade_count": 1,
+    "markets": [
+      "0x22e626b785354df961f8cfd33f04de94f4f754829c64a528eb9fd58398211a71"
+    ],
+    "first_seen": 1764576428,
+    "last_trade": 1764576428,
+    "score": 17.9,
+    "metrics": {
+      "volume_score": 33.2,
       "activity_score": 1,
       "diversity_score": 5
     },

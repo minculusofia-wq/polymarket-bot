@@ -117,6 +117,41 @@
                     au prochain redémarrage</p>
             </div>
 
+            <!-- Whitelist Section -->
+            <div class="section">
+                <h2>🛡️ Whitelist (Wallets à Copier)</h2>
+                <div class="whitelist-controls">
+                    <input type="text" id="whitelist-input" placeholder="Adresse du wallet (0x...)"
+                        class="whitelist-input">
+                    <button class="add-btn" onclick="addToWhitelist()">➕ Ajouter</button>
+                </div>
+                <div class="whitelist-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Adresse</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="whitelist-table">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Wallet Configuration Section -->
+            <div class="section">
+                <h2>🔑 Configuration du Wallet</h2>
+                <p class="settings-note">⚠️ <strong>Sécurité :</strong> Votre clé privée est sauvegardée localement dans
+                    <code>.env</code>. Ne la partagez jamais !</p>
+                <div class="wallet-config">
+                    <label for="private-key-input">Clé Privée (0x...)</label>
+                    <input type="password" id="private-key-input" placeholder="0x..." class="wallet-input">
+                    <button class="save-btn" onclick="saveWallet()">💾 Sauvegarder le Wallet</button>
+                </div>
+            </div>
+
             <!-- Opportunities Tab -->
             <div class="section">
                 <h2>🎯 Opportunités Détectées</h2>
@@ -158,8 +193,28 @@
                     <!-- Populated by JS -->
                 </div>
 
-                <h3>📰 Actualités (NewsAPI)</h3>
+                <h3>📰 Actualités (NewsAPI & CoinStats)</h3>
                 <div class="news-list" id="news-list">
+                    <!-- Populated by JS -->
+                </div>
+
+                <h3>🗣️ Discussions Reddit (r/CryptoCurrency)</h3>
+                <div class="news-list" id="reddit-list">
+                    <!-- Populated by JS -->
+                </div>
+
+                <h3>📅 Événements CoinGecko</h3>
+                <div class="news-list" id="events-list">
+                    <!-- Populated by JS -->
+                </div>
+
+                <h3>🚀 Sentiment LunarCrush</h3>
+                <div class="keywords-grid" id="sentiment-grid">
+                    <!-- Populated by JS -->
+                </div>
+
+                <h3>🎥 Vidéos YouTube (SerpAPI)</h3>
+                <div class="news-list" id="videos-list">
                     <!-- Populated by JS -->
                 </div>
             </div>

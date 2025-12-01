@@ -11,8 +11,19 @@ import config
 # Global state
 active_assets = []
 whales_cache = {}
+whitelist_cache = set()
 analyzer = WhaleAnalyzer()
 trader = Trader()
+
+def load_whitelist():
+    """Load whitelist from JSON file."""
+    if os.path.exists("whitelist.json"):
+        try:
+            with open("whitelist.json", 'r') as f:
+                return set(json.load(f))
+        except:
+            return set()
+    return set()
 
 async def on_trade_message(data):
     """Handle incoming WebSocket messages."""
@@ -26,6 +37,23 @@ def process_trade_event(event):
     """Process a single trade event."""
     if event.get('event_type') != 'last_trade_price':
         return
+
+    # Check if trader is whitelisted or a whale
+    # Note: WS trade messages don't always contain the maker/taker address directly in the public feed.
+    # The public 'last_trade_price' event usually only has price, size, side, asset_id.
+    # To copy trade via WS, we need the maker/taker address, which might require a different subscription or API call.
+    # However, assuming we CAN get the address (e.g. from a different message type or enriched data):
+    
+    # For this implementation, we'll simulate address check if available, 
+    # but acknowledge limitation of public WS feed for copy-trading specific wallets without extra data.
+    
+    # If we are just scanning for high volume, we continue as is.
+    # If we want to copy specific wallets, we might need to poll /trades endpoint rapidly or use a private feed if available.
+    
+    # Let's refresh whitelist periodically
+    global whitelist_cache
+    if int(time.time()) % 60 == 0:
+        whitelist_cache = load_whitelist()
 
     asset_id = event.get('asset_id')
     price = float(event.get('price', 0))

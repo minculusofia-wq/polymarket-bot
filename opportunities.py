@@ -118,7 +118,11 @@ def find_opportunities():
         "trending": get_trending_markets()[:5],
         "price_movements": detect_price_movements(),
         "keywords": scan_keywords()[:10],
-        "news": external_data.get('news', [])[:5],
+        "news": external_data.get('news', [])[:10],
+        "reddit": external_data.get('reddit', [])[:5],
+        "events": external_data.get('events', [])[:5],
+        "sentiment": external_data.get('sentiment', [])[:5],
+        "videos": external_data.get('videos', [])[:3],
         "last_update": datetime.now().isoformat()
     }
     

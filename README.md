@@ -35,6 +35,13 @@ Un bot de trading automatisé pour Polymarket qui identifie et suit les "whales"
 - **Connexion Sécurisée** : Support SSL/TLS
 - **Sniping Ready** : Réaction instantanée aux mouvements de marché
 
+### ✅ Phase 7 : Opportunités & Data
+- **Scanner de Marché** : Détection des tendances et mouvements de prix
+- **News Aggregator** : NewsAPI + CoinStats
+- **Social Sentiment** : Reddit (r/CryptoCurrency) + LunarCrush
+- **Événements** : CoinGecko Events
+- **Vidéos** : YouTube Search (SerpAPI)
+
 ## 📊 Résultats
 
 Le scanner a détecté **63 whales** sur 278 traders analysés :
@@ -46,6 +53,7 @@ Le scanner a détecté **63 whales** sur 278 traders analysés :
 ### Prérequis
 - Python 3.8+
 - Un RPC Polygon (gratuit sur [Alchemy](https://www.alchemy.com/) ou [Infura](https://infura.io/))
+- (Optionnel) Clés API pour les données externes
 
 ### Étapes
 
@@ -55,22 +63,25 @@ git clone https://github.com/minculusofia-wq/polymarket-bot.git
 cd polymarket-bot
 ```
 
-2. **Créer l'environnement virtuel**
+2. **Lancer le script d'installation automatique**
 ```bash
-python3 -m venv venv
-source venv/bin/activate  # Sur Windows: venv\Scripts\activate
+./start_bot.command
+```
+Ce script va créer l'environnement virtuel, installer les dépendances et lancer le bot.
+
+### Configuration Avancée (`config.py`)
+
+Pour activer toutes les fonctionnalités de données externes, ajoutez vos clés dans `config.py` ou `.env` :
+
+```python
+# External Data Sources
+NEWS_API_KEY = "votre_cle"
+LUNARCRUSH_API_KEY = "votre_cle"
+SERPAPI_KEY = "votre_cle"
+HELIUS_API_KEY = "votre_cle"
 ```
 
-3. **Installer les dépendances**
-```bash
-pip install -r requirements.txt
-```
-
-4. **Configurer les variables d'environnement**
-```bash
-cp .env.example .env
-# Éditer .env et ajouter votre RPC URL
-```
+Voir `API_KEYS_GUIDE.md` pour obtenir ces clés gratuitement.
 
 ## 📖 Utilisation
 
@@ -79,34 +90,22 @@ Double-cliquez simplement sur le fichier `start_bot.command` !
 
 Cela va automatiquement :
 1. Lancer le Dashboard API
-2. Ouvrir le Dashboard dans votre navigateur
-3. Lancer le Scanner dans le terminal
+2. Ouvrir le Dashboard dans votre navigateur (`http://localhost:5000`)
+3. Lancer le Scanner WebSocket en arrière-plan
 
-### Lancement Manuel
-
-#### 1. Lancer le Bot (Scanner + Trader)
-```bash
-python scanner.py
-```
-Le bot va :
-- Scanner le marché en continu
-- Identifier les whales
-- Exécuter des trades (paper trading par défaut)
-
-### 2. Lancer le Dashboard
-```bash
-python api.py
-```
-Ouvrez votre navigateur sur `http://localhost:5000` pour voir :
-- Le leaderboard des whales
-- Les positions ouvertes
-- L'historique des trades
+### Dashboard
+Le dashboard offre plusieurs onglets :
+- **Stats & Whales** : Suivi des gros traders
+- **Settings** : Configuration en temps réel (Stop Loss, Capital...)
+- **Opportunités** : News, Sentiment, Événements, Vidéos
 
 ## 📁 Structure du Projet
 
 ```
 polymarket-bot/
-├── scanner.py           # Bot principal (Scanner + Trader)
+├── scanner_ws.py        # Scanner Temps Réel (WebSocket)
+├── opportunities.py     # Scanner d'opportunités (News, Social)
+├── external_scanner.py  # Gestion des APIs externes
 ├── trader.py            # Module d'exécution des trades
 ├── whale_analyzer.py    # Module d'analyse et scoring
 ├── config.py            # Configuration du bot
@@ -116,70 +115,19 @@ polymarket-bot/
 │   ├── style.css
 │   └── app.js
 ├── whales.json          # Base de données des whales
-├── trade_history.json   # Historique des trades
 └── README.md            # Documentation
 ```
-
-## 🔧 Configuration
-
-### Variables d'environnement (`.env`)
-
-```env
-# RPC Polygon (obligatoire)
-POLYGON_RPC_URL=https://polygon-rpc.com
-
-# Clé privée (pour le trading réel)
-PRIVATE_KEY=votre_cle_privee_ici
-```
-
-### Configuration du Bot (`config.py`)
-
-```python
-PAPER_TRADING = True        # False pour trading réel
-MAX_POSITION_SIZE_USD = 10  # Taille max par trade
-STOP_LOSS_PERCENT = 0.15    # Stop loss à 15%
-MIN_WHALE_SCORE = 60        # Score min pour copier
-```
-
-⚠️ **Sécurité** : Ne partagez jamais votre fichier `.env` ou votre clé privée !
-
-## 📊 Format des Données
-
-### `whales.json`
-```json
-{
-  "0xWalletAddress": {
-    "total_volume": 6527.4,
-    "trade_count": 1,
-    "markets": ["0x6903b766..."],
-    "first_seen": 1764508266,
-    "last_trade": 1764508266
-  }
-}
-```
-
-## 🛠️ Approche Technique
-
-### Pivot Stratégique
-L'approche initiale (endpoint `/holders`) a été abandonnée au profit d'une analyse des **trades récents** :
-
-**Avantages :**
-- ✅ Plus robuste (pas de dépendance à des champs manquants)
-- ✅ Identifie les traders **actifs** (pas seulement les détenteurs passifs)
-- ✅ Données riches (historique, marchés, timestamps)
-
-### APIs Utilisées
-- **Polymarket Data API** : `/trades` endpoint
-- **Polygon RPC** : Connexion blockchain
-- **Gamma API** : Recherche de marchés (tests)
 
 ## 🔮 Roadmap
 
 - [x] Phase 1 : Infrastructure & Connexion
 - [x] Phase 2 : Scanner de Whales
-- [ ] Phase 3 : Copy-Trading automatique
-- [ ] Phase 4 : Alertes Discord/Telegram
-- [ ] Phase 5 : Dashboard web
+- [x] Phase 3 : Copy-Trading automatique
+- [x] Phase 4 : Dashboard web
+- [x] Phase 5 : WebSocket & Performance
+- [x] Phase 6 : Agrégateur de Données (News, Social)
+- [ ] Phase 7 : Alertes Discord/Telegram
+- [ ] Phase 8 : Trading Réel (Mainnet)
 
 ## ⚠️ Avertissements
 
