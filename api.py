@@ -165,6 +165,67 @@ def save_signal_config():
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}), 500
 
+@app.route('/api/data')
+def get_data():
+    """Main endpoint that returns all dashboard data."""
+    # Load whales
+    whales = {}
+    if os.path.exists(WHALES_FILE):
+        try:
+            with open(WHALES_FILE, 'r') as f:
+                whales = json.load(f)
+        except:
+            pass
+    
+    # Load positions
+    positions = {}
+    if os.path.exists(HISTORY_FILE):
+        try:
+            with open(HISTORY_FILE, 'r') as f:
+                data = json.load(f)
+                positions = data.get('positions', {})
+        except:
+            pass
+    
+    # Load signals
+    signals = []
+    if os.path.exists('convergent_signals.json'):
+        try:
+            with open('convergent_signals.json', 'r') as f:
+                signals = json.load(f)
+        except:
+            pass
+    
+    # Load whitelist
+    whitelist = []
+    if os.path.exists('whitelist.json'):
+        try:
+            with open('whitelist.json', 'r') as f:
+                whitelist = json.load(f)
+        except:
+            pass
+    
+    # Load active traders
+    active_traders = load_active_traders()
+    
+    # Load opportunities
+    opportunities = {}
+    if os.path.exists('opportunities.json'):
+        try:
+            with open('opportunities.json', 'r') as f:
+                opportunities = json.load(f)
+        except:
+            pass
+    
+    return jsonify({
+        "whales": whales,
+        "positions": positions,
+        "signals": signals,
+        "whitelist": whitelist,
+        "active_traders": active_traders,
+        "opportunities": opportunities
+    })
+
 @app.route('/api/opportunities')
 def get_opportunities():
     if os.path.exists('opportunities.json'):
