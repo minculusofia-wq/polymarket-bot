@@ -500,7 +500,6 @@ input:checked+.toggle-slider:before {
 input:checked~.toggle-label {
     color: #4CAF50;
 }
-}
 
 .close {
     color: var(--text-secondary);
