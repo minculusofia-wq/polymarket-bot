@@ -52,6 +52,9 @@ function updateDashboard(whales, history, config, opportunities, whitelist, sign
     `).join('');
     document.getElementById('whales-table').innerHTML = whalesHtml;
 
+    // Render Followed Traders
+    renderFollowedTraders(whales, positions);
+
     // Update History Table
     const trades = Object.values(positions).sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)).slice(0, 10);
     const historyHtml = trades.map(t => `
@@ -188,6 +191,41 @@ function updateDashboard(whales, history, config, opportunities, whitelist, sign
     // Store signals globally for filtering
     window.allSignals = signals || [];
     renderFilteredSignals();
+}
+
+function renderFollowedTraders(whales, positions) {
+    const whaleList = Object.entries(whales).map(([addr, data]) => ({ addr, ...data }));
+    const positionsList = Object.values(positions || {});
+
+    // Get unique whale addresses from open positions
+    const activeWhales = [...new Set(positionsList.filter(p => p.status === 'OPEN').map(p => p.whale))];
+
+    // Filter whales that have active positions
+    const followedWhales = whaleList.filter(w => activeWhales.includes(w.addr));
+
+    const followedHtml = followedWhales.map(w => {
+        const posCount = positionsList.filter(p => p.whale === w.addr && p.status === 'OPEN').length;
+        return `
+            <tr>
+                <td>
+                    <code>${w.addr}</code>
+                    <button class="action-btn btn-copy" onclick="copyAddress('${w.addr}')">📋</button>
+                </td>
+                <td><strong>${w.score}</strong></td>
+                <td>$${Math.round(w.volume).toLocaleString()}</td>
+                <td><span class="tag">${posCount}</span></td>
+                <td>
+                    <button class="action-btn btn-view" onclick="viewWhaleActivity('${w.addr}')">👁️ Voir</button>
+                </td>
+            </tr>
+        `;
+    }).join('');
+
+    document.getElementById('followed-traders-table').innerHTML = followedHtml || '<tr><td colspan="5">Aucun trader suivi actuellement (pas de positions ouvertes)</td></tr>';
+}
+
+function viewWhaleActivity(address) {
+    alert(`Fonctionnalité à venir : Voir l'activité de ${address.substring(0, 10)}...`);
 }
 
 function renderFilteredSignals() {
