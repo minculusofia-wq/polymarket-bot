@@ -1,5 +1,6 @@
 import asyncio
 import json
+import os
 import time
 from datetime import datetime
 from ws_client import PolymarketWS
@@ -12,6 +13,7 @@ import config
 active_assets = []
 whales_cache = {}
 whitelist_cache = set()
+active_traders_cache = {}
 analyzer = WhaleAnalyzer()
 trader = Trader()
 
@@ -24,6 +26,27 @@ def load_whitelist():
         except:
             return set()
     return set()
+
+def load_active_traders():
+    """Load active traders state from JSON file."""
+    if os.path.exists("active_traders.json"):
+        try:
+            with open("active_traders.json", 'r') as f:
+                return json.load(f)
+        except:
+            return {}
+    return {}
+
+def is_trader_active(address):
+    """Check if a trader is both whitelisted AND active."""
+    global whitelist_cache, active_traders_cache
+    
+    # Must be in whitelist
+    if address not in whitelist_cache:
+        return False
+    
+    # Check active state (default to True if not set)
+    return active_traders_cache.get(address, True)
 
 async def on_trade_message(data):
     """Handle incoming WebSocket messages."""
@@ -50,10 +73,11 @@ def process_trade_event(event):
     # If we are just scanning for high volume, we continue as is.
     # If we want to copy specific wallets, we might need to poll /trades endpoint rapidly or use a private feed if available.
     
-    # Let's refresh whitelist periodically
-    global whitelist_cache
+    # Let's refresh whitelist and active traders periodically
+    global whitelist_cache, active_traders_cache
     if int(time.time()) % 60 == 0:
         whitelist_cache = load_whitelist()
+        active_traders_cache = load_active_traders()
 
     asset_id = event.get('asset_id')
     price = float(event.get('price', 0))
