@@ -1,11 +1,12 @@
 async function fetchData() {
     try {
-        const [whalesRes, historyRes, configRes, oppsRes, whitelistRes] = await Promise.all([
+        const [whalesRes, historyRes, configRes, oppsRes, whitelistRes, signalsRes] = await Promise.all([
             fetch('/api/whales'),
             fetch('/api/history'),
             fetch('/api/config'),
             fetch('/api/opportunities'),
-            fetch('/api/whitelist')
+            fetch('/api/whitelist'),
+            fetch('/api/signals')
         ]);
 
         const whales = await whalesRes.json();
@@ -13,14 +14,15 @@ async function fetchData() {
         const config = await configRes.json();
         const opportunities = await oppsRes.json();
         const whitelist = await whitelistRes.json();
+        const signals = await signalsRes.json();
 
-        updateDashboard(whales, history, config, opportunities, whitelist);
+        updateDashboard(whales, history, config, opportunities, whitelist, signals);
     } catch (error) {
         console.error('Error fetching data:', error);
     }
 }
 
-function updateDashboard(whales, history, config, opportunities, whitelist) {
+function updateDashboard(whales, history, config, opportunities, whitelist, signals) {
     // Update Stats
     const whaleList = Object.entries(whales).map(([addr, data]) => ({ addr, ...data }));
     document.getElementById('total-whales').textContent = whaleList.length;
@@ -177,6 +179,29 @@ function updateDashboard(whales, history, config, opportunities, whitelist) {
         </tr>
     `).join('');
     document.getElementById('whitelist-table').innerHTML = whitelistHtml || '<tr><td colspan="2">Aucun wallet whitelisté</td></tr>';
+
+    // Convergent Signals
+    const signalsHtml = (signals || []).map(s => `
+        <tr>
+            <td>${s.market_question}</td>
+            <td><strong>${s.nb_whales}</strong> 🐋</td>
+            <td><strong>${s.nb_sources}</strong> 📊</td>
+            <td><span class="tag">${s.confidence_score}</span></td>
+            <td>
+                <details>
+                    <summary style="cursor: pointer;">Voir détails</summary>
+                    <div style="margin-top: 8px;">
+                        <strong>Whales:</strong><br>
+                        ${s.whales.map(w => `- ${w.address.substring(0, 10)}... (Score: ${w.score})`).join('<br>')}
+                        <br><br>
+                        <strong>Sources:</strong><br>
+                        ${s.sources.join('<br>')}
+                    </div>
+                </details>
+            </td>
+        </tr>
+    `).join('');
+    document.getElementById('signals-table').innerHTML = signalsHtml || '<tr><td colspan="5">Aucun signal détecté</td></tr>';
 }
 
 async function addToWhitelist() {
@@ -290,6 +315,30 @@ function copyAddress(address) {
     }).catch(err => {
         alert('❌ Erreur de copie: ' + err);
     });
+}
+
+function updateSignalConfig() {
+    const minWhales = document.getElementById('min-whales-slider').value;
+    const minSources = document.getElementById('min-sources-slider').value;
+
+    document.getElementById('min-whales-value').textContent = minWhales;
+    document.getElementById('min-sources-value').textContent = minSources;
+}
+
+async function saveSignalConfig() {
+    const minWhales = parseInt(document.getElementById('min-whales-slider').value);
+    const minSources = parseInt(document.getElementById('min-sources-slider').value);
+
+    try {
+        await fetch('/api/config/signals', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ min_whales: minWhales, min_sources: minSources })
+        });
+        alert('✅ Seuils sauvegardés ! Redémarrez le scanner pour appliquer.');
+    } catch (error) {
+        alert('❌ Erreur: ' + error.message);
+    }
 }
 
 // Auto-refresh every 5 seconds

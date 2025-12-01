@@ -76,16 +76,28 @@ from opportunities import find_opportunities
 # ... (existing imports)
 
 async def run_opportunities_scanner():
-    """Periodically run the opportunities scanner."""
+    """Run opportunities scanner periodically."""
+    from opportunities import find_opportunities
+    from convergent_signals import analyze_convergence, save_signals
+    import config
+    
     while True:
         try:
-            print("🔍 Running background opportunities scan...")
-            # Run in executor to avoid blocking the event loop
-            await asyncio.to_thread(find_opportunities)
+            print("🔍 Scanning opportunities...")
+            find_opportunities()
+            
+            print("🎯 Analyzing convergent signals...")
+            signals = analyze_convergence(
+                min_whales=config.MIN_WHALES_FOR_SIGNAL,
+                min_sources=config.MIN_SOURCES_FOR_SIGNAL
+            )
+            save_signals(signals)
+            print(f"✅ Found {len(signals)} convergent signals")
+            
         except Exception as e:
             print(f"Error in opportunities scanner: {e}")
         
-        await asyncio.sleep(60) # Scan every 60 seconds
+        await asyncio.sleep(60)  # Run every 60 seconds
 
 async def main():
     print("--- Starting Real-Time Scanner (WebSocket) ---")

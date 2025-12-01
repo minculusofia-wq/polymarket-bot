@@ -40,3 +40,7 @@ REDDIT_USER_AGENT = "polymarket-bot:v1.0 (by /u/yourusername)"
 LUNARCRUSH_API_KEY = "tlqgx82dyber5ffbhijwvdqb7omimu20mdxov5ela"
 SERPAPI_KEY = "fee7d2335de3adba052c9afc8fde3de15140305606c43ccf62e302798ae931c5"
 HELIUS_API_KEY = "be5c8bc3-cb64-4141-b691-8ee754b2d3e4"
+
+# Convergent Signals
+MIN_WHALES_FOR_SIGNAL = 2
+MIN_SOURCES_FOR_SIGNAL = 1

@@ -167,6 +167,50 @@
                 </div>
             </div>
 
+            <!-- Convergent Signals Section -->
+            <div class="section">
+                <h2>🎯 Signaux Convergents</h2>
+                <p class="settings-note">Détection automatique des opportunités à haute confiance (Whales + Sources
+                    d'info)</p>
+
+                <!-- Configuration -->
+                <div class="signal-config">
+                    <h3>⚙️ Configuration des Seuils</h3>
+                    <div class="signal-sliders">
+                        <div class="slider-group">
+                            <label>Min Whales: <span id="min-whales-value">2</span></label>
+                            <input type="range" id="min-whales-slider" min="1" max="5" value="2"
+                                oninput="updateSignalConfig()">
+                        </div>
+                        <div class="slider-group">
+                            <label>Min Sources: <span id="min-sources-value">1</span></label>
+                            <input type="range" id="min-sources-slider" min="1" max="5" value="1"
+                                oninput="updateSignalConfig()">
+                        </div>
+                    </div>
+                    <button class="save-btn" onclick="saveSignalConfig()">💾 Sauvegarder les Seuils</button>
+                </div>
+
+                <!-- Signals Display -->
+                <h3>🔔 Signaux Actifs</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Marché</th>
+                                <th>Whales</th>
+                                <th>Sources</th>
+                                <th>Score</th>
+                                <th>Détails</th>
+                            </tr>
+                        </thead>
+                        <tbody id="signals-table">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
             <!-- Opportunities Tab -->
             <div class="section">
                 <h2>🎯 Opportunités Détectées</h2>

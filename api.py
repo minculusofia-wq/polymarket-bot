@@ -102,6 +102,38 @@ def toggle_trading_mode():
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}), 500
 
+@app.route('/api/signals')
+def get_signals():
+    if os.path.exists('convergent_signals.json'):
+        with open('convergent_signals.json', 'r') as f:
+            return jsonify(json.load(f))
+    return jsonify([])
+
+@app.route('/api/config/signals', methods=['POST'])
+def save_signal_config():
+    from flask import request
+    import re
+    
+    data = request.json
+    min_whales = data.get('min_whales', 2)
+    min_sources = data.get('min_sources', 1)
+    
+    config_path = 'config.py'
+    
+    try:
+        with open(config_path, 'r') as f:
+            content = f.read()
+        
+        content = re.sub(r'MIN_WHALES_FOR_SIGNAL = \d+', f'MIN_WHALES_FOR_SIGNAL = {min_whales}', content)
+        content = re.sub(r'MIN_SOURCES_FOR_SIGNAL = \d+', f'MIN_SOURCES_FOR_SIGNAL = {min_sources}', content)
+        
+        with open(config_path, 'w') as f:
+            f.write(content)
+        
+        return jsonify({"status": "success"})
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
+
 @app.route('/api/opportunities')
 def get_opportunities():
     if os.path.exists('opportunities.json'):
