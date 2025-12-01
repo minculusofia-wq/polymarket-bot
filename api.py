@@ -8,6 +8,22 @@ CORS(app)
 
 WHALES_FILE = "whales.json"
 HISTORY_FILE = "trade_history.json"
+ACTIVE_TRADERS_FILE = "active_traders.json"
+
+def load_active_traders():
+    """Load active traders state from JSON file."""
+    if os.path.exists(ACTIVE_TRADERS_FILE):
+        try:
+            with open(ACTIVE_TRADERS_FILE, 'r') as f:
+                return json.load(f)
+        except:
+            return {}
+    return {}
+
+def save_active_traders(active_traders):
+    """Save active traders state to JSON file."""
+    with open(ACTIVE_TRADERS_FILE, 'w') as f:
+        json.dump(active_traders, f, indent=2)
 
 @app.route('/')
 def index():
@@ -181,7 +197,22 @@ def add_whitelist():
         with open('whitelist.json', 'w') as f:
             json.dump(whitelist, f)
             
-    return jsonify({"status": "success", "whitelist": whitelist})
+    # Load active traders
+    active_traders = load_active_traders()
+    
+    # Load signals (assuming convergent_signals.json exists and is relevant here)
+    signals = []
+    if os.path.exists('convergent_signals.json'):
+        try:
+            with open('convergent_signals.json', 'r') as f:
+                signals = json.load(f)
+        except:
+            pass
+            
+    return jsonify({        "signals": signals,
+        "whitelist": whitelist,
+        "active_traders": active_traders
+    })
 
 @app.route('/api/whitelist', methods=['DELETE'])
 def remove_whitelist():
@@ -189,17 +220,24 @@ def remove_whitelist():
     data = request.json
     address = data.get('address')
     
+    # Load whitelist
     whitelist = []
     if os.path.exists('whitelist.json'):
-        with open('whitelist.json', 'r') as f:
-            whitelist = json.load(f)
-            
+        try:
+            with open('whitelist.json', 'r') as f:
+                whitelist = json.load(f)
+        except:
+            pass
+    
+    # Load active traders
+    active_traders = load_active_traders()
+    
     if address in whitelist:
         whitelist.remove(address)
         with open('whitelist.json', 'w') as f:
             json.dump(whitelist, f)
             
-    return jsonify({"status": "success", "whitelist": whitelist})
+    return jsonify({"status": "success", "whitelist": whitelist, "active_traders": active_traders})
 
 @app.route('/api/config/wallet', methods=['POST'])
 def save_wallet():
@@ -237,6 +275,38 @@ def save_wallet():
             f.write(content)
         
         return jsonify({"status": "success", "message": "Wallet configured. Restart bot to apply."})
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+@app.route('/api/traders/toggle', methods=['POST'])
+def toggle_trader():
+    """Toggle active/inactive state for a trader."""
+    from flask import request
+    
+    data = request.json
+    address = data.get('address', '').strip()
+    active = data.get('active', True)
+    
+    if not address:
+        return jsonify({"status": "error", "message": "Address required"}), 400
+    
+    try:
+        # Load current state
+        active_traders = load_active_traders()
+        
+        # Update state
+        active_traders[address] = active
+        
+        # Save
+        save_active_traders(active_traders)
+        
+        status_text = "activé" if active else "désactivé"
+        return jsonify({
+            "status": "success",
+            "message": f"Trader {address[:10]}... {status_text}",
+            "address": address,
+            "active": active
+        })
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}), 500
 

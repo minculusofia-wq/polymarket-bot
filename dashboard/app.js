@@ -52,8 +52,8 @@ function updateDashboard(whales, history, config, opportunities, whitelist, sign
     `).join('');
     document.getElementById('whales-table').innerHTML = whalesHtml;
 
-    // Render Followed Traders
-    renderFollowedTraders(whales, positions);
+    // Render Followed Traders (with whitelist and active state)
+    renderFollowedTraders(whales, positions, data.whitelist, data.active_traders);
 
     // Update History Table
     const trades = Object.values(positions).sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)).slice(0, 10);
@@ -214,35 +214,47 @@ function updateDashboard(whales, history, config, opportunities, whitelist, sign
     renderFilteredSignals();
 }
 
-function renderFollowedTraders(whales, positions) {
-    const whaleList = Object.entries(whales).map(([addr, data]) => ({ addr, ...data }));
+function renderFollowedTraders(whales, positions, whitelist, activeTraders) {
+    const whaleList = Object.entries(whales || {}).map(([addr, data]) => ({ addr, ...data }));
     const positionsList = Object.values(positions || {});
 
-    // Get unique whale addresses from open positions
-    const activeWhales = [...new Set(positionsList.filter(p => p.status === 'OPEN').map(p => p.whale))];
+    // Show ALL whitelisted traders (not just those with open positions)
+    const followedHtml = (whitelist || []).map(address => {
+        // Find whale data for this address
+        const whaleData = whaleList.find(w => w.addr === address) || {};
+        const score = whaleData.score || 'N/A';
+        const volume = whaleData.volume || 0;
 
-    // Filter whales that have active positions
-    const followedWhales = whaleList.filter(w => activeWhales.includes(w.addr));
+        // Count open positions for this whale
+        const posCount = positionsList.filter(p => p.whale === address && p.status === 'OPEN').length;
 
-    const followedHtml = followedWhales.map(w => {
-        const posCount = positionsList.filter(p => p.whale === w.addr && p.status === 'OPEN').length;
+        // Check if trader is active (default to true if not set)
+        const isActive = activeTraders?.[address] !== false;
+
         return `
             <tr>
                 <td>
-                    <code>${w.addr}</code>
-                    <button class="action-btn btn-copy" onclick="copyAddress('${w.addr}')">📋</button>
+                    <code>${address}</code>
+                    <button class="action-btn btn-copy" onclick="copyAddress('${address}')">📋</button>
                 </td>
-                <td><strong>${w.score}</strong></td>
-                <td>$${Math.round(w.volume).toLocaleString()}</td>
+                <td><strong>${score}</strong></td>
+                <td>$${Math.round(volume).toLocaleString()}</td>
                 <td><span class="tag">${posCount}</span></td>
                 <td>
-                    <button class="action-btn btn-view" onclick="viewWhaleActivity('${w.addr}')">👁️ Voir</button>
+                    <label class="toggle-switch">
+                        <input type="checkbox" ${isActive ? 'checked' : ''} onchange="toggleTrader('${address}', this.checked)">
+                        <span class="toggle-slider"></span>
+                    </label>
+                    <span class="toggle-label">${isActive ? 'ON' : 'OFF'}</span>
+                </td>
+                <td>
+                    <button class="action-btn btn-view" onclick="viewWhaleActivity('${address}')">👁️ Voir</button>
                 </td>
             </tr>
         `;
     }).join('');
 
-    document.getElementById('followed-traders-table').innerHTML = followedHtml || '<tr><td colspan="5">Aucun trader suivi actuellement (pas de positions ouvertes)</td></tr>';
+    document.getElementById('followed-traders-table').innerHTML = followedHtml || '<tr><td colspan="6">Aucun trader dans la whitelist</td></tr>';
 }
 
 function viewWhaleActivity(address) {
@@ -489,6 +501,28 @@ async function saveSignalConfig() {
             body: JSON.stringify({ min_whales: minWhales, min_sources: minSources })
         });
         alert('✅ Seuils sauvegardés ! Redémarrez le scanner pour appliquer.');
+    } catch (error) {
+        alert('❌ Erreur: ' + error.message);
+    }
+}
+
+async function toggleTrader(address, active) {
+    try {
+        const res = await fetch('/api/traders/toggle', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ address, active })
+        });
+
+        const result = await res.json();
+
+        if (result.status === 'success') {
+            console.log(`✅ ${result.message}`);
+            // Refresh to update UI
+            fetchData();
+        } else {
+            alert('❌ Erreur: ' + result.message);
+        }
     } catch (error) {
         alert('❌ Erreur: ' + error.message);
     }
