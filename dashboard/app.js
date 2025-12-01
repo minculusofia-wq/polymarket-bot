@@ -76,6 +76,11 @@ function updateDashboard(whales, history, config, opportunities, whitelist, sign
     document.getElementById('input-min-score').value = config.min_whale_score;
     document.getElementById('input-scan-interval').value = config.scan_interval;
 
+    const autoCopyCheckbox = document.getElementById('auto-copy-sells');
+    if (autoCopyCheckbox) {
+        autoCopyCheckbox.checked = config.auto_copy_sells || false;
+    }
+
     // Update trading mode display
     const isPaperTrading = config.paper_trading;
     const modeLabel = document.getElementById('mode-label');
@@ -323,8 +328,10 @@ async function saveSettings() {
         stop_loss: parseFloat(document.getElementById('input-stop-loss').value) / 100,
         take_profit: parseFloat(document.getElementById('input-take-profit').value) / 100,
         max_positions: parseInt(document.getElementById('input-max-positions').value),
+        max_traders: parseInt(document.getElementById('input-max-traders').value),
         min_whale_score: parseInt(document.getElementById('input-min-score').value),
-        scan_interval: parseInt(document.getElementById('input-scan-interval').value)
+        scan_interval: parseInt(document.getElementById('input-scan-interval').value),
+        auto_copy_sells: document.getElementById('auto-copy-sells').checked
     };
 
     try {

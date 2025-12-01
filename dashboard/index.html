@@ -129,6 +129,13 @@
                         <label>Scan Interval (sec)</label>
                         <input type="number" id="input-scan-interval" step="10" min="10" max="300">
                     </div>
+
+                    <div class="setting-item"
+                        style="grid-column: 1 / -1; margin-top: 10px; display: flex; align-items: center; gap: 10px;">
+                        <input type="checkbox" id="auto-copy-sells" style="width: auto;">
+                        <label for="auto-copy-sells" style="margin: 0; font-weight: 600;">Copier les Ventes
+                            Automatiquement</label>
+                    </div>
                 </div>
                 <button class="save-btn" onclick="saveSettings()">💾 Sauvegarder les Paramètres</button>
                 <p class="settings-note">💡 Les paramètres seront sauvegardés dans <code>config.py</code> et appliqués

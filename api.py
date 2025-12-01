@@ -44,8 +44,10 @@ def get_config():
         "stop_loss": config.STOP_LOSS_PERCENT,
         "take_profit": config.TAKE_PROFIT_PERCENT,
         "max_positions": config.MAX_OPEN_POSITIONS,
+        "max_traders": getattr(config, 'MAX_TRADERS_TO_COPY', 3),
         "min_whale_score": config.MIN_WHALE_SCORE,
-        "scan_interval": config.SCAN_INTERVAL
+        "scan_interval": config.SCAN_INTERVAL,
+        "auto_copy_sells": getattr(config, 'AUTO_COPY_SELLS', False)
     })
 
 @app.route('/api/config/save', methods=['POST'])
@@ -67,8 +69,21 @@ def save_config():
         content = re.sub(r'TAKE_PROFIT_PERCENT = [\d.]+', f'TAKE_PROFIT_PERCENT = {data["take_profit"]}', content)
         content = re.sub(r'MAX_OPEN_POSITIONS = \d+', f'MAX_OPEN_POSITIONS = {data["max_positions"]}', content)
         content = re.sub(r'MIN_WHALE_SCORE = \d+', f'MIN_WHALE_SCORE = {data["min_whale_score"]}', content)
-        content = re.sub(r'SCAN_INTERVAL = \d+', f'SCAN_INTERVAL = {data["scan_interval"]}', content)
-        
+        if 'scan_interval' in data:
+            content = re.sub(r'SCAN_INTERVAL\s*=\s*\d+', f'SCAN_INTERVAL = {data["scan_interval"]}', content)
+            
+        if 'auto_copy_sells' in data:
+            auto_copy_value = 'True' if data['auto_copy_sells'] else 'False'
+            if 'AUTO_COPY_SELLS' in content:
+                content = re.sub(r'AUTO_COPY_SELLS\s*=\s*(True|False)', f'AUTO_COPY_SELLS = {auto_copy_value}', content)
+            else:
+                # Add after MAX_TRADERS_TO_COPY
+                # This assumes MAX_TRADERS_TO_COPY exists or will be added.
+                # If MAX_TRADERS_TO_COPY is not present, this regex might not find a match.
+                # A more robust solution might be to find a common insertion point or append.
+                # For now, following the instruction's regex.
+                content = re.sub(r'(MAX_TRADERS_TO_COPY\s*=\s*\d+)', f'\\1\nAUTO_COPY_SELLS = {auto_copy_value}  # Copy whale exits as well as entries', content)
+            
         # Write back
         with open(config_path, 'w') as f:
             f.write(content)

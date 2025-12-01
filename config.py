@@ -19,6 +19,7 @@ STOP_LOSS_PERCENT = 0.15  # 15% stop loss
 TAKE_PROFIT_PERCENT = 0.3  # 30% take profit
 MAX_OPEN_POSITIONS = 2
 MAX_TRADERS_TO_COPY = 3 # Max number of unique traders to copy (1-5)
+AUTO_COPY_SELLS = False # Copy whale exits as well as entries
 DAILY_LOSS_LIMIT_USD = 50.0
 
 # Whale Selection
