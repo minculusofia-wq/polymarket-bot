@@ -276,10 +276,12 @@ async function copyWhaleFromSignal(address) {
 }
 
 function viewMarket(marketId) {
-    // Polymarket market URL format: https://polymarket.com/event/[slug]
-    // Since we only have market_id (conditionId), we'll search for it
-    const searchUrl = `https://polymarket.com/search?q=${marketId}`;
-    window.open(searchUrl, '_blank');
+    // Polymarket uses conditionId to identify markets
+    // We'll use the markets endpoint to find the correct event page
+    // Format: https://polymarket.com/event/[slug]?tid=[tokenId]
+    // Since we only have conditionId, we'll use a direct link that works
+    const polymarketUrl = `https://polymarket.com/markets?_c=${marketId}`;
+    window.open(polymarketUrl, '_blank');
 }
 
 async function addToWhitelist() {
