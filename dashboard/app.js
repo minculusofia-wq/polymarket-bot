@@ -190,7 +190,7 @@ function renderFilteredSignals() {
     const minSources = parseInt(document.getElementById('min-sources-slider').value);
 
     // Filter signals based on current slider values
-    const filteredSignals = window.allSignals.filter(s =>
+    const filteredSignals = (window.allSignals || []).filter(s =>
         s.nb_whales >= minWhales && s.nb_sources >= minSources
     );
 
@@ -202,7 +202,7 @@ function renderFilteredSignals() {
             <td><span class="tag">${s.confidence_score}</span></td>
             <td>
                 <button class="action-btn btn-details" onclick="showSignalDetails(${idx})">📊 Détails</button>
-                <button class="action-btn btn-copy" onclick="copyWhaleFromSignal('${s.whales[0]?.address}')">➕ Copier</button>
+                <button class="action-btn btn-copy" onclick="copyWhaleFromSignal('${s.whales[0]?.address || ''}')">✅ Copier</button>
                 <button class="action-btn btn-view" onclick="viewMarket('${s.market_id}')">🔗 Voir Bet</button>
             </td>
         </tr>
@@ -215,12 +215,16 @@ function showSignalDetails(index) {
     const minWhales = parseInt(document.getElementById('min-whales-slider').value);
     const minSources = parseInt(document.getElementById('min-sources-slider').value);
 
-    const filteredSignals = window.allSignals.filter(s =>
+    // Get the same filtered array
+    const filteredSignals = (window.allSignals || []).filter(s =>
         s.nb_whales >= minWhales && s.nb_sources >= minSources
     );
 
     const signal = filteredSignals[index];
-    if (!signal) return;
+    if (!signal) {
+        alert('Signal introuvable');
+        return;
+    }
 
     const modalBody = document.getElementById('modal-body');
     modalBody.innerHTML = `
@@ -233,7 +237,7 @@ function showSignalDetails(index) {
             ${signal.whales.map(w => `
                 <li>
                     <code>${w.address}</code> 
-                    (Score: ${w.score}, Volume: $${Math.round(w.volume)})
+                    (Score: ${w.score}, Volume: $${Math.round(w.volume || 0)})
                     <button class="action-btn btn-copy" onclick="copyWhaleFromSignal('${w.address}')">➕ Copier</button>
                 </li>
             `).join('')}
