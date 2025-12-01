@@ -66,8 +66,8 @@ function updateDashboard(whales, history, config, opportunities, whitelist) {
     document.getElementById('input-stop-loss').value = (config.stop_loss * 100).toFixed(0);
     document.getElementById('input-take-profit').value = (config.take_profit * 100).toFixed(0);
     document.getElementById('input-max-positions').value = config.max_positions;
-    document.getElementById('min-whale-score').value = config.min_whale_score;
-    document.getElementById('scan-interval').value = config.scan_interval;
+    document.getElementById('input-min-score').value = config.min_whale_score;
+    document.getElementById('input-scan-interval').value = config.scan_interval;
 
     // Update trading mode display
     const isPaperTrading = config.paper_trading;
@@ -86,7 +86,7 @@ function updateDashboard(whales, history, config, opportunities, whitelist) {
         toggleBtn.classList.add('real-mode');
     }
 
-    // Top Whales TableOpportunities
+    // Opportunities
     // Trending Markets
     const trendingHtml = (opportunities.trending || []).map(m => `
         <tr>
