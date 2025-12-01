@@ -384,9 +384,59 @@ th {
 
 .slider-group input[type="range"]::-moz-range-thumb {
     width: 18px;
-    height: 18px;
-    background: var(--accent);
-    border-radius: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: var(--bg-primary);
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.close {
+    color: var(--text-secondary);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
     cursor: pointer;
+}
+
+.close:hover {
+    color: var(--text-primary);
+}
+
+.action-btn {
+    padding: 6px 12px;
+    margin: 0 4px;
     border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+.btn-details {
+    background: var(--accent);
+    color: white;
+}
+
+.btn-copy {
+    background: #28a745;
+    color: white;
+}
+
+.btn-view {
+    background: #007bff;
+    color: white;
+}
+
+.action-btn:hover {
+    opacity: 0.8;
 }

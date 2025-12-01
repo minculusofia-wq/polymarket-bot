@@ -1,6 +1,10 @@
-# Polymarket Bot
+# Polymarket Bot - Copy Trading Intelligent avec Signaux Convergents
 
-Un bot de trading automatisé pour Polymarket qui identifie et suit les "whales" (gros traders) en analysant leurs activités de trading.
+Un bot de trading automatisé avancé pour Polymarket qui combine :
+- **Copy-Trading** : Suit automatiquement les meilleurs traders (whales)
+- **Signaux Convergents** : Détecte les opportunités à haute confiance en croisant données whales + actualités
+- **Dashboard Web** : Interface moderne pour configuration et monitoring en temps réel
+- **Multi-Sources** : Agrège News, Reddit, Événements, et activité on-chain
 
 ## 🎯 Fonctionnalités
 

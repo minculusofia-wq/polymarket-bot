@@ -180,28 +180,102 @@ function updateDashboard(whales, history, config, opportunities, whitelist, sign
     `).join('');
     document.getElementById('whitelist-table').innerHTML = whitelistHtml || '<tr><td colspan="2">Aucun wallet whitelisté</td></tr>';
 
-    // Convergent Signals
-    const signalsHtml = (signals || []).map(s => `
+    // Store signals globally for filtering
+    window.allSignals = signals || [];
+    renderFilteredSignals();
+}
+
+function renderFilteredSignals() {
+    const minWhales = parseInt(document.getElementById('min-whales-slider').value);
+    const minSources = parseInt(document.getElementById('min-sources-slider').value);
+
+    // Filter signals based on current slider values
+    const filteredSignals = window.allSignals.filter(s =>
+        s.nb_whales >= minWhales && s.nb_sources >= minSources
+    );
+
+    const signalsHtml = filteredSignals.map((s, idx) => `
         <tr>
             <td>${s.market_question}</td>
             <td><strong>${s.nb_whales}</strong> 🐋</td>
             <td><strong>${s.nb_sources}</strong> 📊</td>
             <td><span class="tag">${s.confidence_score}</span></td>
             <td>
-                <details>
-                    <summary style="cursor: pointer;">Voir détails</summary>
-                    <div style="margin-top: 8px;">
-                        <strong>Whales:</strong><br>
-                        ${s.whales.map(w => `- ${w.address.substring(0, 10)}... (Score: ${w.score})`).join('<br>')}
-                        <br><br>
-                        <strong>Sources:</strong><br>
-                        ${s.sources.join('<br>')}
-                    </div>
-                </details>
+                <button class="action-btn btn-details" onclick="showSignalDetails(${idx})">📊 Détails</button>
+                <button class="action-btn btn-copy" onclick="copyWhaleFromSignal('${s.whales[0]?.address}')">➕ Copier</button>
+                <button class="action-btn btn-view" onclick="viewMarket('${s.market_id}')">🔗 Voir Bet</button>
             </td>
         </tr>
     `).join('');
-    document.getElementById('signals-table').innerHTML = signalsHtml || '<tr><td colspan="5">Aucun signal détecté</td></tr>';
+
+    document.getElementById('signals-table').innerHTML = signalsHtml || '<tr><td colspan="5">Aucun signal ne correspond aux seuils actuels</td></tr>';
+}
+
+function showSignalDetails(index) {
+    const minWhales = parseInt(document.getElementById('min-whales-slider').value);
+    const minSources = parseInt(document.getElementById('min-sources-slider').value);
+
+    const filteredSignals = window.allSignals.filter(s =>
+        s.nb_whales >= minWhales && s.nb_sources >= minSources
+    );
+
+    const signal = filteredSignals[index];
+    if (!signal) return;
+
+    const modalBody = document.getElementById('modal-body');
+    modalBody.innerHTML = `
+        <h4>Marché: ${signal.market_question}</h4>
+        <p><strong>Market ID:</strong> <code>${signal.market_id}</code></p>
+        <p><strong>Score de Confiance:</strong> ${signal.confidence_score}</p>
+        <hr>
+        <h5>🐋 Whales (${signal.nb_whales}):</h5>
+        <ul>
+            ${signal.whales.map(w => `
+                <li>
+                    <code>${w.address}</code> 
+                    (Score: ${w.score}, Volume: $${Math.round(w.volume)})
+                    <button class="action-btn btn-copy" onclick="copyWhaleFromSignal('${w.address}')">➕ Copier</button>
+                </li>
+            `).join('')}
+        </ul>
+        <hr>
+        <h5>📊 Sources (${signal.nb_sources}):</h5>
+        <ul>
+            ${signal.sources.map(s => `<li>${s}</li>`).join('')}
+        </ul>
+    `;
+
+    document.getElementById('signal-modal').style.display = 'block';
+}
+
+function closeSignalModal() {
+    document.getElementById('signal-modal').style.display = 'none';
+}
+
+async function copyWhaleFromSignal(address) {
+    if (!address) {
+        alert('❌ Adresse invalide');
+        return;
+    }
+
+    try {
+        await fetch('/api/whitelist', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ address })
+        });
+        alert(`✅ Whale ${address.substring(0, 10)}... ajouté à la whitelist !`);
+        fetchData(); // Refresh
+    } catch (error) {
+        alert('❌ Erreur: ' + error.message);
+    }
+}
+
+function viewMarket(marketId) {
+    // Polymarket market URL format: https://polymarket.com/event/[slug]
+    // Since we only have market_id (conditionId), we'll search for it
+    const searchUrl = `https://polymarket.com/search?q=${marketId}`;
+    window.open(searchUrl, '_blank');
 }
 
 async function addToWhitelist() {
@@ -323,6 +397,11 @@ function updateSignalConfig() {
 
     document.getElementById('min-whales-value').textContent = minWhales;
     document.getElementById('min-sources-value').textContent = minSources;
+
+    // Re-render signals with new filters
+    if (window.allSignals) {
+        renderFilteredSignals();
+    }
 }
 
 async function saveSignalConfig() {

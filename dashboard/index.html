@@ -201,13 +201,22 @@
                                 <th>Whales</th>
                                 <th>Sources</th>
                                 <th>Score</th>
-                                <th>Détails</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody id="signals-table">
                             <!-- Populated by JS -->
                         </tbody>
                     </table>
+                </div>
+
+                <!-- Modal for Signal Details -->
+                <div id="signal-modal" class="modal" onclick="closeSignalModal()">
+                    <div class="modal-content" onclick="event.stopPropagation()">
+                        <span class="close" onclick="closeSignalModal()">&times;</span>
+                        <h3>📊 Détails du Signal</h3>
+                        <div id="modal-body"></div>
+                    </div>
                 </div>
             </div>
 
