@@ -273,7 +273,7 @@ function renderFilteredSignals() {
             <td><strong>${s.nb_sources}</strong> 📊</td>
             <td><span class="tag">${s.confidence_score}</span></td>
             <td>
-                <button class="action-btn btn-details" onclick="showSignalDetails(${idx})">📊 Détails</button>
+                <button class="action-btn btn-details" onclick="showSignalDetails('${s.market_id}')">📊 Détails</button>
                 <button class="action-btn btn-copy" onclick="copyWhaleFromSignal('${s.whales[0]?.address || ''}')">✅ Copier</button>
                 <button class="action-btn btn-view" onclick="viewMarket('${s.market_id}')">🔗 Voir Bet</button>
             </td>
@@ -283,16 +283,10 @@ function renderFilteredSignals() {
     document.getElementById('signals-table').innerHTML = signalsHtml || '<tr><td colspan="5">Aucun signal ne correspond aux seuils actuels</td></tr>';
 }
 
-function showSignalDetails(index) {
-    const minWhales = parseInt(document.getElementById('min-whales-slider').value);
-    const minSources = parseInt(document.getElementById('min-sources-slider').value);
+function showSignalDetails(marketId) {
+    const allSignals = window.allSignals || [];
+    const signal = allSignals.find(s => s.market_id === marketId);
 
-    // Get the same filtered array
-    const filteredSignals = (window.allSignals || []).filter(s =>
-        s.nb_whales >= minWhales && s.nb_sources >= minSources
-    );
-
-    const signal = filteredSignals[index];
     if (!signal) {
         alert('Signal introuvable');
         return;
